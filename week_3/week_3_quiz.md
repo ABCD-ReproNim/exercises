@@ -17,7 +17,7 @@ The ABCD sample is representative of youth in the United States.
 - True
 - False
 
-**Quesiton 2**
+**Question 2**
 
 What was the primary method of recruitment for single birth children?
 
