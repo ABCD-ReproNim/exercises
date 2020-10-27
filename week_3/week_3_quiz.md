@@ -14,44 +14,44 @@ First, we will ask you a few questions about ABCD Data.
 
 The ABCD sample is representative of youth in the United States.
 
-<input type="radio" name="q1"> True <br>
-<input type="radio" name="q1"> False
+- True
+- False
 
 **Question 2**
 
 What was the primary method of recruitment for single birth children?
 
-<input type="radio" name="q2"> Birth registries <br>
-<input type="radio" name="q2"> Mailing lists <br>
-<input type="radio" name="q2"> Schools <br>
-<input type="radio" name="q2"> Summer camps
+- Birth registries
+- Mailing lists
+- Schools
+- Summer camps
 
 **Question 3**
 
 What was the primary method of recruitment for twins?
 
-<input type="radio" name="q3"> Birth registries <br>
-<input type="radio" name="q3"> Mailing lists <br>
-<input type="radio" name="q3"> Schools <br>
-<input type="radio" name="q3"> Summer camps
+- Birth registries
+- Mailing lists
+- Schools
+- Summer camps
 
 **Question 4**
 
 What are two sources of sample bias the ABCD recruitment strategy could not account for due to constraints of the study?
 
-<input type="radio" name="q4"> Urbanicity & Self-Selection <br>
-<input type="radio" name="q4"> Race & Sex <br>
-<input type="radio" name="q4"> Socio-Economic Status & Race <br>
-<input type="radio" name="q4"> Urbanicity & Sex <br>
-<input type="radio" name="q4"> Self-Selection & Socio-Economic Status
+- Urbanicity & Self-Selection
+- Race & Sex
+- Socio-Economic Status & Race
+- Urbanicity & Sex
+- Self-Selection & Socio-Economic Status
 
 **Question 5**
 
 How has the sociodemographic bias in missing assessments changed after the beginning of the COVID pandemic?
 
-<input type="radio" name="q5"> Increased <br>
-<input type="radio" name="q5"> Stayed the same <br>
-<input type="radio" name="q5"> Decreased
+- Increased
+- Stayed the same
+- Decreased
 
 ### ReproNim (Containers) Questions
 
@@ -72,28 +72,28 @@ Once Docker is installed, try downloading and running the alpine Docker containe
 
 The alpine docker image is a minimal image based on Alpine Linux. It is designed for you to provide commands yourself as arguments to the docker run command. For example the command `docker run alpine echo 'Hello World'` would pass the `echo 'Hello World'` command to the alpine container. Try it out. In Alpine Linux, the operating system version information is stored in a file located at `/etc/os-release`. Use this information to find the exact Alpine Linux version number for the alpine docker image with tag `3.11`. Hint: be sure to use the tag `3.11` in all docker pull and run commands that you use to answer this question.
 
-<input type="radio" name="q7"> 3.11.4 <br>
-<input type="radio" name="q7"> 3.11.5 <br>
-<input type="radio" name="q7"> 3.11.6 <br>
-<input type="radio" name="q7"> 3.11.7
+- 3.11.4
+- 3.11.5
+- 3.11.6
+- 3.11.7
 
 **Question 8**
 
 8) Use docker commands to download the `bids/base_fsl` image [from Docker Hub](https://hub.docker.com/r/bids/base_fsl/). Also download [this map from NeuroVault.org](http://neurovault.org/media/images/457/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz) and place it in an example folder in your current working directory. Using the `-v` option as described in the lecture (or “volume flags” if you are referencing [the Docker documentation](https://docs.docker.com/storage/volumes/)), mount your folder so that it will be accessible from the container when you run it. Now use the `fslstats` command to output the mean entropy of non-zero voxels for the image you downloaded. Hint: Use `fslstats --help` to determine the option that will return the mean entropy of non-zero voxels. What is the mean entropy of the non-zero voxels in the downloaded image?
 
-<input type="radio" name="q8"> 0.410776 <br>
-<input type="radio" name="q8"> 0.929105 <br>
-<input type="radio" name="q8"> 0.405803 <br>
-<input type="radio" name="q8"> 0.914086
+- 0.410776
+- 0.929105
+- 0.405803
+- 0.914086
 
 **Question 9**
 
 Next, we'll smooth the downloaded image using a Gaussian kernel with the FSL command `fslmaths /data/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz -kernel gauss 10 -fmean /data/smoothed.nii.gz`. Confirm that this command, which you issued inside of the Docker container, added the `smoothed.nii.gz` output file to the example folder on your host system. Use the same commands as before to calculate the mean entropy of the nonzero voxels in the smoothed image. What is it?
 
-<input type="radio" name="q9"> 0.705882 <br>
-<input type="radio" name="q9"> 0.701026 <br>
-<input type="radio" name="q9"> 0.694043 <br>
-<input type="radio" name="q9"> 0.698877
+- 0.705882
+- 0.701026
+- 0.694043
+- 0.698877
 
 **Question 10**
 
