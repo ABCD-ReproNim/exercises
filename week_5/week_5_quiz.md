@@ -12,11 +12,11 @@ In this Week 5 Quiz, we will ask you a few questions about the ABCD neurocogniti
 
  What were the overarching motivations for the tasks selected for the neurocognitive battery?
 
- - [ ] the tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10 
- - [ ] the tasks minimize participant burden 
- - [ ] the tasks are comparable to those used for other large studies 
- - [ ] the tasks cover multiple domains
- - [ ] all the above
+ - [ ] The tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10 
+ - [ ] The tasks minimize participant burden 
+ - [ ] The tasks are comparable to those used for other large studies 
+ - [ ] The tasks cover multiple domains
+ - [ ] All the above
 
 **Question 2**
 
@@ -43,7 +43,6 @@ Which of these are true of the Cash Choice and Delay Discounting tasks? Select a
 - [ ] A strong association has been reported between temporal delay and substance use 
 - [ ] Both of these tasks are administered at each timepoint
 - [ ] The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable
-- [ ] All the above
 
 **Question 5**
 
