@@ -10,14 +10,13 @@ In this Week 5 Quiz, we will ask you a few questions about the ABCD neurocogniti
 
 **Question 1**
 
- What were the overarching motivations for the tasks selected for the neurocognitive battery? Select all that apply.
+ What were the overarching motivations for the tasks selected for the neurocognitive battery?
 
  - [ ] the tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10 
  - [ ]  the tasks minimize participant burden 
  - [ ]  the tasks are comparable to those used for other large studies 
  - [ ]  the tasks cover multiple domains
  - [ ]  all the above
- - [ ]  
 
 **Question 2**
 
@@ -48,6 +47,8 @@ Which of these are true of the Cash Choice and Delay Discounting tasks? Select a
 
 **Question 5**
 
+Which of these are methodological considerations associated with the ABCD study design? 
+
 - Environmental exposures might change the developmental trajectory
 - Alternate forms of tests must be administered to account for potential practice effects
 - Overlapping assessments of youngest and oldest subjects
@@ -76,7 +77,7 @@ Which of the following is(are) globally unique and persistent identifier(s) that
 - [ ] 10.18112/P2159B
 - [ ] 0000-0001-6755-0259
 - [ ] 10.1016/j.neuron.2015.06.037
-- [ ] doi.org/10.18112/P2159B
+- [ ] https://doi.org/10.18112/P2159B
 
 **Question 8**
 
