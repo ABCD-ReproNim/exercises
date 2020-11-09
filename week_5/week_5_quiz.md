@@ -13,14 +13,14 @@ In this Week 5 Quiz, we will ask you a few questions about the ABCD neurocogniti
  What were the overarching motivations for the tasks selected for the neurocognitive battery?
 
  - [ ] the tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10 
- - [ ]  the tasks minimize participant burden 
- - [ ]  the tasks are comparable to those used for other large studies 
- - [ ]  the tasks cover multiple domains
- - [ ]  all the above
+ - [ ] the tasks minimize participant burden 
+ - [ ] the tasks are comparable to those used for other large studies 
+ - [ ] the tasks cover multiple domains
+ - [ ] all the above
 
 **Question 2**
 
-This lecture covered the results of Thompson et al, 2019 whereby principal component analysis was applied to 12 neurocognitive assessments. Based on this study, what were the main principal components underlying the different tasks administered to participants at baseline? Select all that apply.
+This lecture covered the results of Thompson et al. (2019) wherein principal component analysis was applied to 12 neurocognitive assessments. Based on this study, what were the main principal components underlying the different tasks administered to participants at baseline? Select all that apply.
 
 - [ ] Reward 
 - [ ] General cognitive ability
@@ -42,7 +42,7 @@ Which of these are true of the Cash Choice and Delay Discounting tasks? Select a
 
 - [ ] A strong association has been reported between temporal delay and substance use 
 - [ ] Both of these tasks are administered at each timepoint
-- [ ] The decision participants make regarding receiving $75 in three days or $115 in three months are developmentally stable 
+- [ ] The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable
 - [ ] All the above
 
 **Question 5**
@@ -70,7 +70,7 @@ Which of the following are true of digital object identifiers (DOIs)? Select all
 
 The [MyConnectome](https://openneuro.org/datasets/ds000031/versions/00001) dataset is a neuroimaging dataset available on openneuro.
 
-Which of the following is(are) globally unique and persistent identifier(s) that point to this dataset? Select all that apply.
+Which of the following are globally unique and persistent identifier that point to this dataset? Select all that apply.
 
 - [ ] https://openneuro.org/datasets/ds000031/versions/00001
 - [ ] ds000031
@@ -92,7 +92,7 @@ Which of the following is(are) globally unique and persistent identifier(s) that
 For the next questions, you’ll need the following sample dataset repository: https://github.com/ABCD-ReproNim/sample_dataset
 
 To get set up, complete the following steps:
-1. Fork the sample_repository to create your own copy
+1. Fork the sample dataset repository to create your own copy
 2. Clone your forked version of this repository onto your local machine (or on the ABCD-ReproNim JupyterHub)
 
 ***
