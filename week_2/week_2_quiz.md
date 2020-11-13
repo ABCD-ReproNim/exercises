@@ -13,6 +13,7 @@ If you have access to ABCD Study data, then we recommend that you also complete 
 First, please answer two questions about ABCD data.
 
 **Question 1**
+
 Genotyping is included in the ABCD tabulated data.
 
 - True
@@ -20,7 +21,9 @@ Genotyping is included in the ABCD tabulated data.
 
 <details>
 <summary>Click to see answer</summary>
+
 **Answer**
+
 False
 </details>
 
