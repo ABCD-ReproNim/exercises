@@ -14,7 +14,7 @@ The ABCD substance use interview includes questions about: (check all that apply
 
 - [ ] which substances youth have heard of
 - [ ] subjective effects of early use (alcohol, nicotine, cannabis)
-- [ ] Problem symptoms related to use (alcohol, nicotine, cannabis)
+- [ ] problem symptoms related to use (alcohol, nicotine, cannabis)
 - [ ] peer substance use and availability of substances in the neighborhood
 - [ ] parent substance use and family history of use
 - [ ] caffeine consumption and over-the-counter medications
@@ -61,7 +61,7 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 #### Prerequisites
 
 1. You have already [forked](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) and [cloned](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository): https://github.com/ABCD-ReproNim/sample_dataset
-2. You have installed [pynidm](https://pypi.org/project/pynidm/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our jupyterhub)
+2. You have installed [pynidm](https://pynidm.readthedocs.io/en/latest/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our jupyterhub)
     - [notes on running jupyterhub locally for observer students](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439)
 
 **Question 6**
@@ -69,7 +69,7 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 How does structured data annotation help the research process? (Select all that apply)
 
 - [ ] Can make filtering information within and between datasets easier
-- [ ] Can create less ambiguity about the measures recorded in a dataset
+- [ ] Can reduce ambiguity about the measures recorded in a dataset
 - [ ] Can give a better understanding about how data were acquired and processed
 - [ ] Can help generate research hypotheses
 
