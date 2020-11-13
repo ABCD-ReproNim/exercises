@@ -24,6 +24,8 @@ Genotyping is included in the ABCD tabulated data.
 
 False
 
+***
+
 </details>
 
 **Question 2**
@@ -42,6 +44,8 @@ Select all that apply:
 Some measures are not taken at every time point
 
 Some people miss appointments
+
+***
 
 </details>
 
@@ -76,6 +80,8 @@ Select all that apply:
 `echo` is the bash shell command that prints the input back to the terminal. `$` is used to call on existing variables in the namespace. `SHELL` is a default environment variable that encodes the type of shell currently running. Thus, `echo $SHELL` will print the contents of the environment variable to the terminal.
 
 `>` is an operator that funnels the output of the preceeding command into a text file rather than to the terminal. `|` is a pipe operator that takes the output of the preceeding command as the input into the next. `cat` is the bash command that prints the contents of a text file to the terminal screen. Thus, `echo $SHELL > shell.txt | cat shell.txt` funnels the output of `echo $SHELL` into a text file called `shell.txt` and then `cat shell.txt` prints the contents of `shell.txt` to the termninal.
+
+***
 
 </details>
 
@@ -143,7 +149,9 @@ Your answer will depend on your operating system. The answer of `cat.txt`, `grep
 
 `wc` is the bash program that counts things. With the `-l` option, we tell `wc` to count the number of lines. `*.txt` uses the wildcard operator, `*`, to find all files that end in `.txt`, that is, the three files you created in the previous question. So, `wc -l *.txt` counts the number of lines in all files that end in `.txt`. Note, it is implicit in the way this `wc` command is structured that `wc` will only look for matches in the current directory.
 
-We then pipe the output of `wc` to the `sort` command, to have it sort by line number. In the `wc -l *.txt > lines.txt | sort lines.txt` solution, we have an intermediary step of writing the line numbers to a file called `lines.txt`
+We then pipe the output of `wc` to the `sort` command, to have it sort by line number. In the `wc -l *.txt > lines.txt | sort lines.txt` solution, we have an intermediary step of writing the line numbers to a file called `lines.txt`.
+
+***
 
 </details>
 
@@ -168,6 +176,8 @@ Within the `week_2` directory, create a new directory called `user_manuals`. Whi
 `mv` is the bash command to move files from one place to another. It can also be used to rename files if you specify the same location for the output. `mv` is not to be confused with `cp`, `mv` moves files whereas `cp` copies them. The distinction is that with `mv` your file will not exist in it's previous location whereas with `cp` it will.
 
 You can use a wildcard operator to move all files that end in `*.txt` as in the `mv *.txt user_manuals/` solution. Or, you can specify each file manually, as in the `mv grep.txt cat.txt ls.txt user_manuals/` solution.
+
+***
 
 </details>
 
@@ -208,6 +218,8 @@ Add the three files within the `user_manuals` directory: `git add user_manuals/*
 Commit the files: `git commit -m "added grep, cat, and ls manuals`
 
 Check the status of the repository: `git status`
+
+***
 
 </details>
 
