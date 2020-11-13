@@ -45,8 +45,6 @@ Some measures are not taken at every time point
 
 Some people miss appointments
 
-***
-
 </details>
 
 ****
@@ -177,8 +175,6 @@ Within the `week_2` directory, create a new directory called `user_manuals`. Whi
 
 You can use a wildcard operator to move all files that end in `*.txt` as in the `mv *.txt user_manuals/` solution. Or, you can specify each file manually, as in the `mv grep.txt cat.txt ls.txt user_manuals/` solution.
 
-***
-
 </details>
 
 ***
@@ -215,7 +211,7 @@ Initialize the git repository: `git init`
 
 Add the three files within the `user_manuals` directory: `git add user_manuals/*.txt`
 
-Commit the files: `git commit -m "added grep, cat, and ls manuals`
+Commit the files: `git commit -m "added grep, cat, and ls manuals"`
 
 Check the status of the repository: `git status`
 
@@ -231,6 +227,19 @@ Create a branch called “new_feature”. Check the git log. Where is HEAD curre
 - working tree clean
 - new_feature
 - unstaged changes
+
+<details>
+<summary>Click to see answer</summary>
+
+master
+
+**Solution**
+
+Create new branch: `git branch `
+
+***
+
+</details>
 
 **Question 9**
 
