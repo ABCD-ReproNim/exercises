@@ -18,6 +18,12 @@ Genotyping is included in the ABCD tabulated data.
 - True
 - False
 
+<details>
+<summary>Click to see answer</summary>
+**Answer**
+False
+</details>
+
 **Question 2**
 What are some reasons to expect missing data in the ABCD dataset?
 Select all that apply:
@@ -26,6 +32,14 @@ Select all that apply:
 - Different protocols are implemented across different sites
 - Some people miss appointments
 - Sometimes data are deleted just for the fun of it
+
+<details>
+<summary>Click to see answer</summary>
+**Answer**
+Some measures are not taken at every time point
+Some people miss appointments
+</details>
+
 ****
 Let's do a few exercises using the Terminal
 
@@ -40,6 +54,21 @@ Select all that apply:
 - `echo SHELL`
 - `echo $SHELL > shell.txt | cat shell.txt`
 
+<details>
+<summary>Click to see answer</summary>
+**Answer**
+`echo $SHELL`
+`echo $SHELL > shell.txt | cat shell.txt`
+
+**Note**
+`echo $SHELL > shell.txt | cat shell.txt` is an intentionally convuluted and unnecessary solution meant to explain shell concepts.
+
+**Explaination**
+`echo` is the bash shell command that prints the input back to the terminal. `$` is used to call on existing variables in the namespace. `SHELL` is a default environment variable that encodes the type of shell currently running. Thus, `echo $SHELL` will print the contents of the environment variable to the terminal.
+
+`>` is an operator that funnels the output of the preceeding command into a text file rather than to the terminal. `|` is a pipe operator that takes the output of the preceeding command as the input into the next. `cat` is the bash command that prints the contents of a text file to the terminal screen. Thus, `echo $SHELL > shell.txt | cat shell.txt` funnels the output of `echo $SHELL` into a text file called `shell.txt` and then `cat shell.txt` prints the contents of `shell.txt` to the termninal.
+</details>
+
 **Question 4**
 Grep is a bash command used to match patterns and expressions. Using only one line in the terminal, find how many lines contain the word “pattern” in the grep user manual.
 
@@ -50,6 +79,24 @@ Hint: you may need to use pipes.
 - 32
 - 18
 
+<details>
+<summary>Click to see answer</summary>
+**Answer**
+28
+
+**Note**
+Your answer will depend on your operating system. The answer of 28 lines was found using Mac OS 10.14.6.
+
+**Possible solutions**
+- `man grep | grep pattern | wc -l`
+- `man grep | grep -c pattern`
+
+**Explaination**
+`man` is the shell command to see a commands user manual. `grep` is used here in two ways. First we print the user manual of `grep` using `man grep`. Then, that output is piped (using `|`) to the `grep` command and we search for all instances of the string `pattern`. This narrows down the `grep` user manual to only the lines that include `pattern`. We then pipe (using `|`) this output into the `wc` program, which counts various aspects of the input. We us `-l` to tell `wc` that we want to count the number of lines. The second solution, `man grep | grep -c pattern`, leverages the `-c` option in grep, which also counts the number of lines in the matching output.
+
+Note: the usage of `grep pattern` is case-insensitve and can contain the plural, thus `Pattern`, `Patterns`, and `patterns` are also included. 
+</details>
+
 **Question 5**
 Using only commands in the Terminal application, create a directory called `week_2`. Within this directory, save the user manuals of the commands `grep`, `cat`, and `ls` to respective files called `grep.txt`, `cat.txt`, and `ls.txt`. Using one line in the Terminal, sort the contents of these three files by the number of lines they contain, in ascending order. What is this order?
 
@@ -58,6 +105,24 @@ Using only commands in the Terminal application, create a directory called `week
 - `ls.txt`, `cat.txt`, `grep.txt`
 - They all have the same number of lines.
 
+<details>
+<summary>Click to see answer</summary>
+**Answer**
+`cat.txt`, `grep.txt`, `ls.txt`
+
+**Note**
+Your answer will depend on your operating system. The answer of `cat.txt`, `grep.txt`, `ls.txt` was found using Mac OS 10.14.6.
+
+**Possible solutions**
+- `wc -l *.txt | sort`
+- `wc -l *.txt > lines.txt | sort lines.txt`
+
+**Explaination**
+`wc` is the bash program that counts things. With the `-l` option, we tell `wc` to count the number of lines. `*.txt` uses the wildcard operator, `*`, to find all files that end in `.txt`, that is, the three files you created in the previous question. So, `wc -l *.txt` counts the number of lines in all files that end in `.txt`. Note, it is implicit in the way this `wc` command is structured that `wc` will only look for matches in the current directory.
+
+We then pipe the output of `wc` to the `sort` command, to have it sort by line number. In the `wc -l *.txt > lines.txt | sort lines.txt` solution, we have an intermediary step of writing the line numbers to a file called `lines.txt`
+</details>
+
 **Question 6**
 Within the `week_2` directory, create a new directory called `user_manuals`. Which of the following commands will deposit `grep.txt`, `cat.txt`, and `ls.txt` into the `user_manuals` directory and remove them from the parent `week_2` directory? Run this command to deposit the files (if multiple options are true, only run one command).
 
@@ -65,6 +130,18 @@ Within the `week_2` directory, create a new directory called `user_manuals`. Whi
 - `cp grep.txt cat.txt ls.txt user_manuals/`
 - `mv *.txt user_manuals/`
 - `mv grep.txt cat.txt ls.txt user_manuals/`
+
+<details>
+<summary>Click to see answer</summary>
+**Answer**
+`mv *.txt user_manuals/`
+`mv grep.txt cat.txt ls.txt user_manuals/`
+
+**Explaination**
+`mv` is the bash command to move files from one place to another. It can also be used to rename files if you specify the same location for the output. `mv` is not to be confused with `cp`, `mv` moves files whereas `cp` copies them. The distinction is that with `mv` your file will not exist in it's previous location whereas with `cp` it will.
+
+You can use a wildcard operator to move all files that end in `*.txt` as in the `mv *.txt user_manuals/` solution. Or, you can specify each file manually, as in the `mv grep.txt cat.txt ls.txt user_manuals/` solution.
+</details>
 
 ***
 
@@ -87,6 +164,25 @@ After the commit, what is the status of the repository?
 - On branch master. No commits yet. Changes to be committed \<files in user_manuals/>
 - On branch master. Nothing to commit. Working tree clean.
 - On branch user_manuals. No commits yet. Changes to be committed \<files in user_manuals/>
+
+<details>
+<summary>Click to see answer</summary>
+**Answer**
+On branch master. Nothing to commit. Working tree clean.
+
+**Solution**
+Initialize the git repository
+`git init`
+
+Add the three files within the `user_manuals` directory
+`git add user_manuals/*.txt`
+
+Commit the files
+`git commit -m "added grep, cat, and ls manuals`
+
+Check the status of the repository
+`git status`
+</details>
 
 **Question 8**
 Create a branch called “new_feature”. Check the git log. Where is HEAD currently pointing?
