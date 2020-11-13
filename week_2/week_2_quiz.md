@@ -21,7 +21,7 @@ Genotyping is included in the ABCD tabulated data.
 
 <details>
 <summary>Click to see answer</summary>
-False
+- False
 </details>
 
 **Question 2**
@@ -36,8 +36,8 @@ Select all that apply:
 
 <details>
 <summary>Click to see answer</summary>
-Some measures are not taken at every time point
-Some people miss appointments
+- Some measures are not taken at every time point
+- Some people miss appointments
 </details>
 
 ****
@@ -57,8 +57,8 @@ Select all that apply:
 
 <details>
 <summary>Click to see answer</summary>
-`echo $SHELL`
-`echo $SHELL > shell.txt | cat shell.txt`
+- `echo $SHELL`
+- `echo $SHELL > shell.txt | cat shell.txt`
 
 **Note**
 
@@ -84,7 +84,7 @@ Hint: you may need to use pipes.
 
 <details>
 <summary>Click to see answer</summary>
-28
+- 28
 
 **Note**
 
@@ -113,7 +113,7 @@ Using only commands in the Terminal application, create a directory called `week
 
 <details>
 <summary>Click to see answer</summary>
-`cat.txt`, `grep.txt`, `ls.txt`
+- `cat.txt`, `grep.txt`, `ls.txt`
 
 **Note**
 
@@ -142,8 +142,8 @@ Within the `week_2` directory, create a new directory called `user_manuals`. Whi
 
 <details>
 <summary>Click to see answer</summary>
-`mv *.txt user_manuals/`
-`mv grep.txt cat.txt ls.txt user_manuals/`
+- `mv *.txt user_manuals/`
+- `mv grep.txt cat.txt ls.txt user_manuals/`
 
 **Explaination**
 
@@ -177,7 +177,7 @@ After the commit, what is the status of the repository?
 
 <details>
 <summary>Click to see answer</summary>
-On branch master. Nothing to commit. Working tree clean.
+- On branch master. Nothing to commit. Working tree clean.
 
 **Solution**
 
