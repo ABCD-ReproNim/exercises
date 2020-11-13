@@ -21,7 +21,9 @@ Genotyping is included in the ABCD tabulated data.
 
 <details>
 <summary>Click to see answer</summary>
+
 - False
+
 </details>
 
 **Question 2**
@@ -36,8 +38,10 @@ Select all that apply:
 
 <details>
 <summary>Click to see answer</summary>
+
 - Some measures are not taken at every time point
 - Some people miss appointments
+- 
 </details>
 
 ****
