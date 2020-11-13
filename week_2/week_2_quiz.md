@@ -235,7 +235,13 @@ master
 
 **Solution**
 
-Create new branch: `git branch `
+Create new branch: `git branch new_feature`
+
+**Explaination**
+
+`git branch new_feature` creates the branch called `new_feature`, however the `HEAD` is not yet pointed at the `new_feature` branch. The branch has been created, but the `HEAD` is still at the master branch. To move `HEAD` to the `new_feature` branch, you'd use `git checkout new_feature`.
+
+Or, another solution would be to use `git checkout -b new_feature`, which would create the branch and move `HEAD` all in one move.
 
 ***
 
@@ -251,3 +257,22 @@ How many lines does your git log currently have?
 - 11
 - 5
 - 2
+
+<details>
+<summary>Click to see answer</summary>
+
+master
+
+**Solution**
+
+Create new branch: `git branch new_feature`
+
+**Explaination**
+
+`git branch new_feature` creates the branch called `new_feature`, however the `HEAD` is not yet pointed at the `new_feature` branch. The branch has been created, but the `HEAD` is still at the master branch. To move `HEAD` to the `new_feature` branch, you'd use `git checkout new_feature`.
+
+Or, another solution would be to use `git checkout -b new_feature`, which would create the branch and move `HEAD` all in one move.
+
+***
+
+</details>
