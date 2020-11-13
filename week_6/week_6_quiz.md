@@ -79,7 +79,7 @@ How does structured data annotation help the research process? (Select all that 
 After you create an account and log in, click on "MY ACCOUNT" -> "API Keys".
 On the API page, click "Generate an API key", and this should generate an API key.
 Under Project Name, type "abcd-repronim course", and then click update text.
-To make the API key accessible for the next questions, make an evironment variable
+To make the API key accessible for the next questions, make an environment variable
 in a bash terminal by typing:
 
 - `export INTERLEX_API_KEY="YOUR_API_KEY"`
@@ -99,10 +99,10 @@ anyone).
 While we already have a `participants.json` file in `sample_dataset` annotating
 `age`, `sex`, and `handedness`; they do not link to URLs.
 As David Keator mentioned in the lecture, `age` could refer to age at scan, or
-age at first episode of pyschosis, or age at last concussion, or many other
+age at first episode of psychosis, or age at last concussion, or many other
 ambiguous meanings.
 Luckily, `pynidm` can help us annotate `age`, `sex`, and `handedness` to include
-URIs and reduce the ambiguity of the terms.
+URLs and reduce the ambiguity of the terms.
 
 Assuming you are in the `sample_dataset` directory and have `pynidm` installed,
 use the `bidsmri2nidm` command to add URLs to the variables in `participants.json`.
