@@ -101,14 +101,17 @@ Your answer will depend on your operating system. The answer of 28 lines was fou
 
 **Possible solutions**
 
-- `man grep | grep pattern | wc -l`
-- `man grep | grep -c pattern`
+`man grep | grep pattern | wc -l`
+
+`man grep | grep -c pattern`
 
 **Explaination**
 
 `man` is the shell command to see a commands user manual. `grep` is used here in two ways. First we print the user manual of `grep` using `man grep`. Then, that output is piped (using `|`) to the `grep` command and we search for all instances of the string `pattern`. This narrows down the `grep` user manual to only the lines that include `pattern`. We then pipe (using `|`) this output into the `wc` program, which counts various aspects of the input. We us `-l` to tell `wc` that we want to count the number of lines. The second solution, `man grep | grep -c pattern`, leverages the `-c` option in grep, which also counts the number of lines in the matching output.
 
 Note: the usage of `grep pattern` is case-insensitve and can contain the plural, thus `Pattern`, `Patterns`, and `patterns` are also included.
+
+***
 
 </details>
 
@@ -132,8 +135,9 @@ Your answer will depend on your operating system. The answer of `cat.txt`, `grep
 
 **Possible solutions**
 
-- `wc -l *.txt | sort`
-- `wc -l *.txt > lines.txt | sort lines.txt`
+`wc -l *.txt | sort`
+
+`wc -l *.txt > lines.txt | sort lines.txt`
 
 **Explaination**
 
@@ -156,6 +160,7 @@ Within the `week_2` directory, create a new directory called `user_manuals`. Whi
 <summary>Click to see answer</summary>
 
 `mv *.txt user_manuals/`
+
 `mv grep.txt cat.txt ls.txt user_manuals/`
 
 **Explaination**
