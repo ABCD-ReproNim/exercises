@@ -2,11 +2,11 @@
 
 ### Quiz Instructions
 
-In this Week 6 Quiz, we will ask you a few questions about the ABCD substance use assessments and Neuroimaging Data Model (NIDM) semantic markup.
+In this Week 6 Quiz, we will ask you a few questions about the ABCD substance use assessments and the Neuroimaging Data Model (NIDM) semantic markup.
 
 ***
 
-### ABCD (substance use assessments) Questions
+## ABCD (substance use assessments) Questions
 
 **Question 1**
 
@@ -33,7 +33,7 @@ The goals of the ABCD substance use module include the characterization of: (che
 
 **Question 3**
 
-Biospecimens (e.g., saliva, hair, and urine samples) provide a more objective measure of recent substance use and exposure. Biospecimen samples are collected for ALL participants enrolled in the ABCD Study at each in-person visit.
+Biospecimens (e.g., saliva, hair, and urine samples) provide a more objective measure of recent substance use and exposure. Biospecimen samples are collected for **ALL** participants enrolled in the ABCD Study at each in-person visit.
 
 - True
 - False
@@ -56,9 +56,9 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 - False
 
 
-### ReproNim NIDM data questions
+## ReproNim NIDM data questions
 
-#### Prerequisites
+### Prerequisites
 
 1. You have already [forked](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) and [cloned](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository): https://github.com/ABCD-ReproNim/sample_dataset
     - Enrolled students are encouraged to do this on the ABCD-ReproNim JupyterHub.
@@ -77,26 +77,29 @@ How does structured data annotation help the research process? (Select all that 
 
 **Question 7**
 
-[Register for an account at scicrunch](https://scicrunch.org/register?referer=%22%2F%22).
+[Register for an account on scicrunch](https://scicrunch.org/register?referer=%22%2F%22).
 After you create an account and log in, click on "MY ACCOUNT" -> "API Keys".
 On the API page, click "Generate an API key", and this should generate an API key.
-(an API key is a unique identifier used to authenticate a user or a project to get access to a resource, in this
+(An API key is a unique identifier used to authenticate a user or a project to get access to a resource, in this
 case you need authentication to get access to the unique terms and definitions that describe our data, such as `age` and `sex`.)
 Under Project Name, type "abcd-repronim course", and then click update text.
 To make the API key accessible for the next questions, make an environment variable (a variable stored within the shell you’re using)
-in a bash terminal by typing:
+in your terminal by typing:
 
 - `export INTERLEX_API_KEY="YOUR_API_KEY"`
 
-where "YOUR_API_KEY" is replaced with your actual API key.
+where "YOUR_API_KEY" is replaced with your actual API key
+from scicrunch.
+You can see if you were successful by typing `echo $INTERLEX_API_KEY` into your terminal. If you see your
+API key printed in the terminal, you succeeded!
 This step is necessary to get access to Universal Resource Locators (URLs)
 that reference unique terms to disambiguate the measures recorded in our `sample_dataset`.
 Once you have successfully created the API key and created the environment variable
-`INTERLEX_API_KEY` in the terminal, paste the **LAST 4 CHARACTERS**
+`INTERLEX_API_KEY` in your terminal, paste the **LAST 4 CHARACTERS**
 of your API Key as evidence of your success (do not share your entire API-key with
 anyone).
 
-- Enter Text
+- Enter last 4 characters
 
 **Question 8**
 
@@ -172,8 +175,8 @@ Please select an option (1:6) from above:
 - Select 5 to change the query string
 - Please input new search string for CSV column: MOCA     : Montreal Cognitive Assessment
 
-Now you should have a better list of options, select the option labeled
-"Cognitive Assessment Screening Instrument".
+Now you should have a better list of options.
+Select the option labeled "Cognitive Assessment Screening Instrument".
 
 If everything went successfully, the command should gracefully exit and `participants.json`
 should be updated.
@@ -188,11 +191,11 @@ As evidence of successful completion, select the URL associated with MOCA in `pa
 
 **Question 10**
 
-With our dataset annotated, we can now query it.
+With annotations complete, we can query our dataset!
 While it may not be too exciting to only query our dataset, keep in mind this is a tool
-that can query across many datasets, so you can select participants that meet particular
+that can query across many datasets, so you can select participants from a variety of datasets that meet particular
 criteria for your research purposes.
-For this example, we will get the IDs of all Males in this dataset, using the below sparql query:
+In this example query, we will get the IDs of all Males in this dataset, using the sparql query below:
 ```
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -241,8 +244,8 @@ This sparql query is based on [this example query](https://github.com/dbkeator/s
 
 Copy and paste the above code into a file named `male_subj_IDs.sparql`.
 
-Using the nidm.ttl file you created in the previous questions we will query this dataset.
-Which of the below commands will query the dataset?
+Using the `nidm.ttl` file you created in the previous questions we will query this dataset.
+Which of the commands below will run our query on the dataset?
 
 - `pynidm visualize -nl nidm.ttl -q male_subj_IDs.sparql`
 - `pynidm query -nl male_subj_IDs.sparql -q nidm.ttl`
