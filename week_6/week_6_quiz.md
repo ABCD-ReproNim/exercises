@@ -61,8 +61,10 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 #### Prerequisites
 
 1. You have already [forked](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) and [cloned](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository): https://github.com/ABCD-ReproNim/sample_dataset
-2. You have installed [pynidm](https://pynidm.readthedocs.io/en/latest/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our jupyterhub)
-    - [notes on running jupyterhub locally for observer students](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439)
+    - Enrolled students are encouraged to do this on the ABCD-ReproNim JupyterHub.
+    - Observer students will have to do so on their own machines
+2. You have installed [pynidm](https://pynidm.readthedocs.io/en/latest/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our JupyterHub)
+    - [notes on running JupyterHub locally for observer students](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439)
 
 **Question 6**
 
@@ -78,15 +80,17 @@ How does structured data annotation help the research process? (Select all that 
 [Register for an account at scicrunch](https://scicrunch.org/register?referer=%22%2F%22).
 After you create an account and log in, click on "MY ACCOUNT" -> "API Keys".
 On the API page, click "Generate an API key", and this should generate an API key.
+(an API key is a unique identifier used to authenticate a user or a project to get access to a resource, in this
+case you need authentication to get access to the unique terms and definitions that describe our data, such as `age` and `sex`.)
 Under Project Name, type "abcd-repronim course", and then click update text.
-To make the API key accessible for the next questions, make an environment variable
+To make the API key accessible for the next questions, make an environment variable (a variable stored within the shell you’re using)
 in a bash terminal by typing:
 
 - `export INTERLEX_API_KEY="YOUR_API_KEY"`
 
 where "YOUR_API_KEY" is replaced with your actual API key.
 This step is necessary to get access to Universal Resource Locators (URLs)
-to disambiguate the measures recorded in our `sample_dataset`.
+that reference unique terms to disambiguate the measures recorded in our `sample_dataset`.
 Once you have successfully created the API key and created the environment variable
 `INTERLEX_API_KEY` in the terminal, paste the **LAST 4 CHARACTERS**
 of your API Key as evidence of your success (do not share your entire API-key with
@@ -96,9 +100,12 @@ anyone).
 
 **Question 8**
 
+We will be working within BIDS formatted files for the following questions. You can read more about what BIDS is [here](https://github.com/bids-standard/bids-starter-kit/wiki/The-BIDS-folder-hierarchy) and how metadata (e.g. the “.tsv” and “.json” files we’ll be referencing in this question) are stored in BIDS format [here](https://github.com/bids-standard/bids-starter-kit/wiki/Metadata-file-formats).
+
+
 While we already have a `participants.json` file in `sample_dataset` annotating
 `age`, `sex`, and `handedness`; they do not link to URLs.
-As David Keator mentioned in the lecture, `age` could refer to age at scan, or
+As Dr. David Keator mentioned in his lecture, `age` could refer to age at scan, or
 age at first episode of psychosis, or age at last concussion, or many other
 ambiguous meanings.
 Luckily, `pynidm` can help us annotate `age`, `sex`, and `handedness` to include
@@ -116,10 +123,10 @@ Which of the following `bidsmri2nidm` commands below will annotate this dataset 
 output a `nidm.ttl` file? (assuming you are in
 the `sample_dataset` directory)
 
- - `bidsmri2nidm -d nidm.ttl -o ${PWD} -bidsignore`
+- `bidsmri2nidm -d nidm.ttl -o ${PWD} -bidsignore`
 - `bidsmri2nidm -d ${PWD} -o nidm.ttl -bidsignore`
- - `bidsmri2nidm -o ${PWD} -bidsignore`
- - `bidsmri2nidm -d ${PWD} -bidsignore`
+- `bidsmri2nidm -o ${PWD} -bidsignore`
+- `bidsmri2nidm -d ${PWD} -bidsignore`
 
 **Question 9**
 
