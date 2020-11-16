@@ -221,7 +221,7 @@ Check the status of the repository: `git status`
 
 **Question 8**
 
-Create a branch called “new_feature”. Check the git log. Where is HEAD currently pointing?
+Using `git branch`, create a branch called “new_feature”. Check the git log. Where is HEAD currently pointing?
 
 - master
 - working tree clean
@@ -237,11 +237,13 @@ master
 
 Create new branch: `git branch new_feature`
 
+Check the status `git status` and see that you're still on the master branch.
+
 **Explaination**
 
 `git branch new_feature` creates the branch called `new_feature`, however the `HEAD` is not yet pointed at the `new_feature` branch. The branch has been created, but the `HEAD` is still at the master branch. To move `HEAD` to the `new_feature` branch, you'd use `git checkout new_feature`.
 
-Or, another solution would be to use `git checkout -b new_feature`, which would create the branch and move `HEAD` all in one move.
+Or, a related solution would be to use `git checkout -b new_feature`, which would create the branch and move `HEAD` all in one move.
 
 ***
 
@@ -261,17 +263,33 @@ How many lines does your git log currently have?
 <details>
 <summary>Click to see answer</summary>
 
-master
+5
 
 **Solution**
 
-Create new branch: `git branch new_feature`
+Checkout `new_feature`: `git checkout new_feature`
 
-**Explaination**
+Create new file: `echo code for new feature > awesome_feature.txt`
 
-`git branch new_feature` creates the branch called `new_feature`, however the `HEAD` is not yet pointed at the `new_feature` branch. The branch has been created, but the `HEAD` is still at the master branch. To move `HEAD` to the `new_feature` branch, you'd use `git checkout new_feature`.
+Add to staging area: `git add awesome_feature.txt`
 
-Or, another solution would be to use `git checkout -b new_feature`, which would create the branch and move `HEAD` all in one move.
+Commit: `git commit -m "adding awesome feature`
+
+Checkout master: `git checkout master`
+
+View log: `git log`
+
+Count number of lines in log: `git log | wc -l`
+
+Your log should look something like (with a different commit ID):
+
+```
+commit 63a47a48c7673f87b7c8ab463fa766dee3b485e7 (HEAD -> master)
+Author: user.name <user.email>
+Date:   DATE
+
+    added grep, cat, and ls manuals
+```
 
 ***
 
