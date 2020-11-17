@@ -191,7 +191,7 @@ Initialize a git repository within the `week_2` directory. Add the three files w
 
 Hint: you do not need to add each file separately.
 
-After adding the three files, commit the files and tag the commit with a message of “added grep, cat, and ls manuals”.
+After adding the three files, commit the files and tag the commit with a message of “add grep, cat, and ls manuals”.
 
 After the commit, what is the status of the repository?
 
@@ -211,7 +211,7 @@ Initialize the git repository: `git init`
 
 Add the three files within the `user_manuals` directory: `git add user_manuals/*.txt`
 
-Commit the files: `git commit -m "added grep, cat, and ls manuals"`
+Commit the files: `git commit -m "add grep, cat, and ls manuals"`
 
 Check the status of the repository: `git status`
 
@@ -251,7 +251,7 @@ Or, a related solution would be to use `git checkout -b new_feature`, which woul
 
 **Question 9**
 
-Checkout the new_feature branch. Using the Terminal, add the line of text “code for new feature” to a new file called `awesome_feature.txt`. Add `awesome_feature.txt` to the staging area and commit using the message “adding awesome feature”. Using git checkout, switch back to the master branch. Using commands in the Terminal.
+Checkout the new_feature branch. Using the Terminal, add the line of text “code for new feature” to a new file called `awesome_feature.txt`. Add `awesome_feature.txt` to the staging area and commit using the message “add awesome feature”. Using git checkout, switch back to the master branch. Using commands in the Terminal.
 
 How many lines does your git log currently have?
 
@@ -273,7 +273,7 @@ Create new file: `echo code for new feature > awesome_feature.txt`
 
 Add to staging area: `git add awesome_feature.txt`
 
-Commit: `git commit -m "adding awesome feature`
+Commit: `git commit -m "add awesome feature`
 
 Checkout master: `git checkout master`
 
@@ -288,7 +288,7 @@ commit 63a47a48c7673f87b7c8ab463fa766dee3b485e7 (HEAD -> master)
 Author: user.name <user.email>
 Date:   DATE
 
-    added grep, cat, and ls manuals
+    add grep, cat, and ls manuals
 ```
 
 ***
