@@ -71,13 +71,13 @@ Select all that apply:
 
 **Note**
 
-`echo $SHELL > shell.txt | cat shell.txt` is an intentionally convuluted and unnecessary solution meant to explain shell concepts.
+`echo $SHELL > shell.txt | cat shell.txt` is an intentionally convoluted and unnecessary solution meant to explain shell concepts.
 
-**Explaination**
+**Explanation**
 
 `echo` is the bash shell command that prints the input back to the terminal. `$` is used to call on existing variables in the namespace. `SHELL` is a default environment variable that encodes the type of shell currently running. Thus, `echo $SHELL` will print the contents of the environment variable to the terminal.
 
-`>` is an operator that funnels the output of the preceeding command into a text file rather than to the terminal. `|` is a pipe operator that takes the output of the preceeding command as the input into the next. `cat` is the bash command that prints the contents of a text file to the terminal screen. Thus, `echo $SHELL > shell.txt | cat shell.txt` funnels the output of `echo $SHELL` into a text file called `shell.txt` and then `cat shell.txt` prints the contents of `shell.txt` to the termninal.
+`>` is an operator that funnels the output of the preceding command into a text file rather than to the terminal. `|` is a pipe operator that takes the output of the preceding command as the input into the next. `cat` is the bash command that prints the contents of a text file to the terminal screen. Thus, `echo $SHELL > shell.txt | cat shell.txt` funnels the output of `echo $SHELL` into a text file called `shell.txt` and then `cat shell.txt` prints the contents of `shell.txt` to the terminal.
 
 ***
 
@@ -113,7 +113,7 @@ Your answer will depend on your operating system. The answer of 28 lines was fou
 
 `man` is the shell command to see a commands user manual. `grep` is used here in two ways. First we print the user manual of `grep` using `man grep`. Then, that output is piped (using `|`) to the `grep` command and we search for all instances of the string `pattern`. This narrows down the `grep` user manual to only the lines that include `pattern`. We then pipe (using `|`) this output into the `wc` program, which counts various aspects of the input. We us `-l` to tell `wc` that we want to count the number of lines. The second solution, `man grep | grep -c pattern`, leverages the `-c` option in grep, which also counts the number of lines in the matching output.
 
-Note: the usage of `grep pattern` is case-insensitve and can contain the plural, thus `Pattern`, `Patterns`, and `patterns` are also included.
+Note: the usage of `grep pattern` is case-insensitive and can contain the plural, thus `Pattern`, `Patterns`, and `patterns` are also included.
 
 ***
 
@@ -143,7 +143,7 @@ Your answer will depend on your operating system. The answer of `cat.txt`, `grep
 
 `wc -l *.txt > lines.txt | sort lines.txt`
 
-**Explaination**
+**Explanation**
 
 `wc` is the bash program that counts things. With the `-l` option, we tell `wc` to count the number of lines. `*.txt` uses the wildcard operator, `*`, to find all files that end in `.txt`, that is, the three files you created in the previous question. So, `wc -l *.txt` counts the number of lines in all files that end in `.txt`. Note, it is implicit in the way this `wc` command is structured that `wc` will only look for matches in the current directory.
 
@@ -169,7 +169,7 @@ Within the `week_2` directory, create a new directory called `user_manuals`. Whi
 
 `mv grep.txt cat.txt ls.txt user_manuals/`
 
-**Explaination**
+**Explanation**
 
 `mv` is the bash command to move files from one place to another. It can also be used to rename files if you specify the same location for the output. `mv` is not to be confused with `cp`, `mv` moves files whereas `cp` copies them. The distinction is that with `mv` your file will not exist in it's previous location whereas with `cp` it will.
 
@@ -239,7 +239,7 @@ Create new branch: `git branch new_feature`
 
 Check the status `git status` and see that you're still on the master branch.
 
-**Explaination**
+**Explanation**
 
 `git branch new_feature` creates the branch called `new_feature`, however the `HEAD` is not yet pointed at the `new_feature` branch. The branch has been created, but the `HEAD` is still at the master branch. To move `HEAD` to the `new_feature` branch, you'd use `git checkout new_feature`.
 
