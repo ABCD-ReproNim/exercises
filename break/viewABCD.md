@@ -19,7 +19,6 @@ import numpy as np
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
-import plotly.express as px
 
 import os
 from pathlib import Path
@@ -31,8 +30,13 @@ import requests
 
 ### Gather all the data elements from all the txt files
 
+The ABCD3 folder contains a number of tab-delimited text files with ABCD data.
+We will collect all of these files and then load them into pandas DataFrames
+to compile and access the data.
+
 ```python
-files = sorted(glob("/home/jovyan/ABCD3/*.txt"))
+data_path = Path("/home/jovyan/ABCD3")
+files = sorted(data_path.glob("*.txt"))
 ```
 
 ```python
