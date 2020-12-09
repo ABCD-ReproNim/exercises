@@ -189,7 +189,6 @@ CC-BY
 
 </details>
 
-***
 For the next questions, you’ll need the following sample dataset repository: https://github.com/ABCD-ReproNim/sample_dataset
 
 To get set up, complete the following steps:
