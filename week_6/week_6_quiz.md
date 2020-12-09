@@ -78,7 +78,10 @@ How does structured data annotation help the research process? (Select all that 
 <details>
 <summary>Click to see answer</summary>
 
-All of the above
+- [x] Can make filtering information within and between datasets easier
+- [x] Can reduce ambiguity about the measures recorded in a dataset
+- [x] Can give a better understanding about how data were acquired and processed
+- [x] Can help generate research hypotheses
 
 ***
 
@@ -154,6 +157,42 @@ the `sample_dataset` directory)
 <summary>Click to see answer</summary>
 
 `bidsmri2nidm -d ${PWD} -o nidm.ttl -bidsignore`
+
+**Explanation**
+- `bidsmri2nidm -d nidm.ttl -o ${PWD} -bidsignore`
+    - `-d` represents the directory and `-o` represents
+      the output file name, so the arguments are flipped.
+    - `bidsmri2nidm -o ${PWD} -bidsignore`
+        - missing the `-d` flag
+    - `bidsmri2nidm -d ${PWD} -bidsignore`
+        - missing the `-o` flag
+- Here is the output of `bidsmri2nidm --help`
+```
+    usage: bidsmri2nidm [-h] -d DIRECTORY [-jsonld] [-bidsignore] [-no_concepts] [-json_map JSON_MAP] [-log LOGFILE] [-o OUTPUTFILE]
+
+    This program will represent a BIDS MRI dataset as a NIDM RDF document and provide user with opportunity to annotate
+    the dataset (i.e. create sidecar files) and associate selected variables with broader concepts to make datasets more
+    FAIR. 
+
+    Note, you must obtain an API key to Interlex by signing up for an account at scicrunch.org then going to My Account
+    and API Keys.  Then set the environment variable INTERLEX_API_KEY with your key. 
+
+    optional arguments:
+    -h, --help            show this help message and exit
+    -d DIRECTORY          Full path to BIDS dataset directory
+    -jsonld, --jsonld     If flag set, output is json-ld not TURTLE
+    -bidsignore, --bidsignore
+                            If flag set, tool will add NIDM-related files to .bidsignore file
+    -no_concepts, --no_concepts
+                            If flag set, tool will no do concept mapping
+    -log LOGFILE, --log LOGFILE
+                            Full path to directory to save log file. Log file name is bidsmri2nidm_[basename(args.directory)].log
+    -o OUTPUTFILE         Outputs turtle file called nidm.ttl in BIDS directory by default..or whatever path/filename is set here
+
+    map variables to terms arguments:
+    -json_map JSON_MAP, --json_map JSON_MAP
+                            Optional full path to user-suppled JSON file containing variable-term mappings.
+```
 
 ***
 
@@ -300,6 +339,63 @@ If all goes well you should see this output:
 <summary>Click to see answer</summary>
 
 `pynidm query -nl nidm.ttl -q male_subj_IDs.sparql`
+
+**Explanation**
+Here is the output from `pynidm query --help`:
+```
+Usage: pynidm query [OPTIONS]
+
+  This function provides query support for NIDM graphs.
+
+Options:
+  -nl, --nidm_file_list TEXT      A comma separated list of NIDM files with
+                                  full path  [required]
+
+  -nc, --cde_file_list TEXT       A comma separated list of NIDM CDE files
+                                  with full path. Can also be set in the
+                                  CDE_DIR environment variable
+
+  Query Type: [mutually_exclusive, required]
+                                  Pick among the following query type
+                                  selections
+
+    -q, --query_file FILENAME     Text file containing a SPARQL query to
+                                  execute
+
+    -p, --get_participants        Parameter, if set, query will return
+                                  participant IDs and prov:agent entity IDs
+
+    -i, --get_instruments         Parameter, if set, query will return list of
+                                  onli:assessment-instrument:
+
+    -iv, --get_instrument_vars    Parameter, if set, query will return list of
+                                  onli:assessment-instrument: variables
+
+    -de, --get_dataelements       Parameter, if set, will return all
+                                  DataElements in NIDM file
+
+    -debv, --get_dataelements_brainvols
+                                  Parameter, if set, will return all brain
+                                  volume DataElements in NIDM file along with
+                                  details
+
+    -bv, --get_brainvols          Parameter, if set, will return all brain
+                                  volume data elements and values along with
+                                  participant IDs in NIDM file
+
+    -gf, --get_fields TEXT        This parameter will return data for only the
+                                  field names in the comma separated list
+                                  (e.g. -gf age,fs_00003) from all nidm files
+                                  supplied
+
+    -u, --uri TEXT                A REST API URI query
+  -o, --output_file TEXT          Optional output file (CSV) to store results
+                                  of query
+
+  -j / -no_j                      Return result of a uri query as JSON
+  -v, --verbosity TEXT            Verbosity level 0-5, 0 is default
+  --help                          Show this message and exit.
+  ```
 
 ***
 
