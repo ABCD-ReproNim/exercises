@@ -131,7 +131,7 @@ DOIs are resolvable
 
 The object's URL may change, though it is the responsibility of the object's host to report that the URL has changed so that the **globally unique** DOI can remain **persistent** and  **resolve** to the appropriate URL.
 
-Object hosts (e.g., Openneuro.org) can give object's accession numbers, but these are not associated directly with the DOI and are not guaranteed to be globally unique and/or persistent.
+Object hosts (e.g., Openneuro.org) can give objects accession numbers, but these are not associated directly with the DOI and are not guaranteed to be globally unique and/or persistent.
 
 ***
 
