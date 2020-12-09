@@ -75,6 +75,15 @@ How does structured data annotation help the research process? (Select all that 
 - [ ] Can give a better understanding about how data were acquired and processed
 - [ ] Can help generate research hypotheses
 
+<details>
+<summary>Click to see answer</summary>
+
+All of the above
+
+***
+
+</details>
+
 **Question 7**
 
 [Register for an account on scicrunch](https://scicrunch.org/register?referer=%22%2F%22).
@@ -100,6 +109,16 @@ of your API Key as evidence of your success (do not share your entire API-key wi
 anyone).
 
 - Enter last 4 characters
+
+<details>
+<summary>Click to see answer</summary>
+
+Everyone's answer will be different,
+example: `ah87`
+
+***
+
+</details>
 
 **Question 8**
 
@@ -130,6 +149,15 @@ the `sample_dataset` directory)
 - `bidsmri2nidm -d ${PWD} -o nidm.ttl -bidsignore`
 - `bidsmri2nidm -o ${PWD} -bidsignore`
 - `bidsmri2nidm -d ${PWD} -bidsignore`
+
+<details>
+<summary>Click to see answer</summary>
+
+`bidsmri2nidm -d ${PWD} -o nidm.ttl -bidsignore`
+
+***
+
+</details>
 
 **Question 9**
 
@@ -188,6 +216,14 @@ As evidence of successful completion, select the URL associated with MOCA in `pa
 - http://id.nlm.nih.gov/mesh/2018/M0446358
 - http://uri.interlex.org/base/ilx_0102339
 
+<details>
+<summary>Click to see answer</summary>
+
+http://id.nlm.nih.gov/mesh/2018/M000620928
+
+***
+
+</details>
 
 **Question 10**
 
@@ -259,3 +295,12 @@ If all goes well you should see this output:
 0  sub-03   M
 1  sub-04   M
 ```
+
+<details>
+<summary>Click to see answer</summary>
+
+`pynidm query -nl nidm.ttl -q male_subj_IDs.sparql`
+
+***
+
+</details>
