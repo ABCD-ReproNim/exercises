@@ -18,6 +18,15 @@ In this Week 5 Quiz, we will ask you a few questions about the ABCD neurocogniti
  - [ ] The tasks cover multiple domains
  - [ ] All the above
 
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+***
+
+</details>
+
 **Question 2**
 
 This lecture covered the results of Thompson et al. (2019) wherein principal component analysis was applied to 12 neurocognitive assessments. Based on this study, what were the main principal components underlying the different tasks administered to participants at baseline? Select all that apply.
@@ -26,6 +35,19 @@ This lecture covered the results of Thompson et al. (2019) wherein principal com
 - [ ] General cognitive ability
 - [ ] Executive function
 - [ ] Learning and memory
+
+<details>
+<summary>Click to see answer</summary>
+
+General cognitive ability
+
+Executive function
+
+Learning and memory
+
+***
+
+</details>
 
 **Question 3**
 
@@ -36,6 +58,17 @@ Which of these tasks are only offered at one timepoint? Select all that apply.
 - [ ] Stanford Mental Arithmetic Response Time Eval
 - [ ] Dimensional Change Card Sort
 
+<details>
+<summary>Click to see answer</summary>
+
+Stanford Mental Arithmetic Response Time Eval
+
+Dimensional Change Card Sort
+
+***
+
+</details>
+
 **Question 4**
 
 Which of these are true of the Cash Choice and Delay Discounting tasks? Select all that apply.
@@ -44,14 +77,34 @@ Which of these are true of the Cash Choice and Delay Discounting tasks? Select a
 - [ ] Both of these tasks are administered at each timepoint
 - [ ] The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable
 
+<details>
+<summary>Click to see answer</summary>
+
+A strong association has been reported between temporal delay and substance use
+
+The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable
+
+***
+
+</details>
+
 **Question 5**
 
 Which of these are methodological considerations associated with the ABCD study design? 
 
-- Environmental exposures might change the developmental trajectory
-- Alternate forms of tests must be administered to account for potential practice effects
-- Overlapping assessments of youngest and oldest subjects
-- All the above
+- [ ] Environmental exposures might change the developmental trajectory
+- [ ] Alternate forms of tests must be administered to account for potential practice effects
+- [ ] Overlapping assessments of youngest and oldest subjects
+- [ ] All the above
+
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+***
+
+</details>
 
 ### ReproNim FAIR data questions
 
