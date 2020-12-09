@@ -17,6 +17,23 @@ The ABCD sample is representative of youth in the United States.
 - True
 - False
 
+<details>
+<summary>Click to see answer</summary>
+
+False
+
+#### explanation:
+- Due to the urban location of the sites and the self-selection of participants,
+  the sample cannot be considered representative.
+  Additionally, hidden unmeasured variables may influence development and are
+  not being accounted for.
+    - sources:
+        - https://youtu.be/pvbRt5SntE8?t=2291
+        - https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0015
+***
+
+</details>
+
 **Question 2**
 
 What was the primary method of recruitment for single birth children?
@@ -26,6 +43,21 @@ What was the primary method of recruitment for single birth children?
 - Schools
 - Summer camps
 
+<details>
+<summary>Click to see answer</summary>
+
+Schools
+
+#### explanation:
+- most 9-10 year olds are enrolled in school
+    - sources
+        - https://youtu.be/pvbRt5SntE8?t=1167
+        - https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0025
+
+***
+
+</details>
+
 **Question 3**
 
 What was the primary method of recruitment for twins?
@@ -34,6 +66,21 @@ What was the primary method of recruitment for twins?
 - Mailing lists
 - Schools
 - Summer camps
+
+<details>
+<summary>Click to see answer</summary>
+
+Birth registries
+
+#### explanation:
+- twins are relatively rare requiring a more targeted strategy
+  through birth registries.
+    - sources
+        - https://youtu.be/pvbRt5SntE8?t=1380
+        - https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0055
+***
+
+</details>
 
 **Question 4**
 
@@ -45,6 +92,22 @@ What are two sources of sample bias the ABCD recruitment strategy could not acco
 - Urbanicity & Sex
 - Self-Selection & Socio-Economic Status
 
+<details>
+<summary>Click to see answer</summary>
+
+Urbanicity & Self-Selection
+
+#### explanation:
+- self-selection
+    - "it is well understood that self-selection by families into the study will likely be a major and unavoidable source of sampling bias" (Garavan et al. 2018).
+    - source: https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0025
+- urbanicity
+    - Most imaging centers are located in urban areas.
+    - source: https://youtu.be/pvbRt5SntE8?t=842
+***
+
+</details>
+
 **Question 5**
 
 How has the sociodemographic bias in missing assessments changed after the beginning of the COVID pandemic?
@@ -52,6 +115,20 @@ How has the sociodemographic bias in missing assessments changed after the begin
 - Increased
 - Stayed the same
 - Decreased
+
+<details>
+<summary>Click to see answer</summary>
+
+Decreased
+
+#### explanation:
+- it appears removing the burden of coming to lab reduces the
+  sociodemographic bias.
+- source: https://youtu.be/pvbRt5SntE8?t=3083
+
+***
+
+</details>
 
 ### ReproNim (Containers) Questions
 
