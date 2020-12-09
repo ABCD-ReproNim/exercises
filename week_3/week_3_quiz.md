@@ -22,7 +22,7 @@ The ABCD sample is representative of youth in the United States.
 
 False
 
-#### explanation:
+**Explanation**
 - Due to the urban location of the sites and the self-selection of participants,
   the sample cannot be considered representative.
   Additionally, hidden unmeasured variables may influence development and are
@@ -48,7 +48,7 @@ What was the primary method of recruitment for single birth children?
 
 Schools
 
-#### explanation:
+**Explanation**
 - most 9-10 year olds are enrolled in school
     - sources
         - https://youtu.be/pvbRt5SntE8?t=1167
@@ -72,7 +72,7 @@ What was the primary method of recruitment for twins?
 
 Birth registries
 
-#### explanation:
+**Explanation**
 - twins are relatively rare requiring a more targeted strategy
   through birth registries.
     - sources
@@ -97,7 +97,7 @@ What are two sources of sample bias the ABCD recruitment strategy could not acco
 
 Urbanicity & Self-Selection
 
-#### explanation:
+**Explanation**
 - self-selection
     - "it is well understood that self-selection by families into the study will likely be a major and unavoidable source of sampling bias" (Garavan et al. 2018).
     - source: https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0025
@@ -121,7 +121,7 @@ How has the sociodemographic bias in missing assessments changed after the begin
 
 Decreased
 
-#### explanation:
+**Explanation**
 - it appears removing the burden of coming to lab reduces the
   sociodemographic bias.
 - source: https://youtu.be/pvbRt5SntE8?t=3083
