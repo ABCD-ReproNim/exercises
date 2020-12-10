@@ -78,10 +78,10 @@ How does structured data annotation help the research process? (Select all that 
 <details>
 <summary>Click to see answer</summary>
 
-- [x] Can make filtering information within and between datasets easier
-- [x] Can reduce ambiguity about the measures recorded in a dataset
-- [x] Can give a better understanding about how data were acquired and processed
-- [x] Can help generate research hypotheses
+- Can make filtering information within and between datasets easier
+- Can reduce ambiguity about the measures recorded in a dataset
+- Can give a better understanding about how data were acquired and processed
+- Can help generate research hypotheses
 
 ***
 
