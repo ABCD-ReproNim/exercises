@@ -75,6 +75,18 @@ How does structured data annotation help the research process? (Select all that 
 - [ ] Can give a better understanding about how data were acquired and processed
 - [ ] Can help generate research hypotheses
 
+<details>
+<summary>Click to see answer</summary>
+
+- Can make filtering information within and between datasets easier
+- Can reduce ambiguity about the measures recorded in a dataset
+- Can give a better understanding about how data were acquired and processed
+- Can help generate research hypotheses
+
+***
+
+</details>
+
 **Question 7**
 
 [Register for an account on scicrunch](https://scicrunch.org/register?referer=%22%2F%22).
@@ -100,6 +112,16 @@ of your API Key as evidence of your success (do not share your entire API-key wi
 anyone).
 
 - Enter last 4 characters
+
+<details>
+<summary>Click to see answer</summary>
+
+Everyone's answer will be different,
+example: `ah87`
+
+***
+
+</details>
 
 **Question 8**
 
@@ -130,6 +152,51 @@ the `sample_dataset` directory)
 - `bidsmri2nidm -d ${PWD} -o nidm.ttl -bidsignore`
 - `bidsmri2nidm -o ${PWD} -bidsignore`
 - `bidsmri2nidm -d ${PWD} -bidsignore`
+
+<details>
+<summary>Click to see answer</summary>
+
+`bidsmri2nidm -d ${PWD} -o nidm.ttl -bidsignore`
+
+**Explanation**
+- `bidsmri2nidm -d nidm.ttl -o ${PWD} -bidsignore`
+    - `-d` represents the directory and `-o` represents
+      the output file name, so the arguments are flipped.
+    - `bidsmri2nidm -o ${PWD} -bidsignore`
+        - missing the `-d` flag
+    - `bidsmri2nidm -d ${PWD} -bidsignore`
+        - missing the `-o` flag
+- Here is the output of `bidsmri2nidm --help`
+```
+    usage: bidsmri2nidm [-h] -d DIRECTORY [-jsonld] [-bidsignore] [-no_concepts] [-json_map JSON_MAP] [-log LOGFILE] [-o OUTPUTFILE]
+
+    This program will represent a BIDS MRI dataset as a NIDM RDF document and provide user with opportunity to annotate
+    the dataset (i.e. create sidecar files) and associate selected variables with broader concepts to make datasets more
+    FAIR. 
+
+    Note, you must obtain an API key to Interlex by signing up for an account at scicrunch.org then going to My Account
+    and API Keys.  Then set the environment variable INTERLEX_API_KEY with your key. 
+
+    optional arguments:
+    -h, --help            show this help message and exit
+    -d DIRECTORY          Full path to BIDS dataset directory
+    -jsonld, --jsonld     If flag set, output is json-ld not TURTLE
+    -bidsignore, --bidsignore
+                            If flag set, tool will add NIDM-related files to .bidsignore file
+    -no_concepts, --no_concepts
+                            If flag set, tool will no do concept mapping
+    -log LOGFILE, --log LOGFILE
+                            Full path to directory to save log file. Log file name is bidsmri2nidm_[basename(args.directory)].log
+    -o OUTPUTFILE         Outputs turtle file called nidm.ttl in BIDS directory by default..or whatever path/filename is set here
+
+    map variables to terms arguments:
+    -json_map JSON_MAP, --json_map JSON_MAP
+                            Optional full path to user-suppled JSON file containing variable-term mappings.
+```
+
+***
+
+</details>
 
 **Question 9**
 
@@ -188,6 +255,14 @@ As evidence of successful completion, select the URL associated with MOCA in `pa
 - http://id.nlm.nih.gov/mesh/2018/M0446358
 - http://uri.interlex.org/base/ilx_0102339
 
+<details>
+<summary>Click to see answer</summary>
+
+http://id.nlm.nih.gov/mesh/2018/M000620928
+
+***
+
+</details>
 
 **Question 10**
 
@@ -259,3 +334,69 @@ If all goes well you should see this output:
 0  sub-03   M
 1  sub-04   M
 ```
+
+<details>
+<summary>Click to see answer</summary>
+
+`pynidm query -nl nidm.ttl -q male_subj_IDs.sparql`
+
+**Explanation**
+Here is the output from `pynidm query --help`:
+```
+Usage: pynidm query [OPTIONS]
+
+  This function provides query support for NIDM graphs.
+
+Options:
+  -nl, --nidm_file_list TEXT      A comma separated list of NIDM files with
+                                  full path  [required]
+
+  -nc, --cde_file_list TEXT       A comma separated list of NIDM CDE files
+                                  with full path. Can also be set in the
+                                  CDE_DIR environment variable
+
+  Query Type: [mutually_exclusive, required]
+                                  Pick among the following query type
+                                  selections
+
+    -q, --query_file FILENAME     Text file containing a SPARQL query to
+                                  execute
+
+    -p, --get_participants        Parameter, if set, query will return
+                                  participant IDs and prov:agent entity IDs
+
+    -i, --get_instruments         Parameter, if set, query will return list of
+                                  onli:assessment-instrument:
+
+    -iv, --get_instrument_vars    Parameter, if set, query will return list of
+                                  onli:assessment-instrument: variables
+
+    -de, --get_dataelements       Parameter, if set, will return all
+                                  DataElements in NIDM file
+
+    -debv, --get_dataelements_brainvols
+                                  Parameter, if set, will return all brain
+                                  volume DataElements in NIDM file along with
+                                  details
+
+    -bv, --get_brainvols          Parameter, if set, will return all brain
+                                  volume data elements and values along with
+                                  participant IDs in NIDM file
+
+    -gf, --get_fields TEXT        This parameter will return data for only the
+                                  field names in the comma separated list
+                                  (e.g. -gf age,fs_00003) from all nidm files
+                                  supplied
+
+    -u, --uri TEXT                A REST API URI query
+  -o, --output_file TEXT          Optional output file (CSV) to store results
+                                  of query
+
+  -j / -no_j                      Return result of a uri query as JSON
+  -v, --verbosity TEXT            Verbosity level 0-5, 0 is default
+  --help                          Show this message and exit.
+  ```
+
+***
+
+</details>
