@@ -202,7 +202,7 @@ the value returned for `n` is the sample size for one of the groups.
 NOTE: n is number in *each* group
 ```
 
-Note: In R the `pwr` the library can be used in much the same way that the `tt_ind_solve_power` from `statsmodels` is used. 
+Note: In R the `pwr` library can be used in much the same way that the `stats.power` submodule from `statsmodels` is used. 
 
 *** 
 </details>
@@ -224,4 +224,3 @@ All the above
 
 *** 
 </details>
-
