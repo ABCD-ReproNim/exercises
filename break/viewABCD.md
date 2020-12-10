@@ -18,7 +18,7 @@ This notebook walks you through reading, filtering, and
 visualizing ABCD data you downloaded in the previous step.
 After this notebook is run you should be able to:
 1. read data from a text file into python using pandas
-1. select data using control flow methods (if statements and for loops)
+1. select data using control flow (if statements and for loops)
 1. filter data using pandas DataFrame methods.
 1. store data in python data structures (lists, dictionaries, sets, and tuples)
 1. write data to a file for future analysis using pandas
@@ -322,10 +322,13 @@ Check that each participant has one and only one observation.
 all_df.shape, all_df.subjectkey.unique().shape
 ```
 
+See the duplicated entries.
 ```python
 all_df[all_df.duplicated('subjectkey', keep=False)]
 ```
 
+If duplicated entries have `n/a`'s, drop those rows,
+then each participant should have one and only one observation.
 ```python
 all_df = all_df.dropna()
 all_df.shape, all_df.subjectkey.unique().shape
@@ -357,6 +360,7 @@ for each column.
 ```python
 subset_df.describe(include="all")
 ```
+
 #### Write the subset_df to a file named "my_dataset.tsv"
 <details>
 <summary>Hint</summary>
@@ -369,7 +373,9 @@ Look earlier in the notebook on how the `.to_csv` method was used.
 ### Display a linear regression between two variables for two groups
 After filtering and subsetting our data, a common next step is to visualize
 our variables of interest.
-Change the names below to match your research question of interest
+
+Choose a brain imaging variable and a clinical variable that are both continuous. Now plot a relation between these two variables grouped by sex of the participants.
+
 ```python
 # Make a custom palette with gendered colors
 # Note: this is equivalent to {"M": "#6495ED", "F": "#F08080"}
@@ -382,11 +388,20 @@ g = sns.lmplot(x='pps_y_ss_severity_score', y='smri_vol_cdk_total', col="sex", h
 
 ### Display relations between 4 variables color coded by a categorical variable
 
+Choose sex as your group variable and one variable from each of the four categories
+(demographic, clinical, behavioral, imaging)
+
 ```python
 sns.pairplot(subset_df, hue="sex", vars=["anthroweightcalc", 'ksads_1_2_t', 'prosocial_q2_y', "smri_vol_scs_amygdalalh"]);
 ```
 
 ### Create an interactive plot that allows viewing many variables
+
+Can you plot all 20 variables simultaneously?
+([pandas.plotting.parallel_coordinates — pandas 1.1.4 documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.parallel_coordinates.html))
+For an interactive plot you can use plotly
+([Parallel Coordinates Plot | Python](https://plotly.com/python/parallel-coordinates-plot/))
+in the notebook.
 
 ```python
 # Create an interactive parallel coordinate plot
@@ -402,6 +417,9 @@ fig.show()
 
 ### Display effects of two categories on a continuous variable
 
+For this exercise you will need two categorical variables and one continuous variable.
+You are going to show how the continuous variable behaves as a function of the categorical variables.
+
 ```python
 plt.figure(figsize=(15, 6))
 sns.violinplot(data=subset_df, x="mri_info_manufacturer", y="smri_vol_cdk_total", hue="sex",
@@ -409,3 +427,10 @@ sns.violinplot(data=subset_df, x="mri_info_manufacturer", y="smri_vol_cdk_total"
                palette={"M": "#FF9914", "F": ".85"})
 sns.despine(left=True)
 ```
+
+You have been introduced to the enormity of the ABCD dataset through python,
+but with selecting, filtering, and visualizing data, you've made the data
+manageable (and perhaps even enjoyable?) to work with.
+We will continue working with subset of data selected in future notebooks,
+but for now you can reflect on what you've learned and you can go back and
+play with different variables.
