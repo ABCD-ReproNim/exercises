@@ -171,6 +171,9 @@ The alpine docker image is a minimal image based on Alpine Linux. It is designed
 
 3.11.6
 
+**Explanation**
+Use the command `docker run alpine:3.11 cat /etc/os-release` to get the version information.
+
 ***
 
 </details>
@@ -188,6 +191,17 @@ The alpine docker image is a minimal image based on Alpine Linux. It is designed
 <summary>Click to see answer</summary>
 
 0.914086
+
+**Explanation**
+Assuming you have downloaded the required data file in a directory called `data` within your current directory, you would run your Docker image using
+```
+docker run -ti --rm -v $(pwd)/data:/data bids/base_fsl
+```
+Within this docker image, you can run the command
+```
+fslstats data/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz -E
+```
+to get the correct answer.
 
 ***
 
