@@ -145,6 +145,18 @@ Once Docker is installed, try downloading and running the alpine Docker containe
 - [ ] `docker pull alpine; docker run alpine`
 - [ ] `docker build alpine`
 
+<details>
+<summary>Click to see answer</summary>
+
+- [x] `docker run alpine`
+- [ ] `docker image alpine`
+- [x] `docker pull alpine; docker run alpine`
+- [ ] `docker build alpine`
+
+***
+
+</details>
+
 **Question 7**
 
 The alpine docker image is a minimal image based on Alpine Linux. It is designed for you to provide commands yourself as arguments to the docker run command. For example the command `docker run alpine echo 'Hello World'` would pass the `echo 'Hello World'` command to the alpine container. Try it out. In Alpine Linux, the operating system version information is stored in a file located at `/etc/os-release`. Use this information to find the exact Alpine Linux version number for the alpine docker image with tag `3.11`. Hint: be sure to use the tag `3.11` in all docker pull and run commands that you use to answer this question.
@@ -153,6 +165,15 @@ The alpine docker image is a minimal image based on Alpine Linux. It is designed
 - 3.11.5
 - 3.11.6
 - 3.11.7
+
+<details>
+<summary>Click to see answer</summary>
+
+3.11.6
+
+***
+
+</details>
 
 **Question 8**
 
@@ -163,6 +184,15 @@ The alpine docker image is a minimal image based on Alpine Linux. It is designed
 - 0.405803
 - 0.914086
 
+<details>
+<summary>Click to see answer</summary>
+
+0.914086
+
+***
+
+</details>
+
 **Question 9**
 
 Next, we'll smooth the downloaded image using a Gaussian kernel with the FSL command `fslmaths /data/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz -kernel gauss 10 -fmean /data/smoothed.nii.gz`. Confirm that this command, which you issued inside of the Docker container, added the `smoothed.nii.gz` output file to the example folder on your host system. Use the same commands as before to calculate the mean entropy of the nonzero voxels in the smoothed image. What is it?
@@ -171,6 +201,15 @@ Next, we'll smooth the downloaded image using a Gaussian kernel with the FSL com
 - 0.701026
 - 0.694043
 - 0.698877
+
+<details>
+<summary>Click to see answer</summary>
+
+0.705882
+
+***
+
+</details>
 
 **Question 10**
 
