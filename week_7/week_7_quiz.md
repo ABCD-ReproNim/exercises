@@ -207,7 +207,7 @@ Primarily cares about accuracy
 
 For this question you will use the ABCD dataset to explore the relationship between sample size and effect size. If you do not have access to the ABCD data, data have been simulated in the exercises repo.
 
-First, if you have not done so, you will need to download the ABCD dataset. See [here](https://docs.google.com/document/d/1q8Tzm__Ead_oybJxdQdMR-IcvPPdeyFCq1OEXDLb8wk/edit#heading=h.tep60nzg7x89) or [here](https://github.com/ABCD-ReproNim/exercises/blob/main/break/viewABCD.md) for information about how to do this.
+First, if you have not done so, you will need to download the ABCD dataset. See [here](https://docs.google.com/document/d/1q8Tzm__Ead_oybJxdQdMR-IcvPPdeyFCq1OEXDLb8wk/edit#heading=h.tep60nzg7x89) or [here](https://docs.google.com/document/d/1CRU5y3CGDYsaPv1FBkQhJ8ESTtem70RHQ1Q3AmVdOv0/edit?usp=sharing) for information about how to do this.
 
 Second, in your favorite programming language, read in the data element called “abcd_smrip201.txt”. This file contains structural MRI data. 
 
