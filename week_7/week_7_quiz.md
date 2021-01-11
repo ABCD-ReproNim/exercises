@@ -230,4 +230,6 @@ According to your results, as sample size increases which of the following are g
 
 - Raw effect stays the same, cohen's d decreases, z increases
 
+see code in `exercises/week_7` for a solution
+
 </details>
