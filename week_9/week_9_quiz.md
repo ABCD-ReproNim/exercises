@@ -248,7 +248,9 @@ volume_df = pd.DataFrame.from_dict(data_dict)
 
 volume_df.to_csv('../hippocampal_volume.tsv', sep="\t", index=False)
 ```
-
+## BONUS
+(while inside the `code` directory)
+datalad run python ./analysis.py
 ***
 
 </details>
