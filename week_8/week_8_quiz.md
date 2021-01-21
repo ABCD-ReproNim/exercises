@@ -24,7 +24,7 @@ Which general parameters were considered when deciding which culture and environ
 - Time to administer
 - Validity across cultures
 
-The Zucker et al paper specifically mentions that the census group classifications are inadequate.
+The [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper specifically mentions that the census group classifications are inadequate.
 
 ***
 
@@ -65,7 +65,7 @@ The Culture and Environment component of the ABCD protocol has a modest ability 
 
 - 4
 
-This can be answered by looking at Figure 4 of the Zucker et al. paper or simply by reading its conclusion.
+This can be answered by looking at Figure 4 of the [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper or simply by reading its conclusion.
 
 ***
 
