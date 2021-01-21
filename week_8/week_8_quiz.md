@@ -138,7 +138,7 @@ Choose all statements that are true about git and git-annex.
 
 **Question 7**
 
-Navigate to your home directory on the Jupyter Hub. First, create a DataLad dataset using the YODA configuration. Let’s call this dataset directory `week8_analysis`. Next, clone the structural portion of the Study Forrest dataset (https://github.com/psychoinformatics-de/studyforrest-data-structural) as a subdataset named ‘data’. What is the current size of the ‘data’ directory?
+Navigate to your home directory on the Jupyter Hub. First, create a DataLad dataset using the YODA configuration. Let’s call this dataset directory `week8_analysis`. Next, clone the structural portion of the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) (https://github.com/psychoinformatics-de/studyforrest-data-structural) as a subdataset named `data`. What is the current size of the `data` directory?
 
 Note: in the DataLad lecture, Dr. Wagner uses a command to clone a dataset hosted on GitHub by specifying its location with `git@github.com:[remote repository path]`. This `git@` way of specifying a dataset location requires ssh-based access, and if you haven't already set up an RSA key on the JupyterHub you may run into an error. However, you can also specify a dataset location simply by inputting a url into the `datalad clone` command, which does not require setting up RSA credentials. If you need more information on argument options for the `datalad clone` command you can always type `datalad clone --help`.
 
@@ -179,7 +179,7 @@ Let's get only the T1w file content stored in the `anat` subdirectories of the d
 
 **Question 9**
 
-We notice that this dataset is missing a `dataset_description.json` file rendering it not a fully BIDS compliant dataset (and this would pose a problem for running BIDS pipelines). Create this file with the following content in it: {"Name": "Example dataset", "BIDSVersion": "1.0.2"}. (Note: If you’d like to know more about BIDS dataset_description.json files and what goes into them you can find more information here.) To make Datalad aware of this addition, which would you run?
+We notice that this dataset is missing a `dataset_description.json` file, rendering it not a fully BIDS compliant dataset (and this would pose a problem for running BIDS pipelines). Create this file with the following content in it: {"Name": "Example dataset", "BIDSVersion": "1.0.2"}. (Note: If you’d like to know more about BIDS `dataset_description.json` files and what goes into them you can find more information here.) To make DataLad aware of this addition, which would you run?
 
 - `git add dataset_description.json`
 - `git commit -m “added a dataset description file”`
@@ -206,7 +206,7 @@ Step 3: BIDS pipelines require a work directory, and it is preferable for it to 
 
 Step 4: Use `datalad containers-run` to run MRIQC on sub-01’s T1w data and output the results to the `mriqc` directory we just created. Hint: This will require specifying a path to a container (see [here](https://github.com/ReproNim/containers#a-typical-workflow) for an example of how to specify the container and other arguments of interest), the input path, output path, the participant of interest, the modality of interest, and the work directory to be used. If you need help with using the `datalad containers-run` command you can always type `datalad containers-run --help`. The [MRIQC documentation](https://mriqc.readthedocs.io/en/latest/) also provides additional information on how to specify MRIQC specific arguments.
 
-Assuming these steps were executed successfully, you should now be able to access the following filepath from the `mriqc` directory: `sub-01/anat/sub-01_T1w.json`. This JSON file contains a variety of different image quality metrics; you can find the abbreviations and explanations here. What is the contrast to noise ratio for sub-01’s T1w scan?
+Assuming these steps were executed successfully, you should now be able to access the following filepath from the `mriqc` directory: `sub-01/anat/sub-01_T1w.json`. This JSON file contains a variety of different image quality metrics; you can find the abbreviations and explanations [here](https://mriqc.readthedocs.io/en/latest/iqms/t1w.html). What is the contrast to noise ratio for sub-01’s T1w scan?
 
 
 - 0.343
