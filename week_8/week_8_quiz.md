@@ -179,7 +179,7 @@ Let's get only the T1w file content stored in the `anat` subdirectories of the d
 
 **Question 9**
 
-We notice that this dataset is missing a `dataset_description.json` file, rendering it not a fully BIDS compliant dataset (and this would pose a problem for running BIDS pipelines). Create this file with the following content in it: {"Name": "Example dataset", "BIDSVersion": "1.0.2"}. (Note: If you’d like to know more about BIDS `dataset_description.json` files and what goes into them you can find more information here.) To make DataLad aware of this addition, which would you run?
+We notice that this dataset is missing a `dataset_description.json` file, rendering it not a fully BIDS compliant dataset (and this would pose a problem for running BIDS pipelines). Create this file with the following content in it: {"Name": "Example dataset", "BIDSVersion": "1.0.2"}. (Note: If you’d like to know more about BIDS `dataset_description.json` files and what goes into them you can find more information [here](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html).) To make DataLad aware of this addition, which would you run?
 
 - `git add dataset_description.json`
 - `git commit -m “added a dataset description file”`
