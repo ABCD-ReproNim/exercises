@@ -11,9 +11,20 @@ and Reproducible workflows in Repronim.
 
 **Question 1**
 
+What biospecimens are collected at multiple timepoints in the ABCD Study? (select all that apply)
+
+- [ ] Breath, urine, and saliva to detect recent substance use
+- [ ] Saliva to measure pubertal hormones
+- [ ] Blood and saliva for DNA analysis
+- [ ] Hair to detect substance use
+- [ ] Baby teeth to estimate environmental exposure
 
 <details>
 <summary>Click to see answer</summary>
+
+- Breath, urine, and saliva to detect recent substance use
+- Saliva to measure pubertal hormones
+- Hair to detect substance use
 
 ***
 
@@ -21,9 +32,20 @@ and Reproducible workflows in Repronim.
 
 **Question 2**
 
+What are some methodological considerations for dealing with biospecimen data? (select all that apply)
+
+- [ ] Who is missing from the dataset and why? Is there a sampling bias for who opts in (or out) of providing certain biospecimens?
+- [ ] Are the details of specimen collection (e.g., time of day) accurately recorded or labeled? How to identify and deal with potential errors and inconsistencies?
+- [ ] How to perform quality checks, determine final sample selection, and any additional decisions that increase experimenter degrees of freedom?
+- [ ] What confounds may be explaining variance in the data (e.g. caffeine, physical activity)?
 
 <details>
 <summary>Click to see answer</summary>
+
+- Who is missing from the dataset and why? Is there a sampling bias for who opts in (or out) of providing certain biospecimens?
+- Are the details of specimen collection (e.g., time of day) accurately recorded or labeled? How to identify and deal with potential errors and inconsistencies?
+- How to perform quality checks, determine final sample selection, and any additional decisions that increase experimenter degrees of freedom?
+- What confounds may be explaining variance in the data (e.g. caffeine, physical activity)?
 
 ***
 
@@ -31,9 +53,15 @@ and Reproducible workflows in Repronim.
 
 **Question 3**
 
+Individual differences in pubertal hormone levels, patterns, and sensitivity can contribute to differences in brain and body maturation, mental health, substance use, and behavioral problems.
+
+- True
+- False
 
 <details>
 <summary>Click to see answer</summary>
+
+- True
 
 ***
 
@@ -41,8 +69,15 @@ and Reproducible workflows in Repronim.
 
 **Question 4**
 
+Baby teeth provide layer-by-layer information about environmental exposure beginning in the second trimester of pregnancy
+
+- True
+- False
+
 <details>
 <summary>Click to see answer</summary>
+
+- True
 
 ***
 
@@ -50,10 +85,21 @@ and Reproducible workflows in Repronim.
 
 **Question 5**
 
+What are some recommendations for dealing with biospecimen data? (select all that apply)
+
+- [ ] Visualize data to identify physiologically improbable values
+- [ ] Publish experimenter decision trees and scripts for transparency and reproducibility
+- [ ] Trust that the data are accurate even if some data points seem unlikely
+- [ ] Be informed by approaches and effect sizes reported in the literature
+- [ ] Consider sociodemographic factors, sample bias, and methods
 
 <details>
 <summary>Click to see answer</summary>
 
+- Visualize data to identify physiologically improbable values
+- Publish experimenter decision trees and scripts for transparency and reproducibility
+- Be informed by approaches and effect sizes reported in the literature
+- Consider sociodemographic factors, sample bias, and methods
 
 ***
 
