@@ -289,7 +289,9 @@ volume_df.to_csv('../hippocampal_volume.tsv', sep="\t", index=False)
 ```
 ## Bonus
 
-How would you add and run this script using datalad?
+How would you add and run this script using datalad? While inside the `code` directory, use
+datalad run python ./analysis.py
+
 
 <details>
 <summary>Click to see answer</summary>
@@ -316,10 +318,6 @@ volume_df = pd.DataFrame.from_dict(data_dict)
 
 volume_df.to_csv('../hippocampal_volume.tsv', sep="\t", index=False)
 ```
-## BONUS
-(while inside the `code` directory)
-datalad run python ./analysis.py
-***
 
 </details>
 
