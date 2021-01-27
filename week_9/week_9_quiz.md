@@ -157,7 +157,7 @@ the [Week 8 Quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/we
 that we will name `week9_analysis`.
 Assuming you are starting from your home directory on
 the [ABCD-ReproNim JupyterHub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15)
-(i.e., `/home/jovyan`), reorder the below commands to create the necessary datalad datasets for analysis.
+(i.e., `/home/jovyan`), reorder the below commands to create the necessary datalad datasets for analysis (note: not all of the commands listed are necessarily needed).
 We want a dataset named `data` for our raw data, a dataset named `derivatives` for our results,
 T1w images from the first three participants, and an FSL container for the software we will run.
 
@@ -326,7 +326,7 @@ datalad run python ./analysis.py
 **Question 10**
 
 Approximately how large are the volume differences between `none` and `fast`?
-Would you consider the result to be robust across our choices of patameters?
+Would you consider the result to be robust across our choices of parameters?
 
 - 1's
 - 10's
