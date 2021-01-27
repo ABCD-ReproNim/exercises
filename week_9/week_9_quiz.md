@@ -257,6 +257,7 @@ and add [`--explicit`](http://docs.datalad.org/projects/container/en/latest/gene
 </details>
 
 **Question 9**
+
 After the container runs FIRST using both methods, we want to compare
 the methods.
 Load the relevant data (i.e., `_firstseg.nii.gz`) into your
@@ -323,6 +324,7 @@ datalad run python ./analysis.py
 </details>
 
 **Question 10**
+
 Approximately how large are the volume differences between `none` and `fast`?
 Would you consider the result to be robust across our choices of patameters?
 
