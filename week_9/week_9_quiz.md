@@ -257,6 +257,7 @@ and add [`--explicit`](http://docs.datalad.org/projects/container/en/latest/gene
 </details>
 
 **Question 9**
+
 After the container runs FIRST using both methods, we want to compare
 the methods.
 Load the relevant data (i.e., `_firstseg.nii.gz`) into your
