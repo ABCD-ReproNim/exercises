@@ -324,6 +324,7 @@ datalad run python ./analysis.py
 </details>
 
 **Question 10**
+
 Approximately how large are the volume differences between `none` and `fast`?
 Would you consider the result to be robust across our choices of patameters?
 
