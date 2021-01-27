@@ -107,19 +107,36 @@ What are some recommendations for dealing with biospecimen data? (select all tha
 
 ## ReproNim questions
 
-For today's Repronim questions, you will be using 
-(`datalad create week9_analysis`)
-and cloned the studyforrest data (`datalad clone -d . https://github.com/psychoinformatics-de/studyforrest-data-structural.git data`), and retrieved the T1w data `datalad get data/sub-*/anat/*T1w*`
-We will be testing different ways of using FSL's FIRST to compare results.
+For today's Repronim questions, you will be using (via the command `datalad create week9_analysis`),
+cloning (via the command `datalad clone -d . https://github.com/psychoinformatics-de/studyforrest-data-structural.git data`), 
+and retrieving the T1w data (via the command `datalad get data/sub-*/anat/*T1w*`) from 
+the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) we worked with 
+during [last week's quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_quiz.md).
+We will also be testing different ways of using FSL's `FIRST` to compare results.
+
+Enrolled Students: We recommend you use the online version of 
+the [ABCD-ReproNim Jupyterhub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15), in 
+which DataLad is already installed. You can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local 
+instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively, 
+you can work with a local, non-JupyterHub instance of DataLad by following the installation 
+instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
+
+Observer Students: We recommend you use the ABCD-ReproNim Jupyterhub container that we've set up for ABCD-ReproNim Observer Students, in which 
+DataLad is already installed. Instructions on how to set up a local instance of our JupyterHub can be 
+found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). General information about the 
+ABCD-ReproNim JupyterHub can be 
+found [here](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15). Alternatively, you can 
+work with a local, non-JupyterHub instance of DataLad by following the installation 
+instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
 
 **Question 6**
 
-If a researcher uses performs similar analyses on the same data
+If a researcher performs similar analyses on the same data
 and gets a similar result, how would we describe the reproducibility of the result?
 The result is:
 
 - Re-executable
-- Replicible
+- Replicable
 - Robust
 - Generalizable
 
@@ -134,11 +151,14 @@ The result is:
 
 **Question 7**
 
-You will be installing with study-forrest dataset again, inside a new datalad dataset
-`week9_analysis`.
-Assuming you are starting from your home directory (i.e., `/home/jovyan`), Reorder the commands
-to create the necessary datalad datasets for analysis.
-We want a `data` dataset for our raw data, a `derivatives` dataset for our results,
+You will be installing the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) again as you did 
+in the [DataLad](https://www.datalad.org/) questions from 
+the [Week 8 Quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_quiz.md), but this time inside a new datalad dataset 
+that we will name `week9_analysis`.
+Assuming you are starting from your home directory on 
+the [ABCD-ReproNim JupyterHub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15) 
+(i.e., `/home/jovyan`), reorder the below commands to create the necessary datalad datasets for analysis.
+We want a dataset named `data` for our raw data, a dataset named `derivatives` for our results,
 T1w images from the first three participants, and an FSL container for the software we will run.
 
 - `cd week9_analysis`
@@ -186,7 +206,8 @@ Cannot `create` an existing repository
 
 **Question 8**
 
-We are going to determine hippocampal volume from the Forrest dataset using [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) (FMRIB’s Integrated Registration and Segmentation Tool).
+Next, we are going to determine hippocampal volume from the Study Forrest dataset 
+using [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) (FMRIB’s Integrated Registration and Segmentation Tool).
 Additionally, we want to measure the robustness of our analysis by changing a parameter in our 
 call to `FIRST`.
 Specifically, we will be using the command `run_first_all` and we
