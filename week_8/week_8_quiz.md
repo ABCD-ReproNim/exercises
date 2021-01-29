@@ -112,6 +112,21 @@ Which of the following measures were administered for the first time at the one-
 
 ## ReproNim questions
 
+Enrolled Students: We recommend you use the online version of
+the [ABCD-ReproNim Jupyterhub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15), in
+which DataLad is already installed. You can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local
+instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
+you can work with a local, non-JupyterHub instance of DataLad by following the installation
+instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
+
+Observer Students: We recommend you use the ABCD-ReproNim Jupyterhub container that we've set up for ABCD-ReproNim Observer Students, in which
+DataLad is already installed. Instructions on how to set up a local instance of our JupyterHub can be
+found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). General information about the
+ABCD-ReproNim JupyterHub can be
+found [here](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15). Alternatively, you can
+work with a local, non-JupyterHub instance of DataLad by following the installation
+instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
+
 The following questions focus on using DataLad. A summary of the DataLad commands presented in the [Week 8 ReproNim lecture](https://youtu.be/udLVUyZQanw) can be found [here](http://handbook.datalad.org/en/latest/code_from_chapters/ABCD.html#abcd).
 
 **Question 6**
@@ -153,7 +168,12 @@ Note: in the DataLad lecture, Dr. Wagner uses a command to clone a dataset hoste
 
 - 1.8 MB
 
-see code in `exercises/week_8` for a solution (coming soon!)
+Datalad solution
+- `datalad create -c yoda week8_analysis`
+- `cd week8_analysis`
+- `datalad clone -d . https://github.com/psychoinformatics-de/studyforrest-data-structural.git data`
+- `cd data`
+- `du sh`
 
 ***
 
@@ -219,6 +239,13 @@ Assuming these steps were executed successfully, you should now be able to acces
 
 - 3.811
 
-see code in `exercises/week_8` for a solution (coming soon!)
+Datalad solution: 
+- `cd /home/joyvan/week8_analysis`
+- `mkdir data/derivatives/mriqc`
+- `datalad install -d . ///repronim/containers`
+- `echo "workdir/" > .gitignore && datalad save -m "Ignore workdir" .gitignore`
+- `datalad containers-run -n containers/bids-mriqc --input data/sub-01/anat/sub-01_T1w.nii.gz --output data/derivatives/mriqc data '{outputs}' --participant-label 01 -m T1w -w workdir`
+
+Note that the --input to Datalad differs from the input argument to mriqc. This is because we're specifying a specific file for Datalad to download as opposed to the root of the BIDS directory that MRIQC expects. The output is the same for both Datalad and MRIQC.
 
 </details>
