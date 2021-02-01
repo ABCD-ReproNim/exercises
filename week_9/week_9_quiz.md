@@ -144,7 +144,14 @@ The result is:
 <details>
 <summary>Click to see answer</summary>
 
-- Robust
+- Robust is the correct answer since you ran a similar
+  analysis on the original data.
+- Re-executable means you ran the original analysis on the
+  original data
+- Replicable means you ran the original analysis on a 
+  similar dataset
+- Generalizable means you ran a similar analysis on a
+  similar dataset
 ***
 
 </details>
@@ -239,9 +246,17 @@ Type `datalad save -m "run FIRST on sub-01 with none and fast parameters"`.
 If you have the time, you can run `sub-02` in the same way.
 
 ## NOTE
-You may get this error message `cannot find data/sub-01/anat/sub-01_T1w.nii.gz`,
-if this is the case, you may need to unlock `data/sub-01/anat/sub-01_T1w.nii.gz`
+You may get this error in your output:
+```
+[INFO   ] == Command start (output follows) ===== 
+Error: cannot find image data/sub-01/anat/sub-01_T1w.nii.gz
+```
+If this is the case, you may need to unlock `data/sub-01/anat/sub-01_T1w.nii.gz` via (`datalad unlock data/sub-01/anat/sub-01_T1w.nii.gz`).
 and add [`--explicit`](http://docs.datalad.org/projects/container/en/latest/generated/man/datalad-containers-run.html#explicit) to the datalad command.
+
+Unlocking a file means replacing the [`symbolic link`](https://en.wikipedia.org/wiki/Symbolic_link) of the file with a copy
+of the file stored in `git-annex`.
+By replacing the symbolic link with an actual copy of the file, the software within the container can read an actual file instead of a symbolic link, which some software does not interpret correctly, as is the case here.
 
 
 <details>
