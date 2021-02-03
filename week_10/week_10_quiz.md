@@ -1,3 +1,111 @@
+# Week 10 Quiz
+
+### Quiz Instructions
+
+In this Week 10 Quiz, we will ask you a few questions about [ABCD Novel Technologies and using ReproMan Execution and Environment Manager](https://abcd-repronim.github.io/materials/week-10/).
+
+***
+
+## ABCD questions
+
+**Question 1**
+
+Mobile and wearable technology data are acquired using which of the following methods? (select all that apply)
+
+- [ ] Fitbit Charge 2
+- [ ] Daily self report survey of physical activity
+- [ ] Effortless Assessment of Risk States (EARS) smartphone app
+- [ ] Self report of screen media activity
+- [ ] Parent report of screen media activity
+
+<details>
+<summary>Click to see answer</summary>
+
+- Fitbit Charge 2
+- Effortless Assessment of Risk States (EARS) smartphone app
+- Self report of screen media activity
+- Parent report of screen media activity
+
+***
+
+</details>
+
+**Question 2**
+
+Unprocessed minute-level activity data are available in the Data Releases.
+
+- True
+- False
+
+<details>
+<summary>Click to see answer</summary>
+
+- False
+
+Unprocessed data are available from the data analysis and informatics core, not the regular data releases.
+
+***
+
+</details>
+
+**Question 3**
+
+Mobile device data capture using the EARS app is possible on which of the following operating systems? (select all that apply)
+
+- [ ] iOS
+- [ ] Android
+- [ ] Chrome OS
+- [ ] Windows
+
+<details>
+<summary>Click to see answer</summary>
+
+- Android
+
+***
+
+</details>
+
+**Question 4**
+
+Summary data from the EARS app are available from which of the following categories? (select all that apply)
+
+- [ ] Social media
+- [ ] Podcasts
+- [ ] Gaming
+- [ ] Productivity
+- [ ] YouTube
+
+<details>
+<summary>Click to see answer</summary>
+
+- Social media
+- Gaming
+- YouTube
+
+***
+
+</details>
+
+**Question 5**
+
+Self-report data are acquired…
+
+- Every 3 months
+- Every year
+- Every other year
+- Every two years
+
+<details>
+<summary>Click to see answer</summary>
+
+- Every year
+
+***
+
+</details>
+
+## ReproNim questions
 
 We have covered: bash to automate manual tasks, git to keep track of changes, containers to isolate our software, and datalad tied together bash, git, and containers to run commands reproducibly.
 Reproman takes us a step further to run commands at scale
