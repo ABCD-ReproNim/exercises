@@ -212,7 +212,8 @@ clean your datasets)
 - [ ] `nothing to save, working tree clean`
 - [ ]
   ```
-  [ERROR  ] No dataset found at '<directory>'.  Specify a dataset to work with by providing its path via the `dataset` option, or change the current working directory to be in a dataset. [dataset.py:require_dataset:569] (NoDatasetFound)
+  [ERROR  ] No dataset found at '<directory>'.  Specify a dataset to work with by providing its path via the 
+  `dataset` option, or change the current working directory to be in a dataset. [dataset.py:require_dataset:569] (NoDatasetFound)
   usage: datalad status [-h] [-d DATASET] [--annex [MODE]] [--untracked MODE] [-r] [-R LEVELS] [-e {no|commit|full}] [-t {raw|eval}]
                       [PATH [PATH ...]]
   ```
