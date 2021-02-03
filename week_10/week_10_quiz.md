@@ -317,7 +317,8 @@ reproman run  \
 --batch-parameter 'method=none,fast' \
 --input data/sub-'{p[subject]}'/anat/sub-'{p[subject]}'_T1w.nii.gz \
 --output derivatives/sub-'{p[subject]}'/'{p[method]}' \
-bash -c "cd data/sub-'{p[subject]}'/anat && run_first_all -i sub-'{p[subject]}'_T1w.nii.gz -o ../../../derivatives/first/sub-'{p[subject]}'/'{p[method]}' -m '{p[method]}' -s L_Hipp,R_Hipp"
+bash -c "cd data/sub-'{p[subject]}'/anat && run_first_all -i sub-'{p[subject]}'_T1w.nii.gz \
+-o ../../../derivatives/first/sub-'{p[subject]}'/'{p[method]}' -m '{p[method]}' -s L_Hipp,R_Hipp"
 ```
 
 </details>
