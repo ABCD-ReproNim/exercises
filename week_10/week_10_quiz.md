@@ -114,10 +114,9 @@ Thus far in the course we've used `bash` to automate manual tasks,
 (e.g., running the same command across many participants, on other machines,
 and/or on a high performance/throughput computing cluster).
 
-While not strictly necessary, we do recommend you complete the [week 8](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_quiz.md#repronim-questions) (DataLad) and [week 9 ](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions) (reproducible workflows) quizzes before completing this week's ReproNim questions.
-
-For today's ReproNim portion of the Data Exercise, you will be cloning
-(via the command `datalad clone week9_analysis week10_analysis`), the same [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) that we worked with in the ReproNim portions of the previous two quizzes. We will also be testing different ways of using FSL's [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) again.
+While not strictly necessary, we do recommend you complete the [week 8](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_quiz.md#repronim-questions) (DataLad) and [week 9 ](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions) (reproducible workflows) quizzes before completing this week's ReproNim questions. For today's ReproNim portion of the Data Exercise, you
+will be cloning (via the command `datalad clone week9_analysis week10_analysis`), the same [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) that we worked with in the ReproNim portions of the previous two quizzes.
+We will also be testing different ways of using FSL's [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) again.
 
 Enrolled Students: We recommend you use the online version of
 the [ABCD-ReproNim Jupyterhub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15), in
@@ -195,7 +194,7 @@ Assuming this is the case, after entering the above commands you _should_ be rea
 
 If you did _not_ complete the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions) (or, if you'd just like a fresh start for this week),
 then take a moment to look at the answer posted to Question 7 of the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions). Enter those commands now, only changing instances
-of `week9_analysis` with `week10_analysis`. This will set up the appropriate `week10_analysis` DataLad dataset needed to complete the rest of this week's questions.
+of `week9_analysis` with `week10_analysis`. This will set up the appropriate DataLad `week10_analysis` dataset needed to complete the rest of this week's questions.
 
 If the `week10_analysis` dataset is clean, which of the following should the output of `datalad status` be? (if your dataset is not clean, use `datalad save` to
 clean your datasets)
@@ -220,20 +219,20 @@ clean your datasets)
 <details>
 <summary>Click to see answer</summary>
 
-Answer:
-    - [x] `nothing to save, working tree clean`
-        - The working tree refers to your series of
-          commits, the fact that the working tree is clean
-          means there are no new/modified files that Datalad
-          does not know about.
+    - `nothing to save, working tree clean`
+
+  The working tree refers to your series of commits, the fact that
+  the working tree is clean means there are no new/modified files
+  that Datalad does not know about.
+
 ***
 
 </details>
 
 **Question 8**
 
-In this question, we're not going to use ReproMan with an
-Amazon Web Services or a high performance computing cluster. Instead
+In this question, we're not going to use ReproMan to run commands on an
+Amazon Web Services server or a high performance computing cluster. Instead
 we are only going to use the machine at our disposal.
 However, once you practice the syntax of ReproMan, changing
 the command from running commands locally to running commands on a highly
@@ -340,7 +339,7 @@ which flags would need to change values? (at a minimum)
 
 - `--resource, --orchestrator`
     - The resource needs to change from `my-local-shell` to a reference to the remote machine
-      that you can ssh into.
+      that you can `ssh` into.
     - The orchestrator needs to change since `datalad-no-remote` is specific to one's local shell.
     - The submitter can remain the same since you may be able to submit jobs using the shell
       on the remote computer.
