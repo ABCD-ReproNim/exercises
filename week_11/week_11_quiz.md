@@ -97,13 +97,12 @@ data.iloc[:,:] = imputer.fit_transform(data)
 ```
 
 How would you visualize the relationship between bill length and flipper length separately for
-for each species while ensuring that that the x and y axes are not shared across the subplots
+each species while ensuring that the x and y axes are not shared across the subplots
 and the colors are different across the subplots? 
 
 - `sns.regplot(x="flipper_length_mm", y="bill_depth_mm")`
 - `sns.lmplot(x="bill_length_mm", y="flipper_length_mm", col="species", hue="species", data=data, sharex=False, sharey=False)`
-- `sns.lmplot(x="flipper_length_mm", y="bill_depth_mm", col="species", hue="species", data=data, sharex=False, sharey=False)`
-- `sns.regplot(x="flipper_length_mm", y="bill_depth_mm", col="species", hue="species", data=data, sharex=False, sharey=False)`
+- `sns.lmplot(x="flipper_length_mm", y="bill_depth_mm", col="species", data=data, sharex=False, sharey=False)`
 
 <details>
 <summary>Click to see answer</summary>
