@@ -2,8 +2,8 @@
 
 ### Quiz Instructions
 
-In this Week 11 Quiz, we will ask you a few questions about [Visualizing ABCD data and the ReproPub re-executable paper](https://abcd-repronim.github.io/materials/week-11/). For this quiz we're going to combine questions related to the ABCD and ReproNim lectures 
-as they will build off of one another.
+In this Week 11 Quiz, we will ask you a few questions about [Visualizing ABCD data and the ReproPub re-executable paper](https://abcd-repronim.github.io/materials/week-11/). We also encourage you to fork the [repo](https://github.com/62442katieb/NH19-Visualization/blob/binder-live/) Katie Bottenhorn used as a demo for her lecture
+and play around with the various plots that are generated. 
 
 ***
 
