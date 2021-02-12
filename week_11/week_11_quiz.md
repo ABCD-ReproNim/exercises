@@ -221,7 +221,7 @@ Execution environment. We had to either install latexmk or change the Makefile.
 
 </details>
 
-**Question 4** 
+**Question 5** 
 
 We also learned about [Nilearn] in the ABCD lecture, and we can use it to visualize the segmentations we created in week 9. 
 
@@ -281,7 +281,7 @@ datalad run -m "generating plots of hippocampus segmentations" --output "../figu
 </details>
 
 
-**Question 5**
+**Question 6**
 
 It is nice that "repro-paper-sketch" build our LaTeX source for us, but this isn't a requirement of the ReproPub. To create a ReproPub, we need only recognize that the experimental data, workflow, execution environment, and results are themselves research objects and track their provenance. Luckily, if you completed the Week 9 ReproNim quiz, you already have a research finding with provenance tracking, namely you determined that hippocampal volume measurements in the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) were not robust to the two methods of FSL [FIRST](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) that you tried. Let's suppose that you now want to share this groundbreaking research finding in a reproducible publication.
 
@@ -322,10 +322,20 @@ However, the `datalad save` command could be done at any point before the `git p
 
 </details>
 
-**Question 6**
+**Question 7**
 
 You have successfully pushed your reproducible paper elements to a repository on GitHub. The last step is to create a DOI for this resource. Create an account on zenodo.org, link it with your GitHub account, and enable the `repro-paper-hippocampal-volumes` repository that you just created. Then create a new release from the `repro-paper` tag that you created in the previous step. If you've done these steps correctly, you should have published a DOI on zenodo.org. Paste your new DOI in the text box below. When you are writing your groundbreaking paper, you can refer to this DOI to reference your DataLad dataset.
 
-**Question 7**
+**Question 8**
 
-What is the relationship between 
+Matplotlib is built on top of Seaborn. 
+
+- True
+- False 
+
+<details>
+<summary>Click to see answer</summary>
+
+- False 
+
+Explanation: It's the other way around; Seaborn abstracts away some of Matplotlib's complexities and provides an easier to use API. 
