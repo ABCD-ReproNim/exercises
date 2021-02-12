@@ -23,6 +23,8 @@ Now, rerun the paper's analysis using the provided docker commands provided in t
 docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output repronim/simple_workflow:1.1.0 run_demo_workflow.py --key 11an55u9t2TAf0EV2pHN0vOd8Ww2Gie-tHp9xGULh_dA
 ```
 
+If you would like to run this command on the JupyterHub, [please see these instructions](https://github.com/ReproNim/simple_workflow/blob/master/README.md#4-other-containers) to use Singularity instead of Docker.
+
 This will take a while to run (e.g. a couple hours). Feel free to work on some of the other problems while you're waiting. Or you can watch a [panda cam](https://nationalzoo.si.edu/webcams/panda-cam) to pass the time. The possibilities are endless!
 
 Once the simple workflow is done, use the paper's supplied `check_output.py` program to verify that your results match the original results.
