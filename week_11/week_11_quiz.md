@@ -214,13 +214,17 @@ $ datalad status
 Oh yeah, we changed the Makefile to build the pdf without `latexmk`. Let's note that first.
 
 ```
-datalad save -m "Use pdflatex explicitly instead of latexmk in Makefile so that we can build the paper on JupyterHub" Makefile
+datalad save  \
+-m "Use pdflatex explicitly instead of latexmk in Makefile so  \
+that we can build the paper on JupyterHub" Makefile
 ```
 
 And we also add feature scaling to the analysis code.
 
 ```
-datalad save -m "Use MinMaxScaler to scale features before classification." code/mk_figuresnstats.py prediction_report.csv
+datalad save  \
+-m "Use MinMaxScaler to scale features before classification."  \
+code/mk_figuresnstats.py prediction_report.csv
 ```
 
 Great, now let's inspect the compiled paper (or `prediction_report.csv`) to see if scaling the feature had any effect. To the nearest two digits, what is the new average weighted F1-score?
@@ -338,7 +342,9 @@ for participant in glob('../derivatives/first/sub-*'):
 
 Datalad run command: 
 ```
-datalad run -m "generating plots of hippocampus segmentations" --output "../figures/*" "python ./generate_figs.py"
+datalad run  \
+-m "generating plots of hippocampus segmentations"  \
+--output "../figures/*" "python ./generate_figs.py"
 ```
 ***
 
