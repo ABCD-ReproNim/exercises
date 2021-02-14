@@ -20,9 +20,7 @@ cd week_11/problem_1
 
 Now, rerun the paper's analysis using the provided docker commands provided in the paper:
 ```
-docker run  \
--it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output  \
-repronim/simple_workflow:1.1.0 run_demo_workflow.py --key 11an55u9t2TAf0EV2pHN0vOd8Ww2Gie-tHp9xGULh_dA
+docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output repronim/simple_workflow:1.1.0 run_demo_workflow.py --key 11an55u9t2TAf0EV2pHN0vOd8Ww2Gie-tHp9xGULh_dA
 ```
 
 If you would like to run this command on the JupyterHub, [please see these instructions](https://github.com/ReproNim/simple_workflow/blob/master/README.md#4-other-containers) to use Singularity instead of Docker.
@@ -32,9 +30,7 @@ This will take a while to run (e.g. a couple hours). Feel free to work on some o
 Once the simple workflow is done, use the paper's supplied `check_output.py` program to verify that your results match the original results.
 
 ```
-docker run  \
--it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output  \
-repronim/simple_workflow:1.1.0 check_output.py
+docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output repronim/simple_workflow:1.1.0 check_output.py
 ```
 
 Based on the output of this program, what was the **ORIGINAL** platform on which the paper's analysis was performs
@@ -214,17 +210,13 @@ $ datalad status
 Oh yeah, we changed the Makefile to build the pdf without `latexmk`. Let's note that first.
 
 ```
-datalad save  \
--m "Use pdflatex explicitly instead of latexmk in Makefile so  \
-that we can build the paper on JupyterHub" Makefile
+datalad save -m "Use pdflatex explicitly instead of latexmk in Makefile so that we can build the paper on JupyterHub" Makefile
 ```
 
 And we also add feature scaling to the analysis code.
 
 ```
-datalad save  \
--m "Use MinMaxScaler to scale features before classification."  \
-code/mk_figuresnstats.py prediction_report.csv
+datalad save -m "Use MinMaxScaler to scale features before classification." code/mk_figuresnstats.py prediction_report.csv
 ```
 
 Great, now let's inspect the compiled paper (or `prediction_report.csv`) to see if scaling the feature had any effect. To the nearest two digits, what is the new average weighted F1-score?
@@ -342,9 +334,7 @@ for participant in glob('../derivatives/first/sub-*'):
 
 Datalad run command: 
 ```
-datalad run  \
--m "generating plots of hippocampus segmentations"  \
---output "../figures/*" "python ./generate_figs.py"
+datalad run -m "generating plots of hippocampus segmentations" --output "../figures/*" "python ./generate_figs.py"
 ```
 ***
 
