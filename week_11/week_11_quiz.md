@@ -20,7 +20,9 @@ cd week_11/problem_1
 
 Now, rerun the paper's analysis using the provided docker commands provided in the paper:
 ```
-docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output repronim/simple_workflow:1.1.0 run_demo_workflow.py --key 11an55u9t2TAf0EV2pHN0vOd8Ww2Gie-tHp9xGULh_dA
+docker run  \
+-it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output  \
+repronim/simple_workflow:1.1.0 run_demo_workflow.py --key 11an55u9t2TAf0EV2pHN0vOd8Ww2Gie-tHp9xGULh_dA
 ```
 
 If you would like to run this command on the JupyterHub, [please see these instructions](https://github.com/ReproNim/simple_workflow/blob/master/README.md#4-other-containers) to use Singularity instead of Docker.
@@ -30,7 +32,9 @@ This will take a while to run (e.g. a couple hours). Feel free to work on some o
 Once the simple workflow is done, use the paper's supplied `check_output.py` program to verify that your results match the original results.
 
 ```
-docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output repronim/simple_workflow:1.1.0 check_output.py
+docker run  \
+-it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output  \
+repronim/simple_workflow:1.1.0 check_output.py
 ```
 
 Based on the output of this program, what was the **ORIGINAL** platform on which the paper's analysis was performs
