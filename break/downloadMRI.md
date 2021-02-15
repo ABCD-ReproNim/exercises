@@ -184,6 +184,7 @@ subjs = [ ] # enter 5 GUIDs.
 runs = ['MPROC-T1', 'MPROC-rsfMRI']
 ses = ['baselineYear1Arm1']
 
+# filter the s3_derv data frame using the above filters
 sub_s3derv = s3_derv[s3_derv['guid'].isin(subjs) & s3_derv['scan'].isin(runs) & s3_derv['session'].isin(ses)]
 sub_s3derv.sort_values(['guid', 'scan'])
 ```
