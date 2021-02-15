@@ -236,11 +236,18 @@ for sub in submission_*; do
         tar zxf $f --directory /home/jovyan/ABCDndar/image_files
     done
 done
+```
+
+```bash
 
 # track the changes in datalad
 cd /home/jovyan/ABCDndar/image_files
 datalad save -m 'add unzipped files from NDA' .
 ```
+
+### Success!!
+# 🎉🎉🎉
+
 
 ***
 
@@ -326,9 +333,12 @@ cd /home/jovyan/ABCDdcan/
 
 # run the downloader
 nda-abcd-s3-downloader/download.py -i datastructure_manifest.txt -o image_files -s 5subjects.txt -d inputs.txt
+```
+
+```bash
 
 # track the changes in datalad
-cd image_files
+cd /home/jovyan/ABCDdcan/image_files
 datalad save -m 'add T1w and rest input data' .
 ```
 
@@ -340,8 +350,56 @@ datalad save -m 'add T1w and rest input data' .
 ! singularity build bids_validator-1.6.1.simg docker://bids/validator:v1.6.1
 ```
 
-Now let's see if the input data are in BIDS
+Now let's see if the input data are in BIDS.
 
 ```python
 ! singularity run /home/jovyan/bids_validator-1.6.1.simg /home/jovyan/ABCDdcan/image_files
 ```
+
+It looks like the data are in BIDS! (Warnings are ok, but something you should be aware of)
+
+
+***
+
+15. Now let's download some derivatives! You can use the same subjects file.
+
+```bash
+
+cd /home/jovyan/ABCDdcan
+
+# make subsets file
+cat ./nda-abcd-s3-downloader/data_subsets.txt | grep derivatives | grep rest >> derivatives.txt
+cat ./nda-abcd-s3-downloader/data_subsets.txt | grep derivatives | grep T1w >> derivatives.txt
+```
+
+***
+
+16. Now download the derivatives. `download.py` automatically adds the derivatives directory. So we'll have to force a subdataset with datalad after the download.
+
+```bash
+
+cd /home/jovyan/ABCDdcan/
+
+# run the downloader
+nda-abcd-s3-downloader/download.py -i datastructure_manifest.txt -o image_files/derivatives -s 5subjects.txt -d derivatives.txt
+```
+
+***
+
+18. Now use datalad to create a subdataset and save the subdataset's state.
+
+```bash
+
+cd /home/jovyan/ABCDdcan/image_files
+# force the creation of a subdataset
+datalad create -d derivatives --force
+
+# now save the subdataset
+cd derivatives
+datalad save -m 'add T1w and rest derivatives'
+```
+
+### Success!!
+# 🎉🎉🎉
+
+You should probably buy more tea... ☕
