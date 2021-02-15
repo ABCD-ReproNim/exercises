@@ -180,7 +180,7 @@ s3_derv['scan'].value_counts()
 15. Now, we can specify our filtering critera. Let's choose 5 subject GUIDs (you can choose 5 random GUIDs from your work on the ABCD 3.0 Release), only the `baselineYear1Arm1` session, and scan types of `MPROC-T1` and `MPROC-rsfMRI`.
 
 ```python
-subjs = ['NDARINV52K3HFFN', 'NDARINVA3JTEY6X', 'NDARINVFJP3171C', 'NDARINVLTJFH518', 'NDARINVU67FAKAG'] # enter 5 GUIDs.
+subjs = [ ] # enter 5 GUIDs.
 runs = ['MPROC-T1', 'MPROC-rsfMRI']
 ses = ['baselineYear1Arm1']
 
