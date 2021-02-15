@@ -98,7 +98,6 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 ```python
 ! ls /home/jovyan/ABCDndar
-! mkdir /home/jovyan/ABCDndar/image_files
 ```
 
 ***
