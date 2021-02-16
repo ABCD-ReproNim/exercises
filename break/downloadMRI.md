@@ -1,4 +1,3 @@
-<!-- #region -->
 # Downloading the ABCD imaging data
 
 In the previous data exercises you have download and interacted with the [ABCD 3.0 release](https://nda.nih.gov/abcd/query/abcd-curated-annual-release-3.0.html). While there are many measures derived from the imaging data within the pre-packaged tabulated data, you may have noticed that the full set of MRI images are not included in this release.
@@ -7,12 +6,13 @@ As stated on [NDA's website](https://nda.nih.gov/abcd/query/abcd-curated-annual-
 
 "The raw MRI images and the minimally processed imaging files are over 100TB in size which may make data transfer difficult. "
 
+The data are stored on [Amazon Simple Storage Service (s3)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) servers. 
 
 There are multiple routes to obtaining the full imaging data, we'll focus on the following two:
 1. Using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) structure
 2. Using the [nda-abcd-s3-downloader](https://github.com/DCAN-Labs/nda-abcd-s3-downloader)
 
-Both routes involve creating a data package through the NDA, downloading a manifest file, parsing the manifest file, and finally downloading and unzipping the data.
+Both routes involve creating a data package through the NDA, downloading a manifest file, parsing the manifest file, and finally downloading the data.
 
 For brevity, the exercises in this notebook will guide you through downloading the resting state and T1w data from 5 subjects using each of the above download methods. You will need active NDA credentials and an ABCD DUC to download the data.
 
@@ -20,8 +20,8 @@ For brevity, the exercises in this notebook will guide you through downloading t
 
 [From the NDA](https://nda.nih.gov/s/guid/nda-guid.html): "The Global Unique Identifier (GUID) is a subject ID allowing researchers to share data specific to a study participant without exposing personally identifiable information (PII) and match participants across labs and research data repositories."
 
-The GUID's format is `NDAR_INVXXXXXXXX`, where `XXXXXXXX` is a random string of numbers and uppercase letters. The standard GUID format is *not* [BIDS compatible](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#file-name-structure). In BIDS, the underscore character is reserved to separate key:value entities (eg, `sub-01_task-rest`). For the BIDS imaging data on the NDA, the underscore in the GUID has been removed (ie, `NDARINVXXXXXXXX`), but be aware that you might need to do a string replace operation to remove the underscore from the GUIDs in the tabulated data to match the GUIDs in the BIDS imaging data.
-<!-- #endregion -->
+The GUID's format is `NDAR_INVXXXXXXXX`, where `XXXXXXXX` is a random string of numbers and uppercase letters. The standard GUID format is *not* [BIDS compatible](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#file-name-structure). In BIDS, the underscore character is reserved to separate key:value entities (eg, `key1-value1_key2-value2`, `sub-01_task-rest`). For the BIDS imaging data on the NDA, the underscore in the GUID has been removed (ie, `NDARINVXXXXXXXX`), but be aware that you might need to do a string replace operation to remove the underscore from the GUIDs in the tabulated data to match the GUIDs in the BIDS imaging data.
+
 
 ***
 
@@ -29,7 +29,7 @@ The GUID's format is `NDAR_INVXXXXXXXX`, where `XXXXXXXX` is a random string of 
 
 The general workflow on the NDA is to add data to your Filter Cart and then create a Data Package from the filter. Here we will create a Data Package from the *fmriresults01* data structure. See Getting Image Volumes [here](https://nda.nih.gov/abcd/query/abcd-release-faqs.html) for more info on the *fmriresults01* structure.
 
-**NOTE** The `fmriresults01.txt` file is distributed in the ABCD 3.0 Release. So if you've already downnloaded that, then you could use that file. If so, y
+**NOTE**: The `fmriresults01.txt` file is distributed in the ABCD 3.0 Release. So if you've already downnloaded that, then you could use that file. If so, you can skip to step 13.
 
 1. Let's begin at the [NDA's front page](https://nda.nih.gov/). Select **Get Data** > **Get Data**
 
@@ -37,7 +37,7 @@ The general workflow on the NDA is to add data to your Filter Cart and then crea
 
 ***
 
-2. On the **NDA Query Tool*'s menu, select **Data Structures**. Then enter "fmriresults01" into the Text Search field and hit enter.
+2. On the **NDA Query Tool**'s menu, select **Data Structures**. Then enter "fmriresults01" into the Text Search field and hit enter.
 
 <img src="./screenshots/nda_query.png" width="900" />
 
@@ -47,9 +47,11 @@ The general workflow on the NDA is to add data to your Filter Cart and then crea
 
 <img src="./screenshots/add_filter_cart.png" width="150" />
 
-Your Filter Cart will take a few minutes to update. Make yourself some tea. Once it is finished, you should see the following:
+Your Filter Cart will take a few minutes to update. Make yourself some tea. Once it is finished, you should see the following.
 
 <img src="./screenshots/filter_cart.png" width="400" />
+
+(Sample size may vary depending on when you are working through this exercise)
 
 ***
 
@@ -71,7 +73,7 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 ***
 
-8. In the drop down menu Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will take a few minutes to move from the "Creating Package" status to "Ready to Download". Maybe refill your tea. In the below image **ABCDndar** is the Data Package we just created. **ABCDdcan** will be created in the second section of this exercise.
+8. In the drop down menu on the Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will take a few minutes to move from the "Creating Package" status to "Ready to Download". Maybe refill your tea. In the below image **ABCDndar** is the Data Package we just created. **ABCDdcan** will be created in the second section of this exercise.
 
 <img src="./screenshots/create_dash.png" width="350" />
 
@@ -79,15 +81,18 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 ***
 
-9. Once the Data Package are ready to download, we can use the [NDA tools](https://github.com/NDAR/nda-tools) to download it. The NDA tools are already installed and ready to use on the ABCD-ReproNim JupyterHub. The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` has. Recall that the `!` in the code cell of a Jupyter notebook means to execute that command using shell.
+9. Once the Data Package is ready to download, we can use the [NDA tools](https://github.com/NDAR/nda-tools) to download it. The NDA tools are already installed and ready to use on the ABCD-ReproNim JupyterHub. The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` has.
 
 ```python
 ! downloadcmd -h
 ```
 
+Recall that the `!` in the code cell of a Jupyter notebook means to execute that command using shell.
+
+
 ***
 
-10. Our first usage of `downloadcmd` will use the Package ID to downloaded the associated package files. Let's put the ABCDndar package into it's own directory. If you have already set up your NDA credentials to download the ABCD 3.0 Release, then `downloadcmd` will use the already stored credentials.  
+10. Our first usage of `downloadcmd` will use the Package ID to download the associated package files. Let's put the ABCDndar package into it's own directory. If you have already set up your NDA credentials to download the ABCD 3.0 Release, then `downloadcmd` will use the already stored credentials.  
 
 ```python
 ! mkdir /home/jovyan/ABCDndar
@@ -96,7 +101,7 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 ***
 
-11. Once the download is completed, we can list the files that have been downloaded. We will see a few files. The relevant file is `fmriresults01.txt`, which contains information about each image in this structure. We can also make a directory to store the image files that we'll download.
+11. Once the download is complete, we can list the files. The relevant file is `fmriresults01.txt`, which contains information about each image in this structure.
 
 ```python
 ! ls /home/jovyan/ABCDndar
@@ -127,13 +132,13 @@ fmri = fmri.drop([0])
 
 ***
 
-14. We do not need most of the information in this table. The relevant columns are `file_source`, which contains the s3 links to the raw DICOM images and `derived_files` which contains the s3 links to the minimally preprocessed images. Here we will focus on downloading the minimally processed files in `derived_files`. We will create a dataframe that contains the s3 links and other relevant fields so that we can filter the s3 links. Explore other columns of this table to see the processing steps that has been applied to the derived_files.
+14. We do not need most of the information in this table. The relevant columns are `file_source`, which contains the s3 links to the raw DICOM images and `derived_files` which contains the s3 links to the minimally preprocessed images. Here we will focus on downloading the minimally processed files in `derived_files`. We will create a dataframe that contains the s3 links and other relevant fields so that we can filter the s3 links. Explore other columns of this table to see the processing steps that has been applied to the `derived_files`.
 
 ```python
 s3_derv = fmri.loc[:,['derived_files']] # create a new data frame from the derived_files column
 ```
 
-Let's look at the format of the s3 link to see how we could parse this for filtering:
+Let's look at the format of the s3 links to see how we could parse this for filtering:
 
 *s3://NDAR_Central_4/submission_32739/NDARINVXXXXXXXX_baselineYear1Arm1_ABCD-MPROC-SST-fMRI_XXXXXXXXXXXXXX.tgz*
 
@@ -144,14 +149,14 @@ Let's look at the format of the s3 link to see how we could parse this for filte
 - The number at the end of the file is the acqusition date/time
 - *.tgz* is the TAR archive file extension
 
-We can use python's ability to split strings to parse these strings so that we can filter by GUI, session, and scan type. Let's see an example:
+We can use python's ability to split strings to parse these strings so that we can filter by GUID, session, and scan type. Let's see an example:
 
 ```python
 example = 's3://NDAR_Central_4/submission_32739/NDARINVXXXXXXXX_baselineYear1Arm1_ABCD-MPROC-SST-fMRI_XXXXXXXXXXXXXX.tgz'
 example.split('/')
 ```
 
-The above code splits the `example` string into a list at every occurence of `/`.
+The above code splits the `example` string into a list of strings at every occurence of `/`.
 
 `.split` only operates on strings, but we have an entire column of strings we want to split. Here we can leverage python's list comprehension to iterate through each string.
 
@@ -161,7 +166,9 @@ For example:
 [i.split('/') for i in s3_derv['derived_files']]
 ```
 
-The above code submits the same split operation to every item in the `s3_derv['derived_files']` data frame we created above. We can leverage string splitting and list comprehension to parse each s3 link into a corresponding GUID, session, and scan type.
+The above code submits the same split operation to every item in the `s3_derv['derived_files']` data frame we created above. You could also complete this with a regular `for` loop, but list comprehension is cleaner and more efficient.
+
+We can leverage string splitting and list comprehension to parse each s3 link into a corresponding GUID, session, and scan type.
 
 ```python
 s3_derv['guid'] = [i.split('/')[-1].split('_')[0] for i in s3_derv['derived_files']] # get the GUID
@@ -171,6 +178,14 @@ s3_derv['scan'] = [i.split('/')[-1].split('_')[2].split('-',1)[-1] for i in s3_d
 s3_derv.head()
 ```
 
+The above list comprehension and string splitting code looks complicated, let's break downb the code for parsing the scan type:
+
+- `[i for i in s3_derv['derived_files']` is looping through every string in `s3_derv['derived_files']`. `i` will be the string in the current iteration.
+- `i.split('/')[-1]` gives us the last (`[-1]`) item in the list (the filename) once you split the full s3 link by the `/` character.
+- The second `.split('_')[2]` splits the filename by `_`. `[2]` is choosing the third item in that list (because of 0 indexing). This is `ABCD-MPROC-SST-fMRI` in the above example.
+- The third `.split('-',1)[-1]` is splitting `ABCD-MPROC-SST-fMRI` by `-`, only by the first occurence of `-`. `[-1]` means that we are grabbing the last in that two item list (`MPROC-SST-fMRI`).
+
+
 Now we have a dataframe where we can filter s3 links by GUID, session, and scan type! Let's see what scan types we have:
 
 ```python
@@ -179,16 +194,16 @@ s3_derv['scan'].value_counts()
 
 ***
 
-15. Now, we can specify our filtering critera. Let's choose 5 subject GUIDs (you can choose 5 random GUIDs from your work on the ABCD 3.0 Release), only the `baselineYear1Arm1` session, and scan types of `MPROC-T1` and `MPROC-rsfMRI`.
+15. Let's specify our filtering critera. Choose 5 subject GUIDs (you can choose 5 random GUIDs from your work on the ABCD 3.0 Release), only the `baselineYear1Arm1` session, and scan types of `MPROC-T1` and `MPROC-rsfMRI`.
 
 ```python
 subjs = [ ] # enter 5 GUIDs.
-runs = ['MPROC-T1', 'MPROC-rsfMRI']
-ses = ['baselineYear1Arm1']
+runs = ['MPROC-T1', 'MPROC-rsfMRI'] # need to match the scan types in s3_derv
+ses = ['baselineYear1Arm1'] # session
 
 # filter the s3_derv data frame using the above filters
 sub_s3derv = s3_derv[s3_derv['guid'].isin(subjs) & s3_derv['scan'].isin(runs) & s3_derv['session'].isin(ses)]
-sub_s3derv.sort_values(['guid', 'scan'])
+sub_s3derv.sort_values(['guid', 'scan']) # sort to make it pretty
 ```
 
 Let's see a count of how many s3 links met the filter criteria.
@@ -217,7 +232,7 @@ with open('/home/jovyan/ABCDndar/s3_derv_links_5subj.txt', 'w') as f:
 
 ***
 
-18. Let's list out the files we've downloaded. You'll notice that the data was downloaded into a `submission_XXXXX` directory. You will also notice that they are all in `.tgz` format. The last step will be to unzip the files. The unzipping and `datalad save` steps will take a few minutes. 4th tea refill is a charm!
+18. Let's list out the files we've downloaded. You'll notice that the data was downloaded into a `submission_XXXXX` directory. You will also notice that the files are in `.tgz` format. The last step will be to unzip the files. The unzipping and `datalad save` steps will take a few minutes. Fourth tea refill is a charm!
 
 The `%%bash` in the cell tells the entire cell to run the code in bash.
 
@@ -346,7 +361,7 @@ datalad save -m 'add T1w and rest input data' .
 
 ***
 
-14. Let's check to see if the input data we downloaded are in proper BIDS format. To do this we'll use the [bids-validator](https://github.com/bids-standard/bids-validator). We'll build a singularity container of the docker image so that we can run the validator on the JupyterHub.
+14. Let's check to see if the input data we downloaded are in proper BIDS format. To do this we'll use the [bids-validator](https://github.com/bids-standard/bids-validator). We'll build a singularity container from the docker image so that we can run the validator on the JupyterHub.
 
 ```python
 ! singularity build bids_validator-1.6.1.simg docker://bids/validator:v1.6.1
