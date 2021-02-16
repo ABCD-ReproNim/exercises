@@ -306,7 +306,7 @@ echo inputs.func.task-rest >> inputs.txt
 
 ***
 
-12. Now that you have the data subsets, you'll also need to create a subject subset file. You can use the same subjects as you did for the above exercise. Create a file called `5subjects.txt` that contains the following format:
+12. Now that you have the data subsets, you'll also need to create a subject subset file. You can use the same subjects as you did for the above exercise. Create a file called `5subjects.txt` that contains the following format. You can `echo` the GUIDs to a text file as we did with the inputs above, or you can create a text file outside of this notebook.
 
 ```
 sub-NDARINVXXXXXXXX
