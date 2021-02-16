@@ -275,7 +275,7 @@ First you need to create a package and download the list of files contained in C
 
 ```python
 ! mkdir /home/jovyan/ABCDdcan
-! downloadcmd <package_ID> -dp -d /home/jovyan//ABCDdcan # replace <package_ID> with your ID
+! downloadcmd <package_ID> -dp -d /home/jovyan/ABCDdcan # replace <package_ID> with your ID
 ```
 
 ```python
