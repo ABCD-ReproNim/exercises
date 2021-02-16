@@ -299,7 +299,7 @@ git clone https://github.com/DCAN-Labs/nda-abcd-s3-downloader.git
 ```bash
 
 cd /home/jovyan/ABCDdcan
-# use grep to filter the data_subsets.txt to only include T1w and task-rest inputs
+# write inputs of interest to inputs.txt
 echo inputs.anat.T1w >> inputs.txt
 echo inputs.func.task-rest >> inputs.txt
 ```
