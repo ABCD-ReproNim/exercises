@@ -113,7 +113,7 @@ Recall that the `!` in the code cell of a Jupyter notebook means to execute that
 
 ```python
 import pandas as pd
-fmri = pd.read_csv('/home/jovyan/ABCDndar/fmriresults01.txt', sep='\t')
+fmri = pd.read_csv('/home/jovyan/ABCDndar/fmriresults01.txt', sep='\t', low_memory=False)
 ```
 
 *** 
@@ -163,7 +163,8 @@ The above code splits the `example` string into a list of strings at every occur
 For example:
 
 ```python
-[i.split('/') for i in s3_derv['derived_files']]
+test_split = [i.split('/') for i in s3_derv['derived_files']]
+test_split[0:3]
 ```
 
 The above code submits the same split operation to every item in the `s3_derv['derived_files']` data frame we created above. You could also complete this with a regular `for` loop, but list comprehension is cleaner and more efficient.
@@ -260,6 +261,14 @@ done
 # track the changes in datalad
 cd /home/jovyan/ABCDndar/image_files
 datalad save -m 'add unzipped files from NDA' .
+```
+
+Let's look at the log to see the changes we've made to this dataset.
+
+```bash
+
+cd /home/jovyan/ABCDndar/image_files
+git log
 ```
 
 ### Success!!
@@ -414,6 +423,14 @@ datalad create -d derivatives --force
 # now save the subdataset
 cd derivatives
 datalad save -m 'add T1w and rest derivatives'
+```
+
+Finally, we can look at the log to see the changes we've made to this dataset.
+
+```bash
+
+cd /home/jovyan/ABCDdcan/image_files
+git log
 ```
 
 ### Success!!
