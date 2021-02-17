@@ -347,7 +347,7 @@ sub-NDARINVXXXXXXXX
 
 13. Now we are ready to download the input data! This step will take a few minutes. You're probaly out of tea at this point.
 
-**NOTE** the first time you run `download.py`, you'll need to run it from your terminal because it will ask for your NDA credentials
+#### **NOTE**: The first time you run `download.py`, you'll need to run it from your terminal because it will ask for your NDA credentials
 
 ```bash
 
