@@ -33,7 +33,7 @@ Once the simple workflow is done, use the paper's supplied `check_output.py` pro
 docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output repronim/simple_workflow:1.1.0 check_output.py
 ```
 
-Based on the output of this program, what was the **ORIGINAL** platform on which the paper's analysis was performs
+Based on the output of this program, what was the **ORIGINAL** platform on which the paper's analysis was performed
 
 - platform: Linux-4.9.19-moby-x86_64-with-debian-8.7, FSL version: 5.0.9
 - platform: Linux-4.9.19-moby-x86_64-with-debian-8.7, FSL version: 6.0
