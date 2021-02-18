@@ -73,7 +73,7 @@ Which of the following statements are **True**?
 
 **Question 3**
 
-Next, let’s fetch a pre-written Notebook we created that has example code for you to use in the next part of the assignment. This Notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below. 
+Next, let’s fetch a [pre-written Notebook](https://github.com/ABCD-ReproNim/exercises/blob/main/week_12/linear_mixed_effects.md) we created that has example code for you to use in the next part of the assignment. This Notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below. 
 
 $ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_12/linear_mixed_effects.md
 
@@ -159,7 +159,7 @@ when constructing models?
 
 ## Machine learning questions
 
-In this quiz, we're going to explore some of the concepts presented in the machine learning lecture. First, let’s fetch a pre-written Jupyter Notebook with example code to guide you through the assignment. This notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below.
+In this quiz, we're going to explore some of the concepts presented in the machine learning lecture. First, let’s fetch a [pre-written Jupyter Notebook](https://github.com/ABCD-ReproNim/exercises/blob/main/week_12/machine_learning.md) with example code to guide you through the assignment. This notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below.
 
 $ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_12/machine_learning.md
 
