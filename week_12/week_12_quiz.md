@@ -7,7 +7,7 @@ and Machine Learning](https://abcd-repronim.github.io/materials/week-12/).
 
 ***
 
-## Longitudinal Modeling questions
+## Longitudinal modeling questions
 
 **Question 1**
 
