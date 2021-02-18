@@ -12,15 +12,9 @@ jupyter:
     language: python
     name: python3
 ---
-# Week 12 Quiz Part 1: Longitudional Modeling
+# Week 12 Part 1: Longitudional Modeling
 
-### Quiz Instructions
-
-In this first part of the Week 12 Quiz (the last weekly data exercise for the course!), we will walk you through a coding exercise about [longitudional modeling](https://abcd-repronim.github.io/materials/week-12/). 
-Unlike the previous quizzes we've assigned, this portion of the quiz does not contain specific questions that we ask you to answer. 
-Rather, we would like you to work through the below tutorial by fetching the Jupyter notebook from GitHub and running the code either locally or on the ABCD-ReproNim JupyterHub. 
-That is, what we want you to do is read through the code we've provided and try to understand what it does. Then, run each cell in the notebook, generate the associated plots, and perform the analysis for each of the models covered. 
-Our hope is that, by following along with and running our code, you can gain experience working with and thinking about how to use these analytic methods.
+You will use this notebook to answer questions from the longitudional modeling portion of in the Week 12 quiz.
 
 # Linear Mixed Effect Models
 
