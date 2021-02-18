@@ -12,6 +12,15 @@ jupyter:
     language: python
     name: python3
 ---
+# Week 12 Quiz Part 1: Longitudional Modeling
+
+### Quiz Instructions
+
+In this first part of the Week 12 Quiz (the last weekly data exercise for the course!), we will walk you through a coding exercise about [longitudional modeling](https://abcd-repronim.github.io/materials/week-12/). 
+Unlike the previous quizzes we've assigned, this portion of the quiz does not contain specific questions that we ask you to answer. 
+Rather, we would like you to work through the below tutorial by fetching the Jupyter notebook from GitHub and running the code either locally or on the ABCD-ReproNim JupyterHub. 
+That is, what we want you to do is read through the code we've provided and try to understand what it does. Then, run each cell in the notebook, generate the associated plots, and perform the analysis for each of the models covered. 
+Our hope is that, by following along with and running our code, you can gain experience working with and thinking about how to use these analytic methods.
 
 # Linear Mixed Effect Models
 
@@ -21,8 +30,9 @@ In the following notebook we will explore:
 - within and between subject variance
 - model interpretation
 
-The simulated data can be interpreted as measuring brain volume from a particular area of interest (for example the hippocampus) over time.
+The simulated data that we will create in this exercise can be interpreted as measuring brain volume from a particular area of interest (for example the hippocampus) over time.
 We may guess the brain area of interest increases in size over time, and we want to measure the average yearly increase of volume in our cohort.
+First let's import all of the libraries that we will need.
 
 
 ```python
@@ -41,9 +51,11 @@ warnings.filterwarnings('ignore')
 
 ## Functions
 
-Below are the functions used to simulate, plot and analyze data respectively.
+Below are the functions used to simulate, plot, and analyze data respectively.
 By wrapping up common code into functions, we make it easier to change the code
-and call it repeatedly without rewriting all the code.
+and call it repeatedly without rewriting all the code. 
+If you're not familiar with defining your own functions in Python [this](https://realpython.com/defining-your-own-python-function/) 
+is a good tutorial to check out.
 
 
 ```python
@@ -100,7 +112,7 @@ def generate_data(groups, timepoints, rng):
     # combine all the groups into a single dataframe
     full_df = pd.concat(dfs, ignore_index=True)
     
-    # transform the dataframe to long (from wide) for analysis
+    # transform the dataframe to long (from wide) format for analysis
     long_df = pd.wide_to_long(full_df.reset_index(), stubnames='volume', i='index', j='interview_age', sep='-')
     long_df = long_df.reset_index().rename(columns={'index': 'subjectkey'}).sort_values(by=['subjectkey', 'interview_age'], ignore_index=True)
     
@@ -172,7 +184,7 @@ timepoints = 3
 
 ## Simple Dataset
 
-In our simple dataset, every participant has the same starting point (7000) and the same growth trajectory (6) which they follow perfectly.
+In the simple dataset we simulate below, every participant has the same starting point (7000) and the same growth trajectory (6) which they follow perfectly.
 In essence, each person is a clone that follows a deterministic growth trajectory.
 
 Since there is not any variance to be accounted for, a simple ordinary least squares analysis is most appropriate.
@@ -220,7 +232,7 @@ Why is the intercept 6940? The baseline average volume was set to be 7000, where
 
 ## Varying Intercepts Dataset
 
-In the following dataset, each participant has a different starting point/baseline, but 
+Next, in the following simulated dataset, each participant has a different starting point/baseline, but 
 they still all follow the same trajectory perfectly.
 Including random intercepts helps model the varying intercepts between participants.
 
@@ -248,8 +260,8 @@ analyze_data(diff_intercepts_df)
 ```
 
 In the simple ordinary least squares model, the variance from the intercepts becomes a part of the standard error of the estimate (within subject error), reducing the overall significance of the `interview_age` statistic.
-The random intercept mixed effect model, on the other hand, properly attributes the varying intercepts as between subject variance instead of within subject variance increasing the power of the test.
-Since the slopes do not vary between participants, the random intercepts plus slopes model does not give the test more power (and may make the equation non-estimable)
+The random intercept mixed effect model, on the other hand, properly attributes the varying intercepts as between subject variance instead of within subject variance, increasing the power of the test.
+Since the slopes do not vary between participants in the current simulated dataset, though, a random intercepts plus slopes model would not give the test more power (and may make the equation non-estimable).
 
 ## Varying Intercepts and Slopes
 
