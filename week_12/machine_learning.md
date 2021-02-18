@@ -13,9 +13,15 @@ jupyter:
     name: python3
 ---
 
+# Week 12 Quiz Part 2: Machine Learning
+
+### Quiz Instructions
+
+In this second part of the Week 12 Quiz (the last weekly data exercise for the course!), we will walk you through a coding exercise about [analytic approaches in machine learning](https://abcd-repronim.github.io/materials/week-12/).
+
 # ABCD-ReproNim: Exploring machine learning concepts
 
-In this notebook, we will explore some concepts presented in ABCD-ReproNim lecture 12b:
+In this notebook, we will explore some concepts presented in [ABCD-ReproNim lecture 12b](https://youtu.be/LAddDaqUe0A):
 - ordering of imputation and scaling in cross-validation
 - effect of sample size on error distributions
 - ensembling
@@ -278,7 +284,7 @@ for classifier_name in sorted(classifiers):
 ```
 
 Aside: Note here we use the procedural interface to matplotlib
-as opposed to the object-oriented interfaces used above
+as opposed to the object-oriented interfaces used above.
 Both of them work. The procedural interface is fast and very Matlab-like.
 The object-oriented interface can be more expressive if you want fine-grained control over what your plots look like.
 
