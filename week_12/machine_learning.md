@@ -13,11 +13,9 @@ jupyter:
     name: python3
 ---
 
-# Week 12 Quiz Part 2: Machine Learning
+# Week 12 Part 2: Machine Learning
 
-### Quiz Instructions
-
-In this second part of the Week 12 Quiz (the last weekly data exercise for the course!), we will walk you through a coding exercise about [analytic approaches in machine learning](https://abcd-repronim.github.io/materials/week-12/).
+You will use this notebook to answer questions from the machine learning portion of in the Week 12 quiz.
 
 # ABCD-ReproNim: Exploring machine learning concepts
 
