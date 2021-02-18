@@ -288,10 +288,12 @@ We also learned about [Nilearn](https://nipy.org/packages/nilearn/index.html) in
 Once you have completed the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions), you should use the following commands to clone the dataset and get the contents that were generated in the `derivatives` folder. 
 We will also create two new folders to store the code and the figures that we will generate. 
 
-- `datalad clone week9_analysis week11_analysis`
-- `cd week11_analysis`
-- `datalad get derivatives`
-- `mkdir code derivatives`
+```bash
+datalad clone week9_analysis week11_analysis
+cd week11_analysis
+datalad get derivatives
+mkdir code derivatives
+```
 
 Next, we're going to create a python script that will use Nilearn to create two figures corresponding to the `fast` 
 and `none` parameters. These figures will have a resolution of 300 dpi. Place this script in the `code` folder.
