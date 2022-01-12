@@ -1,4 +1,4 @@
-# Week 1 Quiz
+# 2020 ABCD-ReproNim Course: Week 1 Quiz
 
 ### Quiz Instructions
 
