@@ -17,6 +17,15 @@ What is the mean age-corrected standard score?
 - 101.714
 - 103.492
 
+<details>
+<summary>Click to see answer</summary>
+
+102.218
+
+</details>
+
+****
+
 **Question 2**
 
 Using the DEAP “Limit” tool, select only study participants who are siblings, twins, or triplets AND who have an age-corrected reading score (see above question for context) greater than 110. How many study participants satisfy those criteria in the baseline data? It may help to examine the other presets to see how to combine selection queries and how to select siblings, twins, or triplets.
@@ -25,6 +34,15 @@ Using the DEAP “Limit” tool, select only study participants who are siblings
 - 689
 - 2,274
 - 2,886
+
+<details>
+<summary>Click to see answer</summary>
+
+748
+
+****
+
+</details>
 
 **Question 3**
 
@@ -36,3 +54,12 @@ What is the delta-R^2 reported in the effect size table for this model?
 - 2.44%
 - 2.50%
 - 2.39%
+
+<details>
+<summary>Click to see answer</summary>
+
+2.50%
+
+****
+
+</details>
