@@ -50,7 +50,7 @@ Some people miss appointments
 ****
 Let's do a few exercises using the Terminal
 
-For students running computers with MacOS or Linux, follow the instructions in the lecture and do the following problems using your operating system’s Terminal application. For Windows users, you can download Ubuntu for Windows  [here](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:regionofsystemrequirementstab).
+For students running computers with MacOS or Linux, follow the instructions in the lecture and do the following problems using your operating system’s Terminal application. For Windows users, you can download Ubuntu for Windows [here](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:regionofsystemrequirementstab). You can also practice using bash commands without downloading Ubuntu via an online Linux Terminal application such as [Webminal](https://www.webminal.org/register/) (note: you will need to create a free user account in order to use this online Linux emulator).
 
 **Question 3**
 
@@ -91,25 +91,26 @@ Hint: you may need to use pipes.
 
 - 35
 - 28
-- 67
-- 18
+- 22
+- Some other value not listed here
 
 <details>
 <summary>Click to see answer</summary>
 
-35
-
-
-**Solution**
+The numerical answer to this question depends on which version of grep you are running in your Terminal. If you are running `grep` on a Mac (i.e., are running BSD grep 2.5.1-FreeBSD or similar) the number of times the word "pattern" appears in the grep user manual is 35. If you are running `grep` on a Linux Terminal (i.e., are running GNU grep 2.20 or similar) the answer is 22. If you are running a version of grep that is different from either of the above then you may have another answer! Because of this all answers to this question are marked as correct. The important thing here is not, in fact, to identify how many instances of the word "pattern" appear in the grep user manual (shocker!)... what is important is to understand how to use `grep` to search for specific expressions. A deailed explination of one possible set of commands that achieve the above desired search is described below.
+    
+**Possible solution**
 
 `man grep | grep -i -o pattern | wc -l`
+    
+**Explanation**
+    
+`man` is the shell command used to see a commands user manual. `grep` is used here in two ways. First we print the grep user manual using `man grep`. Then, that output is piped (using `|`) to the `grep` command where we search for all instances of the string `pattern`. The `grep` option `-i` is selected to ingore capitalization (`grep` is case-sensitive by default, so `-i` tells `grep` to return instaces of the strings `pattern`, `Pattern`, `PATTERN`, etc). We also use the option `-o` to ask `grep` to print out each instance of `pattern` on a new line (without the `-o` flag, `grep` would print out each line that contains *one or more* instance of the string `pattern` -- because we want to count the *total number of times* the word "pattern" appears, we want to print each appearing of `pattern` to a new line). Finally, We pipe (using `|`) this output into the `wc` program, which counts various aspects of the input. We use `-l` to tell `wc` that we want to count the number of lines (each of which contains a new instance of `pattern`).
 
-**Explaination**
-
-`man` is the shell command to see a commands user manual. `grep` is used here in two ways. First we print the user manual of `grep` using `man grep`. Then, that output is piped (using `|`) to the `grep` command and we search for all instances of the string `pattern`, where the output is one line per instance of the string `pattern`. We then pipe (using `|`) this output into the `wc` program, which counts various aspects of the input. We us `-l` to tell `wc` that we want to count the number of lines.
-
-Note: the usage of `grep pattern` is case-insensitive and can contain the plural, thus `Pattern`, `Patterns`, and `patterns` are also included.
-
+If you want to know more about the acailable options in `grep`, `wc`, or any other bash command then you can find a description of all options in the manual files.
+    
+Note: the usage of `grep -i -o pattern` can contain the plural, thus `pattern` and `patterns` are both included.
+      
 ***
 
 </details>
@@ -119,24 +120,18 @@ Note: the usage of `grep pattern` is case-insensitive and can contain the plural
 Using only commands in the Terminal application, create a directory called `week_2`. Within this directory, save the user manuals of the commands `grep`, `cat`, and `ls` to respective files called `grep.txt`, `cat.txt`, and `ls.txt`. Using one line in the Terminal, sort the contents of these three files by the number of lines they contain, in ascending order. What is this order?
 
 - `cat.txt`, `grep.txt`, `ls.txt`
-- `grep.txt`, `cat.txt`, `ls.txt`
+- `cat.txt`, `ls.txt`, `grep.txt`
 - `ls.txt`, `cat.txt`, `grep.txt`
-- They all have the same number of lines.
+- some other combination not listed here.
 
 <details>
 <summary>Click to see answer</summary>
 
-`cat.txt`, `grep.txt`, `ls.txt`
-
-**Note**
-
-Your answer will depend on your operating system. The answer of `cat.txt`, `grep.txt`, `ls.txt` was found using Mac OS 10.14.6.
+Your answer will depend on your operating system/which version of Unix or Linux you are using. The answer `cat.txt`, `grep.txt`, `ls.txt` was found using the FreeBSD version of Unix that runs on Mac OSX. The answer of `cat.txt`, `ls.txt`, `grep.txt` was found using the version of Linux that runs on CentOS 7 and Fedora 31. There are other possibilties, thus all answers to this question are marked as correct.
 
 **Possible solutions**
-
-`wc -l *.txt | sort`
-
-`wc -l *.txt > lines.txt | sort lines.txt`
+    
+You can create a new directory called `week_2` via the command `mkdir week_2`. You can then change you working directory to `week_2` by using the command `cd week_2`. The separate commands `man ls > ls.txt`, `man grep > grep.txt`, and `man cat > cat.txt` would create three txt files within `week_2`, each containing the three different user manuals for `ls`, `grep` and `cat`. Next you can print a sorted list of the number of lines within each user manual using `wc -l *.txt | sort`. Note, as before, there are many different ways you could determine the answer to this questions. The above is just one example.
 
 **Explanation**
 
