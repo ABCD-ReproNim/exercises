@@ -1,6 +1,6 @@
 # Week 2 Bonus Quiz on DEAP
 
-Only researchers who have been approved to access ABCD Study data are permitted to access DEAP. This is a bonus quiz for students who have successfully gained access to DEAP. This quiz is not required, but is recommended if you have access to DEAP.
+Only researchers who have been approved to access ABCD Study data are permitted to access [DEAP](https://deap.nimhda.org/applications/User/login.php). This is a bonus quiz for students who have successfully gained access to [DEAP](https://deap.nimhda.org/applications/User/login.php). This quiz is not required, but is recommended if you have access to DEAP.
 
 This quiz will be available to you throughout the course. Thus, if you do not currently have access to ABCD data, but your access is approved in the future, then you will be able to complete this quiz at a later date.
 
