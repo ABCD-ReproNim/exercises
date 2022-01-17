@@ -127,7 +127,7 @@ Using only commands in the Terminal application, create a directory called `week
 <details>
 <summary>Click to see answer</summary>
 
-Your answer will depend on your operating system/which version of Unix or Linux you are using. The answer `cat.txt`, `grep.txt`, `ls.txt` was found using the FreeBSD version of Unix that runs on Mac OSX. The answer of `cat.txt`, `ls.txt`, `grep.txt` was found using the version of Linux that runs on CentOS 7 and Fedora 31. There are other possibilties, thus all answers to this question are marked as correct.
+Your answer will depend on your operating system/which version of Unix or Linux you are using. The answer `cat.txt`, `grep.txt`, `ls.txt` was found using the FreeBSD version of Unix that runs on Mac OSX. The answer of `cat.txt`, `ls.txt`, `grep.txt` was found using the version of Linux that runs on CentOS 7 and Fedora 31. There are other possibilities, thus all answers to this question are marked as correct.
 
 **Possible solutions**
     
