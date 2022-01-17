@@ -47,29 +47,8 @@ Reliability and generalizability
 
 </details>
 
+
 **Question 3**
-
-Before ABCD data are made available on NDA, the images are subject to (check all that apply):
-
-- [ ] Compliance check for completeness and sanity checks
-- [ ] Quality checks that are computed automatically (e.g., mean framewise displacement)
-- [ ] Quality checks performed manually by reviewers who inspect all images pre- and post-processing
-- [ ] Nothing. Poor quality participant data are automatically excluded on NDA
-
-<details>
-<summary>Click to see answer</summary>
-
-Compliance check for completeness and sanity checks
-
-Quality checks that are computed automatically (e.g., mean framewise displacement)
-
-Quality checks performed manually by reviewers who inspect all images pre- and post-processing
-
-***
-
-</details>
-
-**Question 4**
 
 ABCD Study neuroimaging data that have been minimally processed can be accessed via (check all that apply):
 
@@ -87,6 +66,24 @@ ABCD-BIDS Community Collection 3165
 ***
 
 </details>
+
+**Question 4**
+
+To take account "nested" covariates in ABCD study, which statistical approach is recommended:
+
+- [ ] General Linear Modeling
+- [ ] Mixed Effect Modeling
+- [ ] Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
+
+<details>
+<summary>Click to see answer</summary>
+
+Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
+
+***
+
+</details>
+
 
 **Question 5**
 
@@ -172,11 +169,9 @@ This same researcher wants to compute the sample size needed to detect a standar
 <details>
 <summary>Click to see answer</summary>
 
-Both R and Python can be used to solve this problem and get the answer for the sample size of ONE of the groups, i.e. to get the final 
-answer, we need to multiply the answer by two since we know the groups are equally sized. 
+Both R and Python can be used to solve this problem and get the answer for the sample size of ONE of the groups, i.e. to get the final answer, we need to multiply the answer by two since we know the groups are equally sized. 
 
 **Solution in Python**
-
 
 ```
 > from statsmodels.stats.power import tt_ind_solve_power
@@ -184,10 +179,8 @@ answer, we need to multiply the answer by two since we know the groups are equal
 99.08032683981143
 ```
 
-Note: The [statsmodels](https://www.statsmodels.org/stable/index.html) package is a really handy Python library for all 
-sorts of statistical modelling. The `tt_ind_solve_power` function allows you to solve for any parameter 
-of the power of a two sample t-test so long as the other parameters are provided. As with the analogous R function, 
-the value returned for `n` is the sample size for one of the groups.
+Note: The [statsmodels](https://www.statsmodels.org/stable/index.html) package is a really handy Python library for all sorts of statistical modelling. The `tt_ind_solve_power` function allows you to solve for any parameter 
+of the power of a two sample t-test so long as the other parameters are provided. As with the analogous R function, the value returned for `n` is the sample size for one of the groups.
 
 **Solution in R**
 ```
