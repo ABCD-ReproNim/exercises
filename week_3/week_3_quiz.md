@@ -164,20 +164,20 @@ Once Docker is installed, try downloading and running the alpine Docker containe
 
 **Question 7**
 
-The alpine docker image is a minimal image based on Alpine Linux. It is designed for you to provide commands yourself as arguments to the docker run command. For example the command `docker run alpine echo 'Hello World'` would pass the `echo 'Hello World'` command to the alpine container. Try it out. In Alpine Linux, the operating system version information is stored in a file located at `/etc/os-release`. Use this information to find the exact Alpine Linux version number for the alpine docker image with tag `3.11`. Hint: be sure to use the tag `3.11` in all docker pull and run commands that you use to answer this question.
+The alpine docker image is a minimal image based on Alpine Linux. It is designed for you to provide commands yourself as arguments to the docker run command. For example the command `docker run alpine echo 'Hello World'` would pass the `echo 'Hello World'` command to the alpine container. Try it out. In Alpine Linux, the operating system version information is stored in a file located at `/etc/alpine-release`. Use this information to find the exact Alpine Linux version number for the alpine docker image with tag `3.14`. Hint: be sure to use the tag `3.14` in all docker pull and run commands that you use to answer this question.
 
-- 3.11.4
-- 3.11.5
-- 3.11.6
-- 3.11.7
+- 3.14.2
+- 3.14.3
+- 3.14.4
+- 3.14.5
 
 <details>
 <summary>Click to see answer</summary>
 
-3.11.6
+3.14.3
 
 **Explanation**
-Use the command `docker run alpine:3.11 cat /etc/os-release` to get the version information.
+Use the command `docker run alpine:3.14 cat /etc/alpine-release` to get the version information.
 
 ***
 
@@ -247,11 +247,11 @@ RUN /bin/bash /opt/miniconda.sh -b -p /opt/conda
 ENV PATH="/opt/conda/bin:$PATH"
 ```
 
-Build this docker image by navigating to the same directory as your Dockerfile and running `docker build -t my_custom_fsl .` Don't forget about the dot at the end, which tells Docker where to find the Dockerfile. Next register for an account on Docker Hub. Log into Docker Hub in your console using `docker login`. Build your image with the name `<username>/my_custom_fsl` and push your image to Docker Hub using `docker push <username>/my_custom_fsl.` Find a link to your image on Docker Hub and ~~paste below~~ (in responsive versions of this quiz, you would be asked to submit the link for grading. Here, simply take a moment to reflect on your accomplishments).
+Build this docker image by navigating to the same directory as your Dockerfile and running `docker build -t my_custom_fsl .` Don't forget about the dot at the end, which tells Docker where to find the Dockerfile. Next register for an account on Docker Hub. Log into Docker Hub in your console using `docker login`. Build your image with the name `<username>/my_custom_fsl` and push your image to Docker Hub using `docker push <username>/my_custom_fsl.` Find a link to your image online on Docker Hub. There's no right or wrong answer for this one. Simply take a moment to reflect on your accomplishments.
 
 **Question 11**
 
-Extra credit (not graded). Using NeuroDocker, create a Dockerfile that will produce an image with FSL that answers Question #8 above. You will need to install FSL, download the image file using a strategy similar to the one used [here](https://github.com/ReproNim/neurodocker#minimize-existing-docker-image), and set the entry-point to use the command that you used to answer question #8. In the text box below, enter the lines that you would use to create this Dockerfile using NeuroDocker. Note: you do not need to actually build this Docker image, which could take quite some time depending on your internet connection. After doing this, you will have built a container to reproducibly answer our quiz question. Think about how you could use the same tools to create reproducible analysis pipelines for your research.
+Extra credit (not graded). Using NeuroDocker, create a Dockerfile that will produce an image with FSL that answers Question #8 above. You will need to install FSL, download the image file using a strategy similar to the one used [here](https://github.com/ReproNim/neurodocker#minimize-existing-docker-image), and set the entry-point to use the command that you used to answer question #8. In the text box below, enter the lines that you would use to create this Dockerfile using NeuroDocker. Note: you do not need to actually build this Docker image, which could take quite some time depending on your internet connection. After doing this, you will have built a container to reproducibly answer our quiz question. Think about how you could use the same tools to create reproducible analysis pipelines for your own research.
 
 <details>
 <summary>Click to expand and see one potential answer</summary>
