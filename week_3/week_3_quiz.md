@@ -23,13 +23,12 @@ The ABCD sample is representative of youth in the United States.
 False
 
 **Explanation**
-- Due to the urban location of the sites and the self-selection of participants,
-  the sample cannot be considered representative.
-  Additionally, hidden unmeasured variables may influence development and are
-  not being accounted for.
-    - sources:
-        - https://youtu.be/pvbRt5SntE8?t=2291
-        - https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0015
+
+- Due to the urban location of the sites and the self-selection of participants, the sample cannot be considered representative.  Additionally, hidden unmeasured variables may influence development and are not being accounted for.
+- sources:
+  - [Course video: Sampling, Recruitment, and Retention (31:18)](https://youtu.be/pvbRt5SntE8?t=2291)
+  - [Recruiting the ABCD sample: Design considerations and procedures](https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0015)
+
 ***
 
 </details>
@@ -49,10 +48,11 @@ What was the primary method of recruitment for single birth children?
 Schools
 
 **Explanation**
-- most 9-10 year olds are enrolled in school
-    - sources
-        - https://youtu.be/pvbRt5SntE8?t=1167
-        - https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0025
+
+- most 9-10 year olds are enrolled through school
+- sources
+  - [Course video: Sampling, Recruitment, and Retention (19:28)](https://youtu.be/pvbRt5SntE8?t=1168)
+  - [Recruiting the ABCD sample: Design considerations and procedures](https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0025)
 
 ***
 
@@ -73,11 +73,13 @@ What was the primary method of recruitment for twins?
 Birth registries
 
 **Explanation**
+
 - twins are relatively rare requiring a more targeted strategy
   through birth registries.
-    - sources
-        - https://youtu.be/pvbRt5SntE8?t=1380
-        - https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0055
+- sources
+  - [Course video: Sampling, Recruitment, and Retention (23:00)](https://youtu.be/pvbRt5SntE8?t=1380)
+  - [Recruiting the ABCD sample: Design considerations and procedures](https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0055)
+
 ***
 
 </details>
@@ -98,12 +100,14 @@ What are two sources of sample bias the ABCD recruitment strategy could not acco
 Urbanicity & Self-Selection
 
 **Explanation**
+
 - self-selection
-    - "it is well understood that self-selection by families into the study will likely be a major and unavoidable source of sampling bias" (Garavan et al. 2018).
-    - source: https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0025
+  - "it is well understood that self-selection by families into the study will likely be a major and unavoidable source of sampling bias" (Garavan et al. 2018).
+  - source: [Recruiting the ABCD sample: Design considerations and procedures](https://www.sciencedirect.com/science/article/pii/S1878929317301809#sec0025)
 - urbanicity
-    - Most imaging centers are located in urban areas.
-    - source: https://youtu.be/pvbRt5SntE8?t=842
+  - Most imaging centers are located in urban areas.
+  - source: [Course video: Sampling, Recruitment, and Retention (14:02)](https://youtu.be/pvbRt5SntE8?t=842)
+
 ***
 
 </details>
@@ -122,9 +126,10 @@ How has the sociodemographic bias in missing assessments changed after the begin
 Decreased
 
 **Explanation**
-- it appears removing the burden of coming to lab reduces the
-  sociodemographic bias.
-- source: https://youtu.be/pvbRt5SntE8?t=3083
+
+- It appears removing the burden of coming to lab reduces the
+  sociodemographic bias
+- source: [Course video: Sampling, Recruitment, and Retention (51:23)](https://youtu.be/pvbRt5SntE8?t=3083)
 
 ***
 
