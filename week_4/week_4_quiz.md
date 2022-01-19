@@ -50,6 +50,28 @@ Reliability and generalizability
 
 **Question 3**
 
+Before ABCD data are made available on NDA, the images are subject to (check all that apply):
+
+- [ ] Compliance check for completeness and sanity checks
+- [ ] Quality checks that are computed automatically (e.g., mean framewise displacement)
+- [ ] Quality checks performed manually by reviewers who inspect all images pre- and post-processing
+- [ ] Nothing. Poor quality participant data are automatically excluded on NDA
+
+<details>
+<summary>Click to see answer</summary>
+
+Compliance check for completeness and sanity checks
+
+Quality checks that are computed automatically (e.g., mean framewise displacement)
+
+Quality checks performed manually by reviewers who inspect all images pre- and post-processing
+
+***
+
+</details>
+
+**Question 4**
+
 ABCD Study neuroimaging data that have been minimally processed can be accessed via (check all that apply):
 
 - [ ] NDA Fast Track data
@@ -62,23 +84,6 @@ ABCD Study neuroimaging data that have been minimally processed can be accessed 
 NDA Tabulated data
 
 ABCD-BIDS Community Collection 3165
-
-***
-
-</details>
-
-**Question 4**
-
-To take account "nested" covariates in ABCD study, which statistical approach is recommended:
-
-- [ ] General Linear Modeling
-- [ ] Mixed Effect Modeling
-- [ ] Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
-
-<details>
-<summary>Click to see answer</summary>
-
-Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
 
 ***
 
@@ -101,6 +106,22 @@ True
 
 </details>
 
+**Question 6**
+
+To take account "nested" covariates in ABCD study, which statistical approach is recommended:
+
+- [ ] General Linear Modeling
+- [ ] Mixed Effect Modeling
+- [ ] Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
+
+<details>
+<summary>Click to see answer</summary>
+
+Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
+
+***
+
+</details>
 
 ### ReproNim Questions 
 
