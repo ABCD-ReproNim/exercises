@@ -26,6 +26,8 @@ Mobile and wearable technology data are acquired using which of the following me
 - Self report of screen media activity
 - Parent report of screen media activity
 
+Source: [Course video: Novel Technologies - Mobile, Wearable, and Social Media (00:48)](https://youtu.be/MFk98_ykknQ?t=48)
+
 ***
 
 </details>
@@ -44,6 +46,8 @@ Unprocessed minute-level activity data are available in the Data Releases.
 
 Unprocessed data are available from the data analysis and informatics core, not the regular data releases.
 
+Source: [Course video: Novel Technologies - Mobile, Wearable, and Social Media (04:22)](https://youtu.be/MFk98_ykknQ?t=262)
+
 ***
 
 </details>
@@ -61,6 +65,8 @@ Mobile device data capture using the EARS app is possible on which of the follow
 <summary>Click to see answer</summary>
 
 - Android
+
+Source: [Course video: Novel Technologies - Mobile, Wearable, and Social Media (16:44)](https://youtu.be/MFk98_ykknQ?t=1004)
 
 ***
 
@@ -83,6 +89,8 @@ Summary data from the EARS app are available from which of the following categor
 - Gaming
 - YouTube
 
+Source: [Course video: Novel Technologies - Mobile, Wearable, and Social Media (24:21)](https://youtu.be/MFk98_ykknQ?t=1461)
+
 ***
 
 </details>
@@ -92,14 +100,16 @@ Summary data from the EARS app are available from which of the following categor
 Self-report data are acquired…
 
 - Every 3 months
+- Every 6 months
 - Every year
-- Every other year
 - Every two years
 
 <details>
 <summary>Click to see answer</summary>
 
 - Every year
+
+Source: [Course video: Novel Technologies - Mobile, Wearable, and Social Media (29:00)](https://youtu.be/MFk98_ykknQ?t=1740)
 
 ***
 
