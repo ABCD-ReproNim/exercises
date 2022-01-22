@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 3 Quiz, we will ask you a few questions about ABCD (Sampling, Recruitment, Retention) and you will complete a few ReproNim exercises (Containers and ReproEnv).
+In this Week 3 Quiz, we will ask you a few questions about [ABCD Sampling, Recruitment, snf Retention](https://youtu.be/pvbRt5SntE8) and you will complete a few ReproNim exercises involving the [lecture on Containers and ReproEnv](https://youtu.be/UHw-DVgm-pE).
 
 ***
 
