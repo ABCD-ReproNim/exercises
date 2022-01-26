@@ -24,7 +24,7 @@ Which general parameters were considered when deciding which culture and environ
 - Time to administer
 - Validity across cultures
 
-The [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper specifically mentions that the census group classifications are inadequate.
+The [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper specifically mentions that the census group classifications are inadequate. All other options can be found in Section 2 `Description of measures` of the paper
 
 ***
 
@@ -44,7 +44,7 @@ The ABCD Study aimed to recruit a certain percentage of participants from a "hig
 <details>
 <summary>Click to see answer</summary>
 
-- 50%
+- 50% (video 28:25)
 
 ***
 
@@ -65,7 +65,7 @@ The Culture and Environment component of the ABCD protocol has a modest ability 
 
 - 4
 
-This can be answered by looking at Figure 4 of the [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper or simply by reading its conclusion.
+This can be answered by looking at Table 3 of the [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper or simply by reading its conclusion. _Although 64% of the tests of difference between the higher and lower risk groups are significant (80% of the Youth measures and 53% of the measures completed by parents), only four make the cut-off for a meaningful effect size, 0.20_
 
 ***
 
@@ -73,19 +73,18 @@ This can be answered by looking at Figure 4 of the [Zucker et al](https://pubmed
 
 **Question 4**
 
-With one exception, in the Culture and Environment component of the ABCD Study, the baseline parent and youth reports all show the same patterns with the regard to sex differences. For which measure was the sex difference (or lack thereof) found in the youth report not found in the parent report?
+With one exception, in the Culture and Environment component of the ABCD Study, the baseline parent and youth reports all show the same patterns with the regard to sex differences. For which measure was the sex difference not found in the youth report but found in the parent report?
 
 - Neighborhood Safety
 - FES Conflict subscale
 - SDQ Prosocial Behavior
-- Parental Monitoring
 
 <details>
 <summary>Click to see answer</summary>
 
 - Neighborhood Safety
 
-Youth reported no sex difference in neighborhood safety, while parents reported that daughters have a lesser sense of safety in their neighborhoods than do their sons.
+This can be answered by looking at Table 4 of the [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper or the conclusion part. _With the exception of the ratings of no differences for Neighborhood Safety, strong sex differences are present in all of the Youth Report measures of their experience of the proximal social environment._
 
 ***
 
@@ -98,13 +97,13 @@ Which of the following measures were administered for the first time at the one-
 - [ ] PhenX Neighborhood Safety/Crime
 - [ ] Perceived Discrimination Scale
 - [ ] Prosocial Tendencies
-- [ ] Family Environment Scale (family conflict subscale) Wills Problem Solving
+- [ ] Wills Problem Solving Scale
 
 <details>
 <summary>Click to see answer</summary>
 
-- Perceived Discrimination Scale
-- Prosocial Tendencies
+- Perceived Discrimination Scale (video 20:38)
+- Wills Problem Solving Scale (video 23:30)
 
 ***
 
@@ -112,20 +111,8 @@ Which of the following measures were administered for the first time at the one-
 
 ## ReproNim questions
 
-Enrolled Students: We recommend you use the online version of
-the [ABCD-ReproNim Jupyterhub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15), in
-which DataLad is already installed. You can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local
-instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
-you can work with a local, non-JupyterHub instance of DataLad by following the installation
-instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
-
-Observer Students: We recommend you use the ABCD-ReproNim Jupyterhub container that we've set up for ABCD-ReproNim Observer Students, in which
-DataLad is already installed. Instructions on how to set up a local instance of our JupyterHub can be
-found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). General information about the
-ABCD-ReproNim JupyterHub can be
-found [here](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15). Alternatively, you can
-work with a local, non-JupyterHub instance of DataLad by following the installation
-instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
+For students who have active DUCs, We recommend you use the online version of
+the [ABCD-ReproNim Jupyterhub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15), in which DataLad is already installed. You can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively, you can work with a local, non-JupyterHub instance of DataLad by following the installation instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
 
 The following questions focus on using DataLad. A summary of the DataLad commands presented in the [Week 8 ReproNim lecture](https://youtu.be/udLVUyZQanw) can be found [here](http://handbook.datalad.org/en/latest/code_from_chapters/ABCD.html#abcd).
 
@@ -153,27 +140,27 @@ Choose all statements that are true about git and git-annex.
 
 **Question 7**
 
-Navigate to your home directory on the Jupyter Hub. First, create a DataLad dataset using the YODA configuration. Let’s call this dataset directory `week8_analysis`. Next, clone the structural portion of the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) (https://github.com/psychoinformatics-de/studyforrest-data-structural) as a subdataset named `data`. What is the current size of the `data` directory?
+Navigate to your home directory on the Jupyter Hub. First, create a DataLad dataset using the YODA configuration. Let’s call this dataset directory `week8_analysis`. Next, clone the structural portion of the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) as a subdataset named `data`. What is the current size of the `data` directory?
 
 Note: in the DataLad lecture, Dr. Wagner uses a command to clone a dataset hosted on GitHub by specifying its location with `git@github.com:[remote repository path]`. This `git@` way of specifying a dataset location requires ssh-based access, and if you haven't already set up an RSA key on the JupyterHub you may run into an error. However, you can also specify a dataset location simply by inputting a url into the `datalad clone` command, which does not require setting up RSA credentials. If you need more information on argument options for the `datalad clone` command you can always type `datalad clone --help`.
 
+- 200 KB
+- 872 KB
 - 1.2 MB
-- 1.8 MB
-- 2.3 MB
 - 2.5 MB
 
 
 <details>
 <summary>Click to see answer</summary>
 
-- 1.8 MB
+- 872 KB
 
 Datalad solution
 - `datalad create -c yoda week8_analysis`
 - `cd week8_analysis`
-- `datalad clone -d . https://github.com/psychoinformatics-de/studyforrest-data-structural.git data`
+- `datalad clone -d . https://github.com/psychoinformatics-de/studyforrest-data-structural.git data/`
 - `cd data`
-- `du sh`
+- `du -sh`
 
 ***
 
@@ -199,7 +186,7 @@ Let's get only the T1w file content stored in the `anat` subdirectories of the d
 
 **Question 9**
 
-We notice that this dataset is missing a `dataset_description.json` file, rendering it not a fully BIDS compliant dataset (and this would pose a problem for running BIDS pipelines). Create this file with the following content in it: {"Name": "Example dataset", "BIDSVersion": "1.0.2"}. (Note: If you’d like to know more about BIDS `dataset_description.json` files and what goes into them you can find more information [here](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html).) To make DataLad aware of this addition, which would you run?
+We notice that the `dataset_description.json` file in this dataset is missing `BIDSVersion`, rendering it not a fully BIDS compliant dataset (and this would pose a problem for running BIDS pipelines). Assuming you have updated this content as `BIDSVersion": "1.0.2"` (Note: If you’d like to know more about BIDS `dataset_description.json` files and what goes into them you can find more information [here](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html).), to make DataLad aware of this addition, which would you run?
 
 - `git add dataset_description.json`
 - `git commit -m “added a dataset description file”`
@@ -218,13 +205,15 @@ We notice that this dataset is missing a `dataset_description.json` file, render
 
 Working with BIDS compliant datasets allows us to easily launch various pipelines and create BIDS compliant derivatives (e.g., standardized, machine-readable outputs from processing pipelines). The proper way of storing such derivatives is detailed [here](https://bids-specification.readthedocs.io/en/latest/02-common-principles.html#storage-of-derived-datasets). Using the `datalad-containers` extension, we can launch [MRIQC](https://mriqc.readthedocs.io/en/latest/) and generate image quality metrics for structural MRI scans. ReproNim has made a ton of popular neuroimaging pipelines available to install as a Datalad dataset (https://github.com/ReproNim/containers), and the link has more information on how to use this dataset in conjunction with `datalad-containers`.  You may also find it helpful to review the commands covered in the [containers section](http://handbook.datalad.org/en/latest/code_from_chapters/ABCD.html#computational-reproducibility) of this week’s [DataLad lecture](https://youtu.be/udLVUyZQanw?t=1962).
 
-Step 1: Based on the 1st protocol outlined in the above linked [derivative storage guide](https://bids-specification.readthedocs.io/en/latest/02-common-principles.html#storage-of-derived-datasets), create a `derivatives` directory at the root of (i.e., at the same level of) `data` and a separate directory called `mriqc` within the `derivatives` directory.
+Step 1: Based on the 1st protocol outlined in the above linked [derivative storage guide](https://bids-specification.readthedocs.io/en/latest/02-common-principles.html#storage-of-derived-datasets), create a `derivatives` directory within the `data` directory and a directory called `mriqc` within the `derivatives`. Save the change `datalad save -m "adding new folders"` 
 
 Step 2: At the root of your `week8_analysis` directory, install the aforementioned ReproNim Datalad dataset using: `datalad install -d . ///repronim/containers`
 
 Step 3: BIDS pipelines require a work directory, and it is preferable for it to be ignored by Git. From the root directory, run the following: `echo "workdir/" > .gitignore && datalad save -m "Ignore workdir" .gitignore`
 
-Step 4: Use `datalad containers-run` to run MRIQC on sub-01’s T1w data and output the results to the `mriqc` directory we just created. Hint: This will require specifying a path to a container (see [here](https://github.com/ReproNim/containers#a-typical-workflow) for an example of how to specify the container and other arguments of interest), the input path, output path, the participant of interest, the modality of interest, and the work directory to be used. If you need help with using the `datalad containers-run` command you can always type `datalad containers-run --help`. The [MRIQC documentation](https://mriqc.readthedocs.io/en/latest/) also provides additional information on how to specify MRIQC specific arguments.
+Step 4: If you have not downloaded the content in all `anat` folders, run the following `datalad get data/sub-*/anat/*`
+
+Step 5: Use `datalad containers-run` to run MRIQC on sub-01’s T1w data and output the results to the `mriqc` directory we just created. Hint: This will require specifying a path to a container (see [here](https://github.com/ReproNim/containers#a-typical-workflow) for an example of how to specify the container and other arguments of interest), the input path, output path, the participant of interest, the modality of interest, and the work directory to be used. If you need help with using the `datalad containers-run` command you can always type `datalad containers-run --help`. The [MRIQC documentation](https://mriqc.readthedocs.io/en/latest/running.html) also provides additional information on how to specify MRIQC specific arguments.
 
 Assuming these steps were executed successfully, you should now be able to access the following filepath from the `mriqc` directory: `sub-01/anat/sub-01_T1w.json`. This JSON file contains a variety of different image quality metrics; you can find the abbreviations and explanations [here](https://mriqc.readthedocs.io/en/latest/iqms/t1w.html). What is the contrast to noise ratio for sub-01’s T1w scan?
 
@@ -241,10 +230,19 @@ Assuming these steps were executed successfully, you should now be able to acces
 
 Datalad solution: 
 - `cd /home/joyvan/week8_analysis`
-- `mkdir data/derivatives/mriqc`
+- `mkdir data/derivatives/mriqc  && datalad save -m "adding new folders"` 
 - `datalad install -d . ///repronim/containers`
 - `echo "workdir/" > .gitignore && datalad save -m "Ignore workdir" .gitignore`
-- `datalad containers-run -n containers/bids-mriqc --input data/sub-01/anat/sub-01_T1w.nii.gz --output data/derivatives/mriqc data '{outputs}' --participant-label 01 -m T1w -w workdir`
+- `datalad containers-run -n containers/bids-mriqc --input data/sub-01/anat/sub-01_T1w.nii.gz --output data/derivatives/mriqc data data/derivatives/mriqc participant --participant-label 01 -m T1w -w workdir`
+
+Template for running datalad containers
+```
+datalad containers-run \
+        -n containers/bids-mriqc \
+        --input sourcedata \
+        --output . \
+        '{inputs}' '{outputs}' participant --participant-label %02d -w workdir
+```
 
 Note that the --input to Datalad differs from the input argument to mriqc. This is because we're specifying a specific file for Datalad to download as opposed to the root of the BIDS directory that MRIQC expects. The output is the same for both Datalad and MRIQC.
 
