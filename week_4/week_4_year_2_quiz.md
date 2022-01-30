@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 4 Quiz, we will ask you a few questions about ABCD (Imaging Measures) and you will complete a few ReproNim exercises (Pre-Registration and P-Hacking).
+In this Week 4 Quiz, we will ask you a few questions about [ABCD Imaging Measures](https://youtu.be/I7Y6jmDMDlE) and you will complete a few ReproNim exercises about [Pre-Registration and P-Hacking](https://youtu.be/Bz8_AVXI5c8).
 
 *** 
 
