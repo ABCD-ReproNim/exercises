@@ -47,6 +47,7 @@ Reliability and generalizability
 
 </details>
 
+
 **Question 3**
 
 Before ABCD data are made available on NDA, the images are subject to (check all that apply):
@@ -88,6 +89,7 @@ ABCD-BIDS Community Collection 3165
 
 </details>
 
+
 **Question 5**
 
 Brain-wide association studies (BWAS) detecting small effect sizes require large datasets to ensure reliability.
@@ -104,12 +106,28 @@ True
 
 </details>
 
+**Question 6**
+
+To take account "nested" covariates in ABCD study, which statistical approach is recommended:
+
+- [ ] General Linear Modeling
+- [ ] Mixed Effect Modeling
+- [ ] Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
+
+<details>
+<summary>Click to see answer</summary>
+
+Marginal Modeling using the Sandwich Estimator For Neuroimaging Data
+
+***
+
+</details>
 
 ### ReproNim Questions 
 
 Now we will ask some statistical questions relevant to Pre-Registration and P-Hacking
 
-**Question 6**
+**Question 7**
 
 Please select all the statements that are true of p-values (check all that apply):
 
@@ -128,7 +146,7 @@ A p-value and other relevant statistical measures should not be reported separat
 *** 
 </details>
 
-**Question 7**
+**Question 8**
 
 Which type of effect size allows you to infer how meaningfully small or big an effect is?
 
@@ -144,7 +162,7 @@ Standardized
 *** 
 </details>
 
-**Question 8**
+**Question 9**
 
 A researcher conducts a study where she compares two groups using an independent t-test and finds that they are significantly different (at the .05 level) with respect to a variable of interest. However, the power of the study is estimated at 0.25. What conclusion can the researcher draw?
 
@@ -160,7 +178,7 @@ The detected effect is likely over-estimated due to estimation uncertainties
 *** 
 </details>
 
-**Question 9**
+**Question 10**
 
 This same researcher wants to compute the sample size needed to detect a standardized effect size of 0.4 when the Type II error is 0.2. The significance level used for this study is the standard 0.05. Given these parameters, what is the required total sample size for this study if the two groups of interest are equally sized? Hint: you can compute this by hand or use the Python statsmodels library/R stats library. 
 
@@ -172,11 +190,9 @@ This same researcher wants to compute the sample size needed to detect a standar
 <details>
 <summary>Click to see answer</summary>
 
-Both R and Python can be used to solve this problem and get the answer for the sample size of ONE of the groups, i.e. to get the final 
-answer, we need to multiply the answer by two since we know the groups are equally sized. 
+Both R and Python can be used to solve this problem and get the answer for the sample size of ONE of the groups, i.e. to get the final answer, we need to multiply the answer by two since we know the groups are equally sized. 
 
 **Solution in Python**
-
 
 ```
 > from statsmodels.stats.power import tt_ind_solve_power
@@ -184,10 +200,8 @@ answer, we need to multiply the answer by two since we know the groups are equal
 99.08032683981143
 ```
 
-Note: The [statsmodels](https://www.statsmodels.org/stable/index.html) package is a really handy Python library for all 
-sorts of statistical modelling. The `tt_ind_solve_power` function allows you to solve for any parameter 
-of the power of a two sample t-test so long as the other parameters are provided. As with the analogous R function, 
-the value returned for `n` is the sample size for one of the groups.
+Note: The [statsmodels](https://www.statsmodels.org/stable/index.html) package is a really handy Python library for all sorts of statistical modelling. The `tt_ind_solve_power` function allows you to solve for any parameter 
+of the power of a two sample t-test so long as the other parameters are provided. As with the analogous R function, the value returned for `n` is the sample size for one of the groups.
 
 **Solution in R**
 ```
@@ -207,7 +221,7 @@ Note: In R the `pwr` library can be used in much the same way that the `stats.po
 *** 
 </details>
 
-**Question 10**
+**Question 11**
 
 Which of these can affect the validity of a study's results?
 
