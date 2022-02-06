@@ -12,16 +12,18 @@ In this Week 5 Quiz, we will ask you a few questions about the ABCD neurocogniti
 
  What were the overarching motivations for the tasks selected for the neurocognitive battery?
 
- - [ ] The tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10 
- - [ ] The tasks minimize participant burden 
- - [ ] The tasks are comparable to those used for other large studies 
- - [ ] The tasks cover multiple domains
- - [ ] All the above
+- [ ] The tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10
+- [ ] The tasks minimize participant burden
+- [ ] The tasks are comparable to those used for other large studies
+- [ ] The tasks cover multiple domains
+- [ ] All the above
 
 <details>
 <summary>Click to see answer</summary>
 
 All the above
+
+Source: [Course Video: Neurocognitive Assessments (2:03)](https://youtu.be/QcnsPmcvjrc?t=123)
 
 ***
 
@@ -31,7 +33,7 @@ All the above
 
 This lecture covered the results of Thompson et al. (2019) wherein principal component analysis was applied to 12 neurocognitive assessments. Based on this study, what were the main principal components underlying the different tasks administered to participants at baseline? Select all that apply.
 
-- [ ] Reward 
+- [ ] Reward
 - [ ] General cognitive ability
 - [ ] Executive function
 - [ ] Learning and memory
@@ -39,11 +41,14 @@ This lecture covered the results of Thompson et al. (2019) wherein principal com
 <details>
 <summary>Click to see answer</summary>
 
-General cognitive ability
+- General cognitive ability
+- Executive function
+- Learning and memory
 
-Executive function
+Sources:
 
-Learning and memory
+- [Course Video: Neurocognitive Assessments (8:38)](https://youtu.be/QcnsPmcvjrc?t=518)
+- [Thompson et al.: 'The structure of cognition in 9 and 10 year-old children and associations with problem behaviors: Findings from the ABCD study's baseline neurocognitive battery'](https://doi.org/10.1016/j.dcn.2018.12.004)
 
 ***
 
@@ -61,9 +66,10 @@ Which of these tasks are only offered at one timepoint? Select all that apply.
 <details>
 <summary>Click to see answer</summary>
 
-Stanford Mental Arithmetic Response Time Eval
+- Stanford Mental Arithmetic Response Time Eval
+- Dimensional Change Card Sort
 
-Dimensional Change Card Sort
+Source: [Course Video: Neurocognitive Assessments (10:08)](https://youtu.be/QcnsPmcvjrc?t=608)
 
 ***
 
@@ -73,16 +79,20 @@ Dimensional Change Card Sort
 
 Which of these are true of the Cash Choice and Delay Discounting tasks? Select all that apply.
 
-- [ ] A strong association has been reported between temporal delay and substance use 
-- [ ] Both of these tasks are administered at each timepoint
-- [ ] The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable
+- [ ] A strong association has been reported between temporal delay and substance use.
+- [ ] Both of these tasks are administered at each timepoint.
+- [ ] The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable.
 
 <details>
 <summary>Click to see answer</summary>
 
-A strong association has been reported between temporal delay and substance use
+- A strong association has been reported between temporal delay and substance use.
+- The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable.
 
-The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable
+Sources:
+
+- [Course Video: Neurocognitive Assessments (16:10)](https://youtu.be/QcnsPmcvjrc?t=970)
+- [Adolescent neurocognitive development and impacts of substance use: Overview of the adolescent brain cognitive development (ABCD) baseline neurocognition battery (see section 4.2)](https://doi.org/10.1016/j.dcn.2018.02.006)
 
 ***
 
@@ -90,7 +100,7 @@ The decision participants make about whether to receive $75 in three days or $11
 
 **Question 5**
 
-Which of these are methodological considerations associated with the ABCD study design? 
+Which of these are methodological considerations associated with the ABCD study design?
 
 - [ ] Environmental exposures might change the developmental trajectory
 - [ ] Alternate forms of tests must be administered to account for potential practice effects
@@ -101,6 +111,8 @@ Which of these are methodological considerations associated with the ABCD study 
 <summary>Click to see answer</summary>
 
 All the above
+
+Source: [Course Video: Neurocognitive Assessments (23:08)](https://youtu.be/QcnsPmcvjrc?t=1388)
 
 ***
 
@@ -121,11 +133,9 @@ Which of the following are true of digital object identifiers (DOIs)? Select all
 <details>
 <summary>Click to see answer</summary>
 
-DOIs are globally unique
-
-DOIs are persistent
-
-DOIs are resolvable
+- DOIs are globally unique
+- DOIs are persistent
+- DOIs are resolvable
 
 **Explanation**
 
@@ -153,19 +163,15 @@ Which of the following are globally unique and persistent identifiers that point
 <details>
 <summary>Click to see answer</summary>
 
-10.18112/P2159B
-
-https://doi.org/10.18112/P2159B
+- 10.18112/P2159B
+- https://doi.org/10.18112/P2159B
 
 **Explanation**
 
-https://openneuro.org/datasets/ds000031/versions/00001 is the object's current URL, though this is not the DOI
-
-ds000031 is the accession number assigned by Openneuro.org, not the DOI
-
-0000-0001-6755-0259 is a DOI, but it is the ORCID of one of the authors, not the dataset
-
-10.1016/j.neuron.2015.06.037 is a DOI, but it is the DOI of the dataset publication, not the dataset itself
+- https://openneuro.org/datasets/ds000031/versions/00001 is the object's current URL, though this is not the DOI
+- ds000031 is the accession number assigned by Openneuro.org, not the DOI
+- 0000-0001-6755-0259 is the ORCID of one of the authors, not the dataset
+- 10.1016/j.neuron.2015.06.037 is a DOI, but it is the DOI of the dataset publication, not the dataset itself
 
 ***
 
@@ -175,15 +181,17 @@ ds000031 is the accession number assigned by Openneuro.org, not the DOI
 
  Which license allows users to freely distribute the materials as long as attribution is given?
 
- - CC-0
- - CC-BY
- - CC-NC
- - CC-INFC
+- CC-0
+- CC-BY
+- CC-NC
+- CC-INFC
 
 <details>
 <summary>Click to see answer</summary>
 
 CC-BY
+
+Source: [Creative Commons: CC-BY](https://creativecommons.org/licenses/by/4.0/)
 
 ***
 
@@ -192,8 +200,9 @@ CC-BY
 For the next questions, you’ll need the following sample dataset repository: https://github.com/ABCD-ReproNim/sample_dataset
 
 To get set up, complete the following steps:
-1. Fork the sample dataset repository to create your own copy
-2. Clone your forked version of this repository onto your local machine (or on the ABCD-ReproNim JupyterHub)
+
+1. Fork the sample dataset repository to create your own copy.
+2. Clone your forked version of this repository onto your local machine (or on the ABCD-ReproNim JupyterHub).
 
 ***
 
@@ -229,15 +238,15 @@ Select all statements that apply to these files:
 <details>
 <summary>Click to see answer</summary>
 
-Both files are individually machine readable
-
-Both are individually human readable
-
-Humans could accurately integrate data across both files without additional information
+- Both files are individually machine readable
+- Both are individually human readable
+- Humans could accurately integrate data across both files without additional information
 
 **Explanation**
 
 The `handedness` column in these two files are encoded differently. One file uses "left" and "right", whereas the other uses "L" and "R". While humans could reason and integrate between files, a computer would not inherently know that "L" = "left" and "R" = "right" without further information.
+
+Hint: If you need to work with non-curated categorical data like this, you might consider using libraries like [dirty_cat](https://dirty-cat.github.io/stable/) in Python.
 
 ***
 
