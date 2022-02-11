@@ -61,10 +61,12 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 ### Prerequisites
 
 1. You have already [forked](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) and [cloned](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository): https://github.com/ABCD-ReproNim/sample_dataset
-    - Enrolled students are encouraged to do this on the ABCD-ReproNim JupyterHub.
-    - Observer students will have to do so on their own machines
+    - Students with active DUCs access are encouraged to do this on the ABCD-ReproNim JupyterHub.
 2. You have installed [pynidm](https://pynidm.readthedocs.io/en/latest/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our JupyterHub)
-    - [notes on running JupyterHub locally for observer students](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439)
+    - Request ABCD-ReproNim JupyterHub access [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link). Note you will need an active DUC to gain access to the hub.
+    - [Notes on running the same JupyterHub enviroment locally](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439) if you do not have an active DUC.
+3. For this exercise, the sample_dataset contains some spurious data, remove the `phenotype` directory from within the sample_dataset directory 
+    - E.g., while in the `sample_dataset` that you cloned to the JupyterHub/your local machine, type `rm -r phenotype` on the terminal.
 
 **Question 6**
 
@@ -138,11 +140,7 @@ URLs and reduce the ambiguity of the terms.
 
 Assuming you are in the `sample_dataset` directory and have `pynidm` installed,
 use the `bidsmri2nidm` command to add URLs to the variables in `participants.json`.
-For the age variable, select `Chronological Age` and select `Genotypic Sex` for the sex variable, but you can select your favorite for `handedness`.
-
-(**NOTE**: The `bidsmri2nidm` command will also annotate `pheno1.json` and `pheno2.json`
-which contain redundant information, so it is expected that you will be annotating the
-same variables multiple times).
+For the age variable, select `2: Label: Age` and select `1: Label: SEX` for the sex variable, but you can select your favorite for `handedness`.
 
 Which of the following `bidsmri2nidm` commands below will annotate this dataset and
 output a `nidm.ttl` file? (assuming you are in
@@ -227,23 +225,23 @@ You will be asked a series of questions to annotate MOCA:
 The next question asks for Concept Association, but the provided options are not very good:
 ```
 Concept Association
-Query String: MOCA
-InterLex:
+Query String: MOCA 
 
-1: Label: MocA protein, Bacteroides fragilis     Definition:     Preferred URL: http://id.nlm.nih.gov/mesh/2018/M0221391
-2: Label: MocA protein, Rhizobium meliloti       Definition:     Preferred URL: http://id.nlm.nih.gov/mesh/2018/M0242430
-3: Label: Moca-cyp protein, Drosophila   Definition:     Preferred URL: http://id.nlm.nih.gov/mesh/2018/M0443056
-4: Narrow Interlex query
-5: Change query string from: "MOCA"
-6: No concept needed for this variable
+1: Broaden Search (includes interlex, cogatlas, and nidm ontology) 
+2: Change query string from: "MOCA"
+3: No concept needed for this variable
 ---------------------------------------------------------------------------------------
-Please select an option (1:6) from above:
+Please select an option (1:3) from above:       2
+Please input new search string for CSV column: MOCA        :Montreal Cognitive Assessment
+---------------------------------------------------------------------------------------
 ```
-- Select 5 to change the query string
+- Select 2 to change the query string
 - Please input new search string for CSV column: MOCA     : Montreal Cognitive Assessment
 
 Now you should have a better list of options.
 Select the option labeled "Cognitive Assessment Screening Instrument".
+
+(**NOTE**: You may need to select `Broaden Search` in order to see the desired option).
 
 If everything went successfully, the command should gracefully exit and `participants.json`
 should be updated.
@@ -286,6 +284,8 @@ prefix dct: <http://purl.org/dc/terms/>
 prefix dctypes: <http://purl.org/dc/dcmitype/>
 prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 prefix ncit: <http://ncitt.ncit.nih.gov/>
+prefix ilx: <http://uri.interlex.org/>
+
 
 select distinct ?ID ?SEX
 where {
@@ -295,18 +295,16 @@ where {
 
                     prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
 
-                        ?as_activity prov:qualifiedAssociation [prov:agent ?agent] ;
-                                        dct:isPartOf/dct:isPartOf [dctypes:title ?study] .
-                        ?agent ndar:src_subject_id ?ID .
+
 
 
   # find sex data element uuid
-                        {?sex_measure a nidm:DataElement ;
-                                        nidm:isAbout <http://id.nlm.nih.gov/mesh/2018/M0446358> .
+                        {?sex_measure a nidm:PersonalDataElement ;
+                                        nidm:isAbout ilx:ilx_0738439 .
                         }
 
 
-  ?as_entity prov:wasGeneratedBy ?as_activity ;
+  ?as_entity prov:wasGeneratedBy ?tool_act ;
 
              ?sex_measure ?sex_coded .
 
@@ -315,7 +313,7 @@ where {
 
   }
 ```
-This sparql query is based on [this example query](https://github.com/dbkeator/simple2_NIDM_examples/blob/7cd4bb2e6d202080c2dcb2f81a5bc47280f486f6/queries/male_subj_IDs.sparql)
+This sparql query is loosely based on [this example query](https://github.com/dbkeator/simple2_NIDM_examples/blob/7cd4bb2e6d202080c2dcb2f81a5bc47280f486f6/queries/male_subj_IDs.sparql)
 
 Copy and paste the above code into a file named `male_subj_IDs.sparql`.
 
