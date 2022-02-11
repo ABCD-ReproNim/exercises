@@ -138,11 +138,7 @@ URLs and reduce the ambiguity of the terms.
 
 Assuming you are in the `sample_dataset` directory and have `pynidm` installed,
 use the `bidsmri2nidm` command to add URLs to the variables in `participants.json`.
-For the age variable, select `Chronological Age` and select `Genotypic Sex` for the sex variable, but you can select your favorite for `handedness`.
-
-(**NOTE**: The `bidsmri2nidm` command will also annotate `pheno1.json` and `pheno2.json`
-which contain redundant information, so it is expected that you will be annotating the
-same variables multiple times).
+For the age variable, select `2: Label: Age` and select `1: Label: SEX` for the sex variable, but you can select your favorite for `handedness`.
 
 Which of the following `bidsmri2nidm` commands below will annotate this dataset and
 output a `nidm.ttl` file? (assuming you are in
@@ -286,6 +282,8 @@ prefix dct: <http://purl.org/dc/terms/>
 prefix dctypes: <http://purl.org/dc/dcmitype/>
 prefix ncicb: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 prefix ncit: <http://ncitt.ncit.nih.gov/>
+prefix ilx: <http://uri.interlex.org/>
+
 
 select distinct ?ID ?SEX
 where {
@@ -295,18 +293,16 @@ where {
 
                     prov:qualifiedAssociation [prov:agent [ndar:src_subject_id ?ID]] .
 
-                        ?as_activity prov:qualifiedAssociation [prov:agent ?agent] ;
-                                        dct:isPartOf/dct:isPartOf [dctypes:title ?study] .
-                        ?agent ndar:src_subject_id ?ID .
+
 
 
   # find sex data element uuid
-                        {?sex_measure a nidm:DataElement ;
-                                        nidm:isAbout <http://id.nlm.nih.gov/mesh/2018/M0446358> .
+                        {?sex_measure a nidm:PersonalDataElement ;
+                                        nidm:isAbout ilx:ilx_0738439 .
                         }
 
 
-  ?as_entity prov:wasGeneratedBy ?as_activity ;
+  ?as_entity prov:wasGeneratedBy ?tool_act ;
 
              ?sex_measure ?sex_coded .
 
@@ -315,7 +311,7 @@ where {
 
   }
 ```
-This sparql query is based on [this example query](https://github.com/dbkeator/simple2_NIDM_examples/blob/7cd4bb2e6d202080c2dcb2f81a5bc47280f486f6/queries/male_subj_IDs.sparql)
+This sparql query is loosely based on [this example query](https://github.com/dbkeator/simple2_NIDM_examples/blob/7cd4bb2e6d202080c2dcb2f81a5bc47280f486f6/queries/male_subj_IDs.sparql)
 
 Copy and paste the above code into a file named `male_subj_IDs.sparql`.
 
