@@ -65,6 +65,7 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
     - Observer students will have to do so on their own machines
 2. You have installed [pynidm](https://pynidm.readthedocs.io/en/latest/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our JupyterHub)
     - [notes on running JupyterHub locally for observer students](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439)
+3. For this exercise, the sample_dataset contains some spurious data, remove the `phenotype` directory from within the sample_dataset directory
 
 **Question 6**
 
