@@ -171,11 +171,10 @@ the `sample_dataset` directory)
     usage: bidsmri2nidm [-h] -d DIRECTORY [-jsonld] [-bidsignore] [-no_concepts] [-json_map JSON_MAP] [-log LOGFILE] [-o OUTPUTFILE]
 
     This program will represent a BIDS MRI dataset as a NIDM RDF document and provide user with opportunity to annotate
-    the dataset (i.e. create sidecar files) and associate selected variables with broader concepts to make datasets more
-    FAIR.
+    the dataset (i.e. create sidecar files) and associate selected variables with broader concepts to make datasets more FAIR. 
 
     Note, you must obtain an API key to Interlex by signing up for an account at scicrunch.org then going to My Account
-    and API Keys.  Then set the environment variable INTERLEX_API_KEY with your key.
+    and API Keys.  Then set the environment variable INTERLEX_API_KEY with your key. 
 
     optional arguments:
     -h, --help            show this help message and exit
