@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 6 Quiz, we will ask you a few questions about the ABCD substance use assessments and the Neuroimaging Data Model (NIDM) semantic markup.
+In this Week 6 Quiz, we will ask you a few questions about the [ABCD substance use assessments](https://youtu.be/Yy8mA8Teb3E) and the [Neuroimaging Data Model (NIDM) semantic markup](https://youtu.be/-Y-3OBDZJgo).
 
 ***
 
@@ -19,6 +19,14 @@ The ABCD substance use interview includes questions about: (check all that apply
 - [ ] parent substance use and family history of use
 - [ ] caffeine consumption and over-the-counter medications
 
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+Source: [Course Video: Substance Use Assessments (15:25)](https://youtu.be/Yy8mA8Teb3E?t=925)
+
+</details>
 
 **Question 2**
 
@@ -30,6 +38,14 @@ The goals of the ABCD substance use module include the characterization of: (che
 - [ ] associations between substance use and psychopathology
 - [ ] differential trajectories of substance use initiation, experimentation, and use patterns
 
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+Source: [Course Video: Substance Use Assessments (1:45)](https://youtu.be/Yy8mA8Teb3E?t=105)
+
+</details>
 
 **Question 3**
 
@@ -37,6 +53,15 @@ Biospecimens (e.g., saliva, hair, and urine samples) provide a more objective me
 
 - True
 - False
+
+<details>
+<summary>Click to see answer</summary>
+
+False
+
+Source: [Course Video: Substance Use Assessments (27:05)](https://youtu.be/Yy8mA8Teb3E?t=1625)
+
+</details>
 
 **Question 4**
 
@@ -47,6 +72,15 @@ Which of the following are examples of gating in the ABCD substance use intervie
 - [ ] If a participant indicates they have NOT used a given substance, zeros may be inserted for any follow-up questions triggered by this question
 - [ ] If a participant has indicated they have used a given substance, they will be asked to recall details of their first experience with that substance at future visits
 
+<details>
+<summary>Click to see answer</summary>
+
+- In years baseline-2 year follow-up, a participant indicates they have “heard of” a given substance, additional questions about that particular substance will follow
+- If a participant indicates they have NOT used a given substance, zeros may be inserted for any follow-up questions triggered by this question
+
+Source: [Course Video: Substance Use Assessments (34:39)](https://youtu.be/Yy8mA8Teb3E?t=2079)
+
+</details>
 
 **Question 5**
 
@@ -55,6 +89,14 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 - True
 - False
 
+<details>
+<summary>Click to see answer</summary>
+
+True
+
+Source: [Course Video: Substance Use Assessments (11:44)](https://youtu.be/Yy8mA8Teb3E?t=704) and [Course Video: Substance Use Assessments (20:00)](https://youtu.be/Yy8mA8Teb3E?t=1199)
+
+</details>
 
 ## ReproNim NIDM data questions
 
@@ -65,8 +107,8 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 2. You have installed [pynidm](https://pynidm.readthedocs.io/en/latest/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our JupyterHub)
     - Request ABCD-ReproNim JupyterHub access [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link). Note you will need an active DUC to gain access to the hub.
     - [Notes on running the same JupyterHub enviroment locally](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439) if you do not have an active DUC.
-3. For this exercise, the sample_dataset contains some spurious data, remove the `phenotype` directory from within the sample_dataset directory 
-    - E.g., while in the `sample_dataset` that you cloned to the JupyterHub/your local machine, type `rm -r phenotype` on the terminal.
+3. For this exercise, the `sample_dataset` contains some spurious data, remove the `phenotype` directory from within the sample_dataset directory. Note: the final question on this week's Data Exercise **will not work** if you do not complete this step initially. 
+    - E.g., while in the `sample_dataset` directly that wsa cloned to the JupyterHub/your local machine, type `rm -r phenotype` on the terminal to remove directory.
 
 **Question 6**
 
@@ -80,12 +122,14 @@ How does structured data annotation help the research process? (Select all that 
 <details>
 <summary>Click to see answer</summary>
 
+All the above:
 - Can make filtering information within and between datasets easier
 - Can reduce ambiguity about the measures recorded in a dataset
 - Can give a better understanding about how data were acquired and processed
 - Can help generate research hypotheses
 
 ***
+Source: [Course Video: Semantic Markup 2 (19:13)](https://youtu.be/-Y-3OBDZJgo?t=1153)
 
 </details>
 
@@ -157,6 +201,9 @@ the `sample_dataset` directory)
 `bidsmri2nidm -d ${PWD} -o nidm.ttl -bidsignore`
 
 **Explanation**
+
+Source: [Course Video: Semantic Markup 2 (31:07)](https://youtu.be/-Y-3OBDZJgo?t=1867)
+
 - `bidsmri2nidm -d nidm.ttl -o ${PWD} -bidsignore`
     - `-d` represents the directory and `-o` represents
       the output file name, so the arguments are flipped.
@@ -169,8 +216,7 @@ the `sample_dataset` directory)
     usage: bidsmri2nidm [-h] -d DIRECTORY [-jsonld] [-bidsignore] [-no_concepts] [-json_map JSON_MAP] [-log LOGFILE] [-o OUTPUTFILE]
 
     This program will represent a BIDS MRI dataset as a NIDM RDF document and provide user with opportunity to annotate
-    the dataset (i.e. create sidecar files) and associate selected variables with broader concepts to make datasets more
-    FAIR. 
+    the dataset (i.e. create sidecar files) and associate selected variables with broader concepts to make datasets more FAIR. 
 
     Note, you must obtain an API key to Interlex by signing up for an account at scicrunch.org then going to My Account
     and API Keys.  Then set the environment variable INTERLEX_API_KEY with your key. 
