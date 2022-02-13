@@ -103,12 +103,12 @@ Source: [Course Video: Substance Use Assessments (11:44)](https://youtu.be/Yy8mA
 ### Prerequisites
 
 1. You have already [forked](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) and [cloned](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository): https://github.com/ABCD-ReproNim/sample_dataset
-    - Students with active DUCs access are encouraged to do this on the ABCD-ReproNim JupyterHub.
+    - Students with active DUCs access are encouraged to do this on the [ABCD-ReproNim JupyterHub](https://abcd.repronim.org/).
 2. You have installed [pynidm](https://pynidm.readthedocs.io/en/latest/) and [pyontutils](https://pypi.org/project/pyontutils/) (or are using our JupyterHub)
-    - Request ABCD-ReproNim JupyterHub access [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link). Note you will need an active DUC to gain access to the hub.
+    - Request [ABCD-ReproNim JupyterHub](https://abcd.repronim.org/) access [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link). Note you will need an active DUC to gain access to the hub.
     - [Notes on running the same JupyterHub enviroment locally](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439) if you do not have an active DUC.
 3. For this exercise, the `sample_dataset` contains some spurious data, remove the `phenotype` directory from within the sample_dataset directory. Note: the final question on this week's Data Exercise **will not work** if you do not complete this step initially. 
-    - E.g., while in the `sample_dataset` directly that wsa cloned to the JupyterHub/your local machine, type `rm -r phenotype` on the terminal to remove directory.
+    - E.g., while in the `sample_dataset` directly that wsa cloned to the [ABCD-ReproNim JupyterHub](https://abcd.repronim.org/)/your local machine, type `rm -r phenotype` on the terminal to remove directory.
 
 **Question 6**
 
