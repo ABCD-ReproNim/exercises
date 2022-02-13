@@ -128,9 +128,9 @@ All the above:
 - Can give a better understanding about how data were acquired and processed
 - Can help generate research hypotheses
 
-***
 Source: [Course Video: Semantic Markup 2 (19:13)](https://youtu.be/-Y-3OBDZJgo?t=1153)
 
+***
 </details>
 
 **Question 7**
@@ -166,7 +166,6 @@ Everyone's answer will be different,
 example: `ah87`
 
 ***
-
 </details>
 
 **Question 8**
