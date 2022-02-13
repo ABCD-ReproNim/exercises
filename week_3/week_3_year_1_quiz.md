@@ -1,4 +1,4 @@
-# Week 3 Quiz
+# Week 3 Year 1 Quiz
 
 ### Quiz Instructions
 

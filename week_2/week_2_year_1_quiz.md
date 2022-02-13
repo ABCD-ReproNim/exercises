@@ -1,4 +1,4 @@
-# Week 2 Quiz
+# Week 2 Year 1 Quiz
 
 ### Quiz Instructions
 
