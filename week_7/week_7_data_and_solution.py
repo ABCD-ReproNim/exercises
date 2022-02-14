@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import math
 
 ### If you have access to the ABCD data, you can read in the data using the following code.
-### If not, the code to simulate data is included below
+### If not, the code to simulate data or import simulated data from github is included below
 
 # import full data
 smrip201_file = '/home/jovyan/ABCD3/abcd_smrip201.txt'
@@ -43,6 +43,19 @@ hippo = pd.concat([m_dat, f_dat])
 # write to tsv
 #hippo.to_csv('~/Desktop/ABCD-repronim/exercises/week_7/simulated_data.tsv', sep='\t', index=False)
 
+###importing the data from Github
+import requests
+import io
+    
+# Downloading the csv file from your GitHub account
+
+url = "https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_7/simulated_data.tsv" 
+# Make sure the url is the raw version of the file on GitHub
+download = requests.get(url).content
+
+# Reading the downloaded content and turning it into a pandas dataframe
+
+df = pd.read_csv(io.StringIO(download.decode('utf-8')), sep='\t')
 
 ### function to calculate effect size for a given sample size
 def eff_size_cal(df, niter, n_size):
@@ -81,3 +94,10 @@ for n in ns:
     fin.append(temp)
     
 fin = pd.concat(fin)
+
+### Making simple plots
+%matplotlib inline 
+#force it to display the figures
+plt.scatter(fin['n'], fin['raw_eff'])
+plt.scatter(fin['n'], fin['cohen'], color='g')
+plt.scatter(fin['n'], fin['z'])
