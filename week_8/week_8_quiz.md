@@ -229,10 +229,11 @@ Assuming these steps were executed successfully, you should now be able to acces
 - 3.811
 
 Datalad solution: 
-- `cd /home/joyvan/week8_analysis`
-- `mkdir data/derivatives/mriqc  && datalad save -m "adding new folders"` 
+- `cd /home/jovyan/week8_analysis` (if you are using the local docker, change the path accordingly)
+- `mkdir data/derivatives/mriqc -q && datalad save -m "adding new folders"` 
 - `datalad install -d . ///repronim/containers`
 - `echo "workdir/" > .gitignore && datalad save -m "Ignore workdir" .gitignore`
+- `datalad get data/sub-*/anat/*`
 - `datalad containers-run -n containers/bids-mriqc --input data/sub-01/anat/sub-01_T1w.nii.gz --output data/derivatives/mriqc data data/derivatives/mriqc participant --participant-label 01 -m T1w -w workdir`
 
 Template for running datalad containers
