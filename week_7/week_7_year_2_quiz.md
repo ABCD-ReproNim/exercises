@@ -205,11 +205,11 @@ Primarily cares about accuracy
 
 **Question 10**
 
-For this question you will need some data with which to explore the relationships between sample size and the different measures of effect size discussed in [this week's lecture (4:33)](https://youtu.be/auzLLbQPMfY?t=273). We have simulated a dataset for you to use that is based on [ABCD structural MRI morphometric and image intensity measures ("abcd_smrip201")](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data file. You can download our simulated data file for this assignment [on our GitHub](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv). Alternatively, if you have ABCD data access, feel free to work directly with the [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data (the answers you will compute should end up being the same). We've shared the script we used to assemble the 'smri_vol_scs_hpuslh','smri_vol_scs_hpusrh', and 'sex' data elements from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) and then create a new vector that represents the sum total volume of both the left and right hippocampi across 10000 participants.
+For this question you will need some data with which to explore the relationships between sample size and the different measures of effect size discussed in [this week's lecture (4:33)](https://youtu.be/auzLLbQPMfY?t=273). We have simulated a dataset for you to use that is based on [ABCD structural MRI morphometric and image intensity measures ("abcd_smrip201")](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data file. You can download our simulated data file for this assignment [on our GitHub](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv) or simulate it yourself. Alternatively, if you have ABCD data access, feel free to work directly with the [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data (the answers you will compute should end up being the same). We've shared the script we used to assemble the 'smri_vol_scs_hpuslh','smri_vol_scs_hpusrh', and 'sex' data elements from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) and then create a new vector that represents the sum total volume of both the left and right hippocampi across 10000 participants.
 
-First, in your favorite programming language (we like Python), read in the [simulated data file](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv) or simulate the data.
+First, in your favorite programming language (we like Python), either read in the [simulated data file](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv) (option A), simulate the data yourself (option B), or download and parce the appropriate ABCD data elements from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) (option C).
 
-*Option A: read in the data*
+*Option A: read in data from [our GitHub](simulated data file](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv))*
 ```
 import requests
 import io
@@ -222,7 +222,7 @@ download = requests.get(url).content
 df = pd.read_csv(io.StringIO(download.decode('utf-8')), sep='\t')
 ```
 
-*Option B: simulate data using on the mean and standard deviation of hippocampal values from ["abcd_smrip201"](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201)*
+*Option B: simulate data using on the mean and standard deviation of hippocampal values from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201)*
 ```
 # male
 m_mean = 8407
@@ -242,6 +242,21 @@ f_dat.head()
 
 # concatenate
 hippo = pd.concat([m_dat, f_dat])
+```
+
+*Option C: read in and parce ABCD data using on the mean and standard deviation of hippocampal values from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201)*
+```
+# import full data -- note you will need to download this data from the NDA directly
+smrip201_file = '/home/jovyan/ABCD3/abcd_smrip201.txt'
+smrip201 = pd.read_csv(smrip201_file, sep='\t',skiprows=[1],header=[0])
+
+# subset to only include columns of interest
+columns = ['subjectkey','sex','smri_vol_scs_hpuslh','smri_vol_scs_hpusrh']
+hippo = smrip201.loc[:,columns]
+# sum left and right hippocampi
+hippo['both'] = hippo['smri_vol_scs_hpuslh'] + hippo['smri_vol_scs_hpusrh']
+# make names easier to read
+hippo.rename(columns={'smri_vol_scs_hpuslh':'left','smri_vol_scs_hpusrh':'right'},inplace=True)
 ```
 
 Now that you have the total hippocampal volume for both male and female participants, we can subset these data at multiple sample sizes to see the relationship between effect size and sample size. The goal is to get a distribution of effect sizes corresponding to each sample size we choose. We can then use these distributions to visualize how the mean effect sizes may change as a function of sample size.
@@ -277,11 +292,11 @@ def eff_size_cal(df, niter, n_size):
     return results
 ```
   
-When you are finished calculating the numbers, plot the results. You’ll need three plots, one for the distributions of raw effect size, cohen’s d, and z-scored cohen’s d.
+When you are finished calculating the numbers, plot the results. You’ll need three plots, one for the distributions of raw effect size, cohen’s d, and z-scored cohen’s d for each sample size you iterated over.
 
 According to your results, as sample size increases which of the following are generally true (more or less, there will be variability across iterations). 
 
-Note: remmeber that your plots will show a *distribution* of effect sizes at each sample size iteration. You should focus on whether the *mean* of that distribution changes with each sample size iteration.
+Note: remmeber your plots should show a *distribution* of effect sizes at each sample size. You should focus on if the *means* of the effect size distributions changes with each sample size step.
 
 - Raw effect decreases, cohen’s d increases, z increases
 - Raw effect increases, cohen’s d stays the same, z decreases
