@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 7 Quiz, we will ask you a few questions about the ABCD Demographic, Physical, and Mental Health Assessments and Scientific Questions and Statistical Issues.
+In this Week 7 Quiz, we will ask you a few questions about [ABCD Demographic, Physical, and Mental Health Assessments](https://youtu.be/VxwWQRvE7QY) and [Scientific Questions and Statistical Issues](https://youtu.be/auzLLbQPMfY).
 
 ***
 
@@ -205,30 +205,92 @@ Primarily cares about accuracy
 
 **Question 10**
 
-For this question you will use the ABCD dataset to explore the relationship between sample size and effect size. If you do not have access to the ABCD data, data have been simulated in the exercises repo.
+For this question you will need some data with which to explore the relationships between sample size and the different measures of effect size discussed in [this week's lecture (4:33)](https://youtu.be/auzLLbQPMfY?t=273). We have simulated a dataset for you to use that is based on [ABCD structural MRI morphometric and image intensity measures ("abcd_smrip201")](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data file. You can download our simulated data file for this assignment [on our GitHub](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv). Alternatively, if you have ABCD data access, feel free to work directly with the [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data (the answers you will compute should end up being the same). We've shared the script we used to assemble the 'smri_vol_scs_hpuslh','smri_vol_scs_hpusrh', and 'sex' data elements from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) and then create a new vector that represents the sum total volume of both the left and right hippocampi across 10000 participants.
 
-First, if you have not done so, you will need to download the ABCD dataset. See [here](https://docs.google.com/document/d/1q8Tzm__Ead_oybJxdQdMR-IcvPPdeyFCq1OEXDLb8wk/edit#heading=h.tep60nzg7x89) or [here](https://docs.google.com/document/d/1CRU5y3CGDYsaPv1FBkQhJ8ESTtem70RHQ1Q3AmVdOv0/edit?usp=sharing) for information about how to do this.
+First, in your favorite programming language (we like Python), read in the [simulated data file](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv) or simulate the data.
 
-Second, in your favorite programming language, read in the data element called “abcd_smrip201.txt”. This file contains structural MRI data. 
+*Option A: read in the data*
+```
+import requests
+import io
 
-Third, subset this file to only include the participant’s sex and volumes of the left and the right hippocampus (‘sex’, 'smri_vol_scs_hpuslh','smri_vol_scs_hpusrh'), then create an new vector that includes sum total volume of both the left and right hippocampi. 
+url = "https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_7/simulated_data.tsv" 
+# Make sure the url is the raw version of the file on GitHub
+download = requests.get(url).content
 
-Now you have the total hippocampal volume for both male and female participants. Now we can subset these data at multiple sample sizes to see the relationship between effect size and sample size. Create a vector of sample sizes beginning at 10 and ending at 1000, with increments of 20 (so, 50 different sample sizes). 
+# Reading the downloaded content and turning it into a pandas dataframe
+df = pd.read_csv(io.StringIO(download.decode('utf-8')), sep='\t')
+```
 
-For each sample size, loop through a large number of iterations (eg, 1000) of subsetting the full male and female participant data so that each iteration has a subset where the number of male and female participants equals the sample size. For each iteration, calculate the raw effect size, the cohen’s d, and the z-scored cohen’s d. Also make sure to record the sample size for each iteration. Now calculate these values for each sample size with your specified number of iterations. For 1000 iterations over 50 sample sizes, this took ~8 minutes on the jupyterhub.
+*Option B: simulate data using on the mean and standard deviation of hippocampal values from ["abcd_smrip201"](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201)*
+```
+# male
+m_mean = 8407
+m_std = 813
+m_vol = np.random.normal(m_mean, m_std, 5000)
+m_dat = pd.DataFrame(m_vol, columns=['hippocampi'])
+m_dat['sex'] = 'M'
+m_dat.head()
 
-When you are finished calculating the numbers, plot the results. You’ll need three plots, one for raw effect size, cohen’s d, and z-scored cohen’s d.
+# female
+f_mean = 7892
+f_std = 775
+f_vol = np.random.normal(f_mean, f_std, 5000)
+f_dat = pd.DataFrame(f_vol, columns=['hippocampi'])
+f_dat['sex'] = 'F'
+f_dat.head()
 
-According to your results, as sample size increases which of the following are generally true (more or less, there will be variability across iterations).
+# concatenate
+hippo = pd.concat([m_dat, f_dat])
+```
 
-- Raw effect decreases, cohen’s d increases, z stays the same
+Now that you have the total hippocampal volume for both male and female participants, we can subset these data at multiple sample sizes to see the relationship between effect size and sample size. The goal is to get a distribution of effect sizes corresponding to each sample size we choose. We can then use these distributions to visualize how the mean effect sizes may change as a function of sample size.
+
+We want to give you the opportunity to practice coding, so try to do the following on your own:
+
+1) Create a vector of sample sizes beginning at 10 and ending at 1000, with increments of 20 (so, 50 different sample sizes). 
+2) For each sample size, loop through a large number of iterations (eg, 1000) of subsetting the full male and female participant data so that each iteration has a subset where the number of male and female participants equals the sample size. 
+3) For each iteration, calculate the raw effect size (e.g., the difference of the two sample means), the Cohen’s d, and the z-scored Cohen’s d. Also make sure to record the sample size for each iteration. 
+4) Now calculate these values for each sample size with your specified number of iterations. For 1000 iterations over 50 sample sizes, this took ~8 minutes on the JupyterHub.
+
+Here is a function you can use to calculate the effect sizes (step 3):
+```
+### function to calculate effect size for a given sample size
+def eff_size_cal(df, niter, n_size):
+    raw_eff = []
+    cohen = []
+    z = []
+    for i in range(niter):
+        male = df[df['sex']=='M'].sample(n_size)
+        female = df[df['sex']=='F'].sample(n_size)
+        m_mu = male['hippocampi'].mean()
+        f_mu = female['hippocampi'].mean()
+        #pooled standard deviation for males and females
+        sigma = math.sqrt(((male['hippocampi'].std())**2 + (female['hippocampi'].std())**2)/(n_size))
+        raw_eff.append(m_mu - f_mu)
+        cohen.append((m_mu - f_mu)/sigma)
+        z.append( ((m_mu - f_mu)/(sigma)) / math.sqrt(n_size))
+        
+    results = pd.DataFrame(list(zip(raw_eff,cohen,z)), columns=['raw_eff','cohen','z'])
+    results['n'] = n_size
+    
+    return results
+```
+  
+When you are finished calculating the numbers, plot the results. You’ll need three plots, one for the distributions of raw effect size, cohen’s d, and z-scored cohen’s d.
+
+According to your results, as sample size increases which of the following are generally true (more or less, there will be variability across iterations). 
+
+Note: remmeber that your plots will show a *distribution* of effect sizes at each sample size iteration. You should focus on whether the *mean* of that distribution changes with each sample size iteration.
+
+- Raw effect decreases, cohen’s d increases, z increases
 - Raw effect increases, cohen’s d stays the same, z decreases
-- Raw effect stays the same, cohen's d decreases, z increases
+- Raw effect stays the same, cohen's d increases, z stays the same
 
 <details>
 <summary>Click to see answer</summary>
 
-- Raw effect stays the same, cohen's d decreases, z increases
+- Raw effect stays the same, cohen's d increases, z stays the same
 
 see code in `exercises/week_7` for a solution
 
