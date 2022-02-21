@@ -210,7 +210,7 @@ For this question you will need some data with which to explore the relationship
 First, in your favorite programming language (we like Python), either read in the [simulated data file](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv) (option A), simulate the data yourself (option B), or download and parce the appropriate ABCD data elements from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) (option C).
 
 
-*Option A: read in data from [our GitHub](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv))*
+*Option A: read in data from [our GitHub](https://github.com/ABCD-ReproNim/exercises/blob/488b30924cab37dfa742ea845adc8ac4d5945b44/week_7/simulated_data.tsv)*
 ```
 import requests
 import io
