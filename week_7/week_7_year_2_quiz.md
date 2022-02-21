@@ -297,11 +297,11 @@ When you are finished calculating the numbers, plot the results. You’ll need t
 
 According to your results, as sample size increases which of the following are generally true (more or less, there will be variability across iterations). 
 
-Note: remmeber your plots should show a *distribution* of effect sizes at each sample size. You should focus on if the *means* of the effect size distributions changes with each sample size step.
-
 - Raw effect decreases, cohen’s d increases, z increases
 - Raw effect increases, cohen’s d stays the same, z decreases
 - Raw effect stays the same, cohen's d increases, z stays the same
+
+NOTE: remmeber your plots should show a *distribution* of effect sizes at each sample size. You should focus on if the *means* of the effect size distributions changes with each sample size step.
 
 <details>
 <summary>Click to see answer</summary>
