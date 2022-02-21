@@ -308,6 +308,6 @@ NOTE: remmeber your plots should show a *distribution* of effect sizes at each s
 
 - Raw effect stays the same, cohen's d increases, z stays the same
 
-see code in `exercises/week_7` for a solution
+see [code](https://github.com/ABCD-ReproNim/exercises/blob/main/week_7/week_7_year_2_data_and_solution.py) in `exercises/week_7` for a solution
 
 </details>
