@@ -5,10 +5,10 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.7.1
+      format_version: '1.3'
+      jupytext_version: 1.13.7
   kernelspec:
-    display_name: Python 3
+    display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
@@ -48,21 +48,25 @@ is used in the notebook.
         - `pd.DataFrame(data_elements, columns=["element", "description", "structure"])`
 - control structures
     - [if statements](https://realpython.com/python-conditional-statements/)
-        - `if any(['eventname' == data_element for data_element in data_structure_df.columns.levels[0]]):
-                ...`
+        - ```
+        if any(['eventname' == data_element for data_element in data_structure_df.columns.levels[0]]):
+                ...
+          ```
     - [for loops](https://realpython.com/python-for-loop/)
-        - `for data_structure, info in data_structures.items():
-                ...`
+        - ```
+        for data_structure, info in data_structures.items():
+                ...
+          ```
 - unix concepts
     - [globbing](https://swcarpentry.github.io/python-novice-inflammation/06-files/index.html)
         - `sorted(data_path.glob("*.txt"))`
     - [folders/directories](http://swcarpentry.github.io/shell-novice/02-filedir/index.html),
       [connection to python through pathlib](https://realpython.com/python-pathlib/)
-        - `data_path = Path("/home/jovyan/ABCD3")`
+        - `data_path = Path("/home/jovyan/ABCD4")`
 
 - misc
     - [f-strings](https://realpython.com/python-f-strings/)
-        - `f"/home/jovyan/ABCD3/{structure}.txt"`
+        - `f"/home/jovyan/ABCD4/{structure}.txt"`
 
 ### Import all libraries
 By convention all libraries being used are read in at the top of a notebook/script.
@@ -88,7 +92,7 @@ to compile and access the data.
 Below we collect the files into a variable with the name `files`
 ```python
 # save directory we downloaded the ABCD data to `data_path`
-data_path = Path("/home/jovyan/ABCD3")
+data_path = Path("/home/jovyan/ABCD4")
 # glob (match) all text files in the `data_path` directory
 files = sorted(data_path.glob("*.txt"))
 ```
@@ -327,13 +331,6 @@ See the duplicated entries.
 all_df[all_df.duplicated('subjectkey', keep=False)]
 ```
 
-If duplicated entries have `n/a`'s, drop those rows,
-then each participant should have one and only one observation.
-```python
-all_df = all_df.dropna()
-all_df.shape, all_df.subjectkey.unique().shape
-```
-
 #### Choose a random subset of participants
 
 Every time your run the following code, a random set of 1000 participants is chosen. How would you alter this code to choose the same N participants each time?
@@ -392,9 +389,14 @@ Choose sex as your group variable and one variable from each of the four categor
 (demographic, clinical, behavioral, imaging)
 
 ```python
-sns.pairplot(subset_df, hue="sex", vars=["anthroweightcalc", 'ksads_1_2_t', 'prosocial_q2_y', "smri_vol_scs_amygdalalh"]);
+subset_df
 ```
 
+```python
+sns.pairplot(subset_df, hue="sex", vars=["anthroheightcalc", 'ksads_1_2_t', 'prosocial_q2_y', "smri_vol_scs_amygdalalh"]);
+```
+
+<!-- #region tags=[] -->
 ### Create an interactive plot that allows viewing many variables
 
 Can you plot all 20 variables simultaneously?
@@ -402,12 +404,14 @@ Can you plot all 20 variables simultaneously?
 For an interactive plot you can use plotly
 ([Parallel Coordinates Plot | Python](https://plotly.com/python/parallel-coordinates-plot/))
 in the notebook.
+<!-- #endregion -->
 
 ```python
 # Create an interactive parallel coordinate plot
-subset_df_numerical = subset_df.copy()
-subset_df_numerical.sex = subset_df.sex.astype("category").cat.codes
-subset_df_numerical.site_id_l = subset_df.site_id_l.astype("category").cat.codes
+# use pandas.DataFrame.copy (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.copy.html)
+subset_df_numerical = subset_df.copy(deep=True)
+subset_df_numerical.sex = subset_df_numerical.sex.astype("category").cat.codes
+subset_df_numerical.site_id_l = subset_df_numerical.site_id_l.astype("category").cat.codes
 fig = px.parallel_coordinates(subset_df_numerical, color="interview_age", 
                               dimensions=["interview_age", "sex"] + data_elements_of_interest,
                               color_continuous_scale=px.colors.sequential.Agsunset,)
