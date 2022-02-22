@@ -163,6 +163,15 @@ Now that you have the Package ID from the step above, you can use the following 
 
 The first time you run the above you will be asked for various pieces of credentials (which you should have at this point, see your ~/.aws/credentials file). We suggest that you enter your NDAR username, password, and credentials from the ~/.aws/credentials file carefully on the first try as your initial entry is stored in a configuration file for future access. It may error out with `Exception: Invalid username and/or password`. If that happens, use `Nano` to open the configurations file `~/.NDATools/settings.cfg` and re-enter your credentials. You can then run the `downloadcmd` command again, and unless you entered incorrect info it should start downloading things into the `ABCD4` directory (note that the default download location is `AWS_downloads`, but we specified an alternate target directory with the `-d` option in the downloadcmd command).
 
+If you get the following warning:
+```
+Running NDATools Version 0.2.13
+Your version of nda-tools is out of date. Please upgrade to the latest version (0.2.14) from PyPi or GitHub and try again. 
+        To upgrade using pip, run: 
+pip install nda-tools==0.2.14
+```
+Run `$ pip install nda-tools==0.2.14`,then `$ downloadcmd -dp <package_id> -d ABCD4`
+
 The above download may take ~10 minutes on the JupyterHub. Once this is completed, you have the Release 4.0 content! Go forth to Task 2...
 
 ## Task 2: Introspecting the data
