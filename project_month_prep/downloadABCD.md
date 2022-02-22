@@ -172,7 +172,6 @@ The above download may take ~10 minutes on the JupyterHub. Once this is complete
 If all has gone well, you would have a folder (ABCD4) containing the downloaded files. In this section of the assignment we are going to help you walk through how to read in the files you have just downloaded. We’ll also show you some techniques in how to visualize the data that you have just downloaded.
 
 First, let's use the Terminal on jupyterhub to verify a few things about the download.
-!(https://lh6.googleusercontent.com/FJEq4CjGzdIEeBMhfWraP6nIYge-XZLgtLydFgwggRNln0G8fCygjEW6sM8WcF6oaYWG7ADr9HE0JDDY6tho-8kNLqIt0rhDi1Y0JmSkfbJ2gJkB0SGdrg2L_8hUPTmtHSNv5IeU=s800)
 
 If you do not see the above Terminal icon, click on the __File__ menu in Jupyterhub and then click __New Launcher__. 
 
