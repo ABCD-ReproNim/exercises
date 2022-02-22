@@ -170,7 +170,7 @@ Your version of nda-tools is out of date. Please upgrade to the latest version (
         To upgrade using pip, run: 
 pip install nda-tools==0.2.14
 ```
-Run `$ pip install nda-tools==0.2.14`,then `$ downloadcmd -dp <package_id> -d ABCD4`
+Run `$ pip install nda-tools==0.2.14`, then `$ downloadcmd -dp <package_id> -d ABCD4`
 
 The above download may take ~10 minutes on the JupyterHub. Once this is completed, you have the Release 4.0 content! Go forth to Task 2...
 
