@@ -146,14 +146,15 @@ Note: in the DataLad lecture, Dr. Wagner uses a command to clone a dataset hoste
 
 - 200 KB
 - 872 KB
-- 1.2 MB
+- 1.9 MB
 - 2.5 MB
 
 
 <details>
 <summary>Click to see answer</summary>
 
-- 872 KB
+- 872 KB (if using the local docker)
+- 1.9 M (if using JupyterHub)
 
 Datalad solution
 - `datalad create -c yoda week8_analysis`
@@ -230,7 +231,7 @@ Assuming these steps were executed successfully, you should now be able to acces
 
 Datalad solution: 
 - `cd /home/jovyan/week8_analysis` (if you are using the local docker, change the path accordingly)
-- `mkdir data/derivatives/mriqc -q && datalad save -m "adding new folders"` 
+- `mkdir data/derivatives/mriqc -p && datalad save -m "adding new folders"` 
 - `datalad install -d . ///repronim/containers`
 - `echo "workdir/" > .gitignore && datalad save -m "Ignore workdir" .gitignore`
 - `datalad get data/sub-*/anat/*`
