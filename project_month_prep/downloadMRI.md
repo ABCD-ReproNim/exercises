@@ -105,7 +105,6 @@ The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` 
 
 ```python
 ! mkdir /home/jovyan/ABCDndar
-! downloadcmd <package_ID> -dp -d /home/jovyan/ABCDndar 
 ! downloadcmd -dp <package_ID> -d '/home/jovyan/ABCDndar' -u <your NDA username> -p <your NDA password>
 #replace <package_ID> with your Data Package ID, and your NDA credentials in the other arguments.
 ```
