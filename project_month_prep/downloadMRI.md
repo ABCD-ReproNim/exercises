@@ -1,12 +1,11 @@
 # Downloading the ABCD imaging data
 
-In the previous data exercises you have downloaded and interacted with the [ABCD 3.0 release](https://nda.nih.gov/abcd/query/abcd-curated-annual-release-3.0.html). #link is broken--maybe use https://nda.nih.gov/study.html?id=901
+In the previous data exercises you have downloaded and interacted with the [ABCD 3.0 release](https://nda.nih.gov/study.html?id=901).
 
 While there are many measures derived from the imaging data within the pre-packaged tabulated data, you may have noticed that the full set of MRI images are not included in this release.
 
-As stated on [NDA's website](https://nda.nih.gov/abcd/query/abcd-curated-annual-release-3.0.html): 
-
-"The raw MRI images and the minimally processed imaging files are over 100TB in size which may make data transfer difficult. "
+~~As stated on [NDA's website](https://nda.nih.gov/abcd/query/abcd-curated-annual-release-3.0.html):  
+"The raw MRI images and the minimally processed imaging files are over 100TB in size which may make data transfer difficult. "~~  *(link does not work anymore)*
 
 The data are stored on [Amazon Simple Storage Service (s3)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) servers. 
 
@@ -75,22 +74,30 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 ***
 
-8. In the drop down menu on the Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will take a few minutes to move from the "Creating Package" status to "Ready to Download". Maybe refill your tea. In the below image **ABCDndar** is the Data Package we just created. **ABCDdcan** will be created in the second section of this exercise.
+8. In the drop down menu on the Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will take a few minutes to move from the "Creating Package" status to "Ready to Download". Maybe refill your tea. In the below image **ABCDndar** is the Data Package we just created.  **ABCDdcan** will be created in the second section of this exercise.
 
 <img src="./screenshots/create_dash.png" width="350" />
 
 <img src="./screenshots/ready_dash.png" width="350" />
 
+Make note of the "Package ID" value for your new Data Package, as you will need this to download it.
 ***
 
-9. Once the Data Package is ready to download, we can use the [NDA tools](https://github.com/NDAR/nda-tools) to download it. The NDA tools are already installed and ready to use on the ABCD-ReproNim JupyterHub. The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` has.
+9. Once the Data Package is ready to download, we can use the [NDA tools](https://github.com/NDAR/nda-tools) to download it.  
 
+The NDA tools are already installed on the ABCD-ReproNim JupyterHub, but it may need to be updated individually via pip install.
 ```python
-! downloadcmd -h
+! pip install nda-tools
+! pip install requests[secure]
 ```
 
 Recall that the `!` in the code cell of a Jupyter notebook means to execute that command using shell.
 
+The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` has.
+
+```python
+! downloadcmd -h
+```
 
 ***
 
@@ -98,7 +105,9 @@ Recall that the `!` in the code cell of a Jupyter notebook means to execute that
 
 ```python
 ! mkdir /home/jovyan/ABCDndar
-! downloadcmd <package_ID> -dp -d /home/jovyan/ABCDndar # replace <package_ID> with your ID
+! downloadcmd <package_ID> -dp -d /home/jovyan/ABCDndar 
+! downloadcmd -dp <package_ID> -d '/home/jovyan/ABCDndar' -u <your NDA username> -p <your NDA password>
+#replace <package_ID> with your Data Package ID, and your NDA credentials in the other arguments.
 ```
 
 ***
@@ -160,11 +169,12 @@ example.split('/')
 
 The above code splits the `example` string into a list of strings at every occurence of `/`.
 
-`.split` only operates on strings, but we have an entire column of strings we want to split. Here we can leverage python's list comprehension to iterate through each string.
+`.split` only operates on strings, but we have an entire column of strings we want to split. Here we can leverage python's list comprehension to iterate through each string once we remove nans.
 
 For example:
 
 ```python
+s3_derv = s3_derv.dropna()
 test_split = [i.split('/') for i in s3_derv['derived_files']]
 test_split[0:3]
 ```
