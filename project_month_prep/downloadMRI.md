@@ -1,6 +1,7 @@
 # Downloading the ABCD imaging data
 
 In the previous data exercises you have downloaded and interacted with the [ABCD 3.0 release](https://nda.nih.gov/abcd/query/abcd-curated-annual-release-3.0.html). #link is broken--maybe use https://nda.nih.gov/study.html?id=901
+
 While there are many measures derived from the imaging data within the pre-packaged tabulated data, you may have noticed that the full set of MRI images are not included in this release.
 
 As stated on [NDA's website](https://nda.nih.gov/abcd/query/abcd-curated-annual-release-3.0.html): 
