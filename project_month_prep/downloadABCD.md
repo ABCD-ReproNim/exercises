@@ -345,6 +345,7 @@ We are going to create a few visualizations of the data. You will need to manipu
 3. Can you plot all 20 variables simultaneously? ([pandas.plotting.parallel_coordinates — pandas 1.1.4 documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.parallel_coordinates.html)) For an interactive plot you can use plotly ([Parallel Coordinates Plot | Python](https://plotly.com/python/parallel-coordinates-plot/)) in the notebook.
 
 4. Plotting distributions: A violin plot grouped by sex. ([Grouped violinplots with split violins — seaborn 0.11.0 documentation](https://seaborn.pydata.org/examples/grouped_violinplots.html))
+    
     For this exercise you will need two categorical variables and one continuous variable. You are going to show how the continuous variable behaves as a function of the categorical variables
     (Optional) Can you think of some ways of estimating if a variable is continuous or categorical?
 
