@@ -73,9 +73,8 @@ def eff_size_cal(df, niter, n_size):
         #pooled standard deviation for males and females
         # here: same number of male and female, hence just averaging the two variance
         # if not same sample size, do a proportional weighting
-        pooled_var = (male['hippocampi'].std())**2 + female['hippocampi'].std())**2)/2
+        pooled_var = ((male['hippocampi'].std())**2 + (female['hippocampi'].std())**2)/2
         sigma = math.sqrt(pooled_var)
-        # sigma = math.sqrt(((male['hippocampi'].std())**2 + (female['hippocampi'].std())**2)/(n_size))
         raw_eff.append(m_mu - f_mu)
         cohen.append((m_mu - f_mu)/sigma)
         # to be exact, variance of the difference of the means : v(m - f) = v(m) + v(f) - 2cov(f,m) 
