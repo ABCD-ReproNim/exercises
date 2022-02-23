@@ -48,15 +48,13 @@ is used in the notebook.
         - `pd.DataFrame(data_elements, columns=["element", "description", "structure"])`
 - control structures
     - [if statements](https://realpython.com/python-conditional-statements/)
-        - ```
-        if any(['eventname' == data_element for data_element in data_structure_df.columns.levels[0]]):
-                ...
-          ```
+        - `if any(['eventname' == data_element for data_element in data_structure_df.columns.levels[0]]):
+                ...`
+                
     - [for loops](https://realpython.com/python-for-loop/)
-        - ```
-        for data_structure, info in data_structures.items():
-                ...
-          ```
+        - `for data_structure, info in data_structures.items():
+                ...`
+          
 - unix concepts
     - [globbing](https://swcarpentry.github.io/python-novice-inflammation/06-files/index.html)
         - `sorted(data_path.glob("*.txt"))`
@@ -363,6 +361,7 @@ subset_df.describe(include="all")
 <summary>Hint</summary>
 Look earlier in the notebook on how the `.to_csv` method was used.
 </details>
+
 ```python
 # insert code to create "my_dataset.tsv" here
 ```
