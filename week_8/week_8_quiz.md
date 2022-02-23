@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 8 Quiz, we will ask you a few questions about the ABCD Culture and Environment Assessments and Data Versioning and Transformation with DataLad.
+In this Week 8 Quiz, we will ask you a few questions about the [ABCD Culture and Environment Assessments](https://youtu.be/EbHXALb484k) and [Data Versioning and Transformation with DataLad](https://youtu.be/udLVUyZQanw).
 
 ***
 
@@ -44,7 +44,7 @@ The ABCD Study aimed to recruit a certain percentage of participants from a "hig
 <details>
 <summary>Click to see answer</summary>
 
-- 50% (video 28:25)
+- 50% ([ABCD Culture and Environment Assessments lecture video 28:25](https://youtu.be/EbHXALb484k?t=1705))
 
 ***
 
@@ -112,7 +112,7 @@ Which of the following measures were administered for the first time at the one-
 ## ReproNim questions
 
 For students who have active DUCs, We recommend you use the online version of
-the [ABCD-ReproNim Jupyterhub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15), in which DataLad is already installed. You can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively, you can work with a local, non-JupyterHub instance of DataLad by following the installation instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
+the [ABCD-ReproNim Jupyterhub](https://abcd.repronim.org/) (read more on how to use the JupyterHub [here](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15) and request access [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link)), in which [DataLad](https://www.datalad.org/) is already installed. You can also use a [local version of the ABCD-ReproNim JupyterHub container](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively, you can work with a local, non-JupyterHub instance of DataLad by following the installation instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
 
 The following questions focus on using DataLad. A summary of the DataLad commands presented in the [Week 8 ReproNim lecture](https://youtu.be/udLVUyZQanw) can be found [here](http://handbook.datalad.org/en/latest/code_from_chapters/ABCD.html#abcd).
 
