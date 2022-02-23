@@ -271,7 +271,7 @@ We want to give you the opportunity to practice coding, so try to do the followi
 
 Here is a function you can use to calculate the effect sizes (step 3):
 ```
-### function to calculate effect size for a given sample size
+# Function to calculate effect size for a given sample size
 def eff_size_cal(df, niter, n_size):
     raw_eff = []
     cohen = []
@@ -282,10 +282,16 @@ def eff_size_cal(df, niter, n_size):
         m_mu = male['hippocampi'].mean()
         f_mu = female['hippocampi'].mean()
         #pooled standard deviation for males and females
-        sigma = math.sqrt(((male['hippocampi'].std())**2 + (female['hippocampi'].std())**2)/(n_size))
+        # here: same number of male and female, hence just averaging the two variance
+        # if not same sample size, do a proportional weighting
+        pooled_var = ((male['hippocampi'].std())**2 + (female['hippocampi'].std())**2)/2
+        sigma = math.sqrt(pooled_var)
         raw_eff.append(m_mu - f_mu)
         cohen.append((m_mu - f_mu)/sigma)
-        z.append( ((m_mu - f_mu)/(sigma)) / math.sqrt(n_size))
+        # to be exact, variance of the difference of the means : v(m - f) = v(m) + v(f) - 2cov(f,m) 
+        # we assume data are independant between m and f
+        # hence v(m-f) = 2*sigma**2 / n_size 
+        z.append( ((m_mu - f_mu)/(math.sqrt(2)*sigma)) / math.sqrt(n_size))
         
     results = pd.DataFrame(list(zip(raw_eff,cohen,z)), columns=['raw_eff','cohen','z'])
     results['n'] = n_size
@@ -298,7 +304,7 @@ When you are finished calculating the numbers, plot the results. You’ll need t
 According to your results, as sample size increases which of the following are generally true (more or less, there will be variability across iterations). 
 
 - Raw effect decreases, cohen’s d increases, z increases
-- Raw effect increases, cohen’s d stays the same, z decreases
+- Raw effect stays the same, cohen’s d stays the same, z decreases
 - Raw effect stays the same, cohen's d increases, z stays the same
 
 NOTE: remmeber your plots should show a *distribution* of effect sizes at each sample size. You should focus on if the *means* of the effect size distributions changes with each sample size step.
@@ -306,7 +312,7 @@ NOTE: remmeber your plots should show a *distribution* of effect sizes at each s
 <details>
 <summary>Click to see answer</summary>
 
-- Raw effect stays the same, cohen's d increases, z stays the same
+- Raw effect stays the same, cohen’s d stays the same, z decreases
 
 see [code](https://github.com/ABCD-ReproNim/exercises/blob/main/week_7/week_7_year_2_data_and_solution.py) in `exercises/week_7` for a solution
 
