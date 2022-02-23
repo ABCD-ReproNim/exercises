@@ -1,4 +1,4 @@
-# Download ABCD Annual Release 4.0
+# Download and Introspect ABCD 4.0
 
 This is the first two installments in a series of data exercises for ABCD-ReproNim students on how to download, vizualize, and work with the ABCD data. They are intended as guided tutorials that will prepare for Project Week (to be held on April 4th - April 29th, 2022). By working through these exercises you will have the opportunity to explore the ABCD data, generate ideas about what kind of project you might like to work on during Project Week, and get practice with various technical/programming skills that will be useful in carrying out your project idea.
 
@@ -6,7 +6,7 @@ This data exercise is intended for students who have _already obtained_ [ABCD da
 
 This assignment has a suggested due date of March 8th, which is the start of Project Week. Unlike the Quizzes you’ve been turning in thus far in the course, this data exercise does not have any multiple choice questions to answer. Rather, we will be asking you to submit a Galink to a Jupyter Notebook (or whatever code you generated) that you wrote based on the steps outlined in each assignment. ABCD-ReproNim TAs will be available to give you feedback on your code upon request.
 
-## Task 1: Download the ABCD Version 4 Annual Release
+## Task 1: Download the ABCD 4.0
 
 Learning Objectives:
 - Use NDA to access a Data Package;
@@ -174,7 +174,7 @@ Run `$ pip install nda-tools==0.2.14`, then `$ downloadcmd -dp <package_id> -d A
 
 The above download may take ~10 minutes on the JupyterHub. Once this is completed, you have the Release 4.0 content! Go forth to Task 2...
 
-## Task 2: Introspecting the data
+## Task 2: Introspect the data
 
 ### 2.1 Do you have the correct data?
  
