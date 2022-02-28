@@ -102,8 +102,8 @@ Which of the following measures were administered for the first time at the one-
 <details>
 <summary>Click to see answer</summary>
 
-- Perceived Discrimination Scale (video 20:38)
-- Wills Problem Solving Scale (video 23:30)
+- Perceived Discrimination Scale (Source: [lecture video 23:30](https://youtu.be/EbHXALb484k?t=1410))
+- Wills Problem Solving Scale (Source: [lecture video 23:30](https://youtu.be/EbHXALb484k?t=1410))
 
 ***
 
