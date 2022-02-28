@@ -40,7 +40,7 @@ The general workflow on the NDA is to add data to your Filter Cart and then crea
 
 2. On the **NDA Query Tool**'s menu, select **Data Structures**. Then enter "fmriresults01" into the Text Search field and hit enter.
 
-<img src="./screenshots/nda_query.png" width="900" />
+<img src="./screenshots/nda_query2.png" width="900" />
 
 ***
 
@@ -50,7 +50,7 @@ The general workflow on the NDA is to add data to your Filter Cart and then crea
 
 Your Filter Cart will take a few minutes to update. Make yourself some tea. Once it is finished, you should see the following.
 
-<img src="./screenshots/filter_cart.png" width="400" />
+<img src="./screenshots/filter_cart2.png" width="400" />
 
 (Sample size may vary depending on when you are working through this exercise)
 
@@ -62,9 +62,9 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 <img src="./screenshots/create_data_package.png" width="200" />
 
-6. If you are not logged into the NDA, this will prompt you to log in with your credientials. After, you will see a menu to define your Data Package. Give it a short name and ensure that **Include Associated Data Files** is *unchecked*. Otherwise, the Data Package will contain the all images in *fmriresults*. It will be faster and more flexible to only download the pointers to the data and not the data istself. When you are finished entering this information, click **Create Data Package**.
+6. If you are not logged into the NDA, this will prompt you to log in with your credientials. After, you will see a menu to define your Data Package. Give it a short name and ensure that **Include Associated Data Files** is *checked*. This is necessary in order to be able to download the files later. When you are finished entering this information, click **Create Data Package**.
 
-<img src="./screenshots/create_menu.png" width="300" />
+<img src="./screenshots/create_menu2.png" width="300" />
 
 ***
 
@@ -74,7 +74,7 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 ***
 
-8. In the drop down menu on the Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will take a few minutes to move from the "Creating Package" status to "Ready to Download". Maybe refill your tea. In the below image **ABCDndar** is the Data Package we just created.  **ABCDdcan** will be created in the second section of this exercise.
+8. In the drop down menu on the Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will probably take a while to move from the "Creating Package" status to "Ready to Download". Maybe take a nap. In the below image **ABCDndar** is the Data Package we just created.  **ABCDdcan** will be created in the second section of this exercise.
 
 <img src="./screenshots/create_dash.png" width="350" />
 
@@ -101,17 +101,18 @@ The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` 
 
 ***
 
-10. Our first usage of `downloadcmd` will use the Package ID to download the associated package files. Let's put the ABCDndar package into it's own directory. If you have already set up your NDA credentials to download the ABCD 3.0 Release, then `downloadcmd` will use the already stored credentials.  
+10. As you may have noticed, the package containing all the image files is /very/ large. We will use the --file-regex argument in `downloadcmd` to download only the /fmriresults01.txt/ file, which contains information about each image in this structure. Let's put the ABCDndar package into it's own directory. 
 
 ```python
 ! mkdir /home/jovyan/ABCDndar
-! downloadcmd -dp <package_ID> -d '/home/jovyan/ABCDndar' -u <your NDA username> -p <your NDA password>
-#replace <package_ID> with your Data Package ID, and your NDA credentials in the other arguments.
+! downloadcmd -dp <package_ID> -d '/home/jovyan/ABCDndar' -u <your NDA username> -p <your NDA password> --file-regex 'fmriresults01.txt'
+
+## replace <package_ID> with your Data Package ID, and your NDA credentials in the other arguments.
 ```
 
 ***
 
-11. Once the download is complete, we can list the files. The relevant file is `fmriresults01.txt`, which contains information about each image in this structure.
+11. Once the download is complete, we can list the files.
 
 ```python
 ! ls /home/jovyan/ABCDndar
@@ -206,7 +207,7 @@ s3_derv['scan'].value_counts()
 
 ***
 
-15. Let's specify our filtering critera. Choose 5 subject GUIDs (you can choose 5 random GUIDs from your work on the ABCD 3.0 Release), only the `baselineYear1Arm1` session, and scan types of `MPROC-T1` and `MPROC-rsfMRI`.
+15. Let's specify our filtering critera. Choose 5 subject GUIDs (you can choose 5 random GUIDs from any previous work with ABCD Data), only the `baselineYear1Arm1` session, and scan types of `MPROC-T1` and `MPROC-rsfMRI`.
 
 ```python
 subjs = [ ] # enter 5 GUIDs.
@@ -239,14 +240,15 @@ with open('/home/jovyan/ABCDndar/s3_derv_links_5subj.txt', 'w') as f:
 
 ```python
 ! mkdir /home/jovyan/ABCDndar/tar_files
-! downloadcmd -d /home/jovyan/ABCDndar/tar_files -t /home/jovyan/ABCDndar/s3_derv_links_5subj.txt
+! downloadcmd -dp <project-id> -d '/home/jovyan/ABCDndar/tar_files' -u <NDA-username> -p <NDA-password> -t '/home/jovyan/ABCDndar/s3_derv_links_5subj.txt'
+
 ```
 
 ***
 
 18. Let's list out the files we've downloaded. You'll notice that the data was downloaded into a `submission_XXXXX` directory. You will also notice that the files are in `.tgz` format. The last step will be to unzip the files. The unzipping and `datalad save` steps will take a few minutes. Fourth tea refill is a charm!
 
-The `%%bash` in the cell tells the entire cell to run the code in bash.
+If using Jupyter Notebook, place the `%%bash` command in the cell to tell the entire cell to run the code in bash.
 
 ```python
 ! ls /home/jovyan/ABCDndar/tar_files
