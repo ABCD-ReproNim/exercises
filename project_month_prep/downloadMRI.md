@@ -1,17 +1,15 @@
 # Downloading the ABCD imaging data
 
-In the previous data exercises you have downloaded and interacted with the [ABCD 3.0 release](https://nda.nih.gov/study.html?id=901).
+In the previous data exercises you may have downloaded and interacted with the [ABCD 3.0 release](https://nda.nih.gov/study.html?id=901) or [ABCD 4.0 release](https://nda.nih.gov/study.html?id=1299).
 
-While there are many measures derived from the imaging data within the pre-packaged tabulated data, you may have noticed that the full set of MRI images are not included in this release.
-
-~~As stated on [NDA's website](https://nda.nih.gov/abcd/query/abcd-curated-annual-release-3.0.html):  
-"The raw MRI images and the minimally processed imaging files are over 100TB in size which may make data transfer difficult. "~~  *(link does not work anymore)*
+While there are many measures derived from the imaging data within the pre-packaged tabulated data, you may have noticed that the full set of MRI images are not included in these releases.
 
 The data are stored on [Amazon Simple Storage Service (s3)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) servers. 
 
 There are multiple routes to obtaining the full imaging data, we'll focus on the following two:
-1. Using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) structure
-2. Using the [nda-abcd-s3-downloader](https://github.com/DCAN-Labs/nda-abcd-s3-downloader)
+1. Using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) data structure
+~~2. Using the [nda-abcd-s3-downloader](https://github.com/DCAN-Labs/nda-abcd-s3-downloader)~~
+2. Using the [nda-data-access code](https://github.com/NDAR/nda-data-access-example-code)
 
 Both routes involve creating a data package through the NDA, downloading a manifest file, parsing the manifest file, and finally downloading the data.
 
@@ -28,9 +26,7 @@ The GUID's format is `NDAR_INVXXXXXXXX`, where `XXXXXXXX` is a random string of 
 
 ## Downloading the data using the fmriresults01 structure
 
-The general workflow on the NDA is to add data to your Filter Cart and then create a Data Package from the filter. Here we will create a Data Package from the *fmriresults01* data structure. See Getting Image Volumes [here](https://nda.nih.gov/abcd/query/abcd-release-faqs.html) for more info on the *fmriresults01* structure.
-
-~~**NOTE**: The `fmriresults01.txt` file is distributed in the ABCD 3.0 Release. So if you've already downnloaded that, then you could use that file. If so, you can skip to step 13.~~
+The general workflow on the NDA is to add data to your Filter Cart and then create a Data Package from the filter. Here we will create a Data Package from the *fmriresults01* data structure. See the Release Notes on ABCD Imaging Instruments [here](http://dx.doi.org/10.15154/1523041) for more info on the *fmriresults01* structure.
 
 1. Let's begin at the [NDA's front page](https://nda.nih.gov/). Select **Get Data** > **Get Data**
 
@@ -112,7 +108,7 @@ The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` 
 
 ***
 
-11. Once the download is complete, we can list the files.
+11. Once the download is complete, we can check our file.
 
 ```python
 ! ls /home/jovyan/ABCDndar
@@ -290,9 +286,9 @@ git log
 
 ***
 
-## Downloading the data using the nda-abcd-s3-downloader
+## Downloading the data using the nda-data-access repository
 
-The [Developmental Cognition and Neuroimaging Lab (DCAN)](https://www.ohsu.edu/school-of-medicine/developmental-cognition-and-neuroimaging-lab) at Oregon Health & Science University has created a handy tool to make downloading easier. In addition, they have uploaded preprocessed derivatives to facilitate quick analysis. More information about the specific contents and preprocessing pipeline can be found at the [Collection 3165 documentation page](https://collection3165.readthedocs.io/en/stable/release_notes/). The procedure for preparing the final download is similar to the procedure above.
+~~The [Developmental Cognition and Neuroimaging Lab (DCAN)](https://www.ohsu.edu/school-of-medicine/developmental-cognition-and-neuroimaging-lab) at Oregon Health & Science University has created a handy tool to make downloading easier. In addition, they have uploaded preprocessed derivatives to facilitate quick analysis. More information about the specific contents and preprocessing pipeline can be found at the [Collection 3165 documentation page](https://collection3165.readthedocs.io/en/stable/release_notes/). The procedure for preparing the final download is similar to the procedure above.~~
 
 First you need to create a package and download the list of files contained in Collection 3165. Below are the instructions for using this tool from the [`nda-abcd-s3-downloader` README](https://github.com/DCAN-Labs/nda-abcd-s3-downloader). 
 
