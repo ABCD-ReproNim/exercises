@@ -30,7 +30,7 @@ The GUID's format is `NDAR_INVXXXXXXXX`, where `XXXXXXXX` is a random string of 
 
 The general workflow on the NDA is to add data to your Filter Cart and then create a Data Package from the filter. Here we will create a Data Package from the *fmriresults01* data structure. See Getting Image Volumes [here](https://nda.nih.gov/abcd/query/abcd-release-faqs.html) for more info on the *fmriresults01* structure.
 
-**NOTE**: The `fmriresults01.txt` file is distributed in the ABCD 3.0 Release. So if you've already downnloaded that, then you could use that file. If so, you can skip to step 13.
+~~**NOTE**: The `fmriresults01.txt` file is distributed in the ABCD 3.0 Release. So if you've already downnloaded that, then you could use that file. If so, you can skip to step 13.~~
 
 1. Let's begin at the [NDA's front page](https://nda.nih.gov/). Select **Get Data** > **Get Data**
 
