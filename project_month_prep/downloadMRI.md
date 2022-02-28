@@ -6,9 +6,9 @@ While there are many measures derived from the imaging data within the pre-packa
 
 The data are stored on [Amazon Simple Storage Service (s3)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) servers. 
 
-The most straightforward way to obtain the full imaging data is by using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) data structure
+The most straightforward way to obtain the full imaging data is by using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) data structure, which involves creating a data package through the NDA, downloading a manifest file, parsing the manifest file, and finally downloading the data.
 
-Both routes involve creating a data package through the NDA, downloading a manifest file, parsing the manifest file, and finally downloading the data.
+***NOTE:***  *The NDA Data Package may take some time to be available for download once you have created it. Because of this, it may be advisable to complete the Data Package creation step at least a day before you are planning to complete the rest of the exercise. * 
 
 For brevity, the exercises in this notebook will guide you through downloading the resting state and T1w data from 5 subjects using each of the above download methods. You will need active NDA credentials and an ABCD DUC to download the data.
 
@@ -23,7 +23,7 @@ The GUID's format is `NDAR_INVXXXXXXXX`, where `XXXXXXXX` is a random string of 
 
 ## Downloading the data using the fmriresults01 structure
 
-The general workflow on the NDA is to add data to your Filter Cart and then create a Data Package from the filter. Here we will create a Data Package from the *fmriresults01* data structure. See the Release Notes on ABCD Imaging Instruments [here](http://dx.doi.org/10.15154/1523041) for more info on the *fmriresults01* structure.
+The general workflow on the NDA is to add data to your Filter Cart and then create a Data Package from the filter. Here we will create a Data Package from the `fmriresults01` data structure. See the Release Notes on ABCD Imaging Instruments [here](http://dx.doi.org/10.15154/1523041) for more info on the `fmriresults01` structure.
 
 1. Let's begin at the [NDA's front page](https://nda.nih.gov/). Select **Get Data** > **Get Data**
 
