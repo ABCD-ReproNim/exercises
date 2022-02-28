@@ -6,9 +6,7 @@ While there are many measures derived from the imaging data within the pre-packa
 
 The data are stored on [Amazon Simple Storage Service (s3)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) servers. 
 
-There are multiple routes to obtaining the full imaging data, we'll focus on the following two:
-1. Using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) data structure
-~~2. Using the [nda-abcd-s3-downloader](https://github.com/DCAN-Labs/nda-abcd-s3-downloader)~~
+The most straightforward way to obtain the full imaging data is by using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) data structure
 
 Both routes involve creating a data package through the NDA, downloading a manifest file, parsing the manifest file, and finally downloading the data.
 
