@@ -9,7 +9,6 @@ The data are stored on [Amazon Simple Storage Service (s3)](https://docs.aws.ama
 There are multiple routes to obtaining the full imaging data, we'll focus on the following two:
 1. Using links from the [fmriresults01](https://nda.nih.gov/data_structure.html?short_name=fmriresults01) data structure
 ~~2. Using the [nda-abcd-s3-downloader](https://github.com/DCAN-Labs/nda-abcd-s3-downloader)~~
-2. Using the [nda-data-access code](https://github.com/NDAR/nda-data-access-example-code)
 
 Both routes involve creating a data package through the NDA, downloading a manifest file, parsing the manifest file, and finally downloading the data.
 
@@ -81,7 +80,7 @@ Make note of the "Package ID" value for your new Data Package, as you will need 
 
 9. Once the Data Package is ready to download, we can use the [NDA tools](https://github.com/NDAR/nda-tools) to download it.  
 
-The NDA tools are already installed on the ABCD-ReproNim JupyterHub, but it may need to be updated individually via pip install.
+The NDA tools are already installed on the ABCD-ReproNim JupyterHub, but it may need to be updated individually via `pip install`.
 ```python
 ! pip install nda-tools
 ! pip install requests[secure]
@@ -97,7 +96,7 @@ The relvant command will be `downloadcmd`. Let's see what options `downloadcmd` 
 
 ***
 
-10. As you may have noticed, the package containing all the image files is /very/ large. We will use the --file-regex argument in `downloadcmd` to download only the /fmriresults01.txt/ file, which contains information about each image in this structure. Let's put the ABCDndar package into it's own directory. 
+10. As you may have noticed, the package containing all the image files is /very/ large. We will use the `--file-regex argument` in `downloadcmd` to download only the `/fmriresults01.txt` file, which contains information about each image in this structure. Let's put the ABCDndar package into it's own directory. 
 
 ```python
 ! mkdir /home/jovyan/ABCDndar
@@ -242,22 +241,29 @@ with open('/home/jovyan/ABCDndar/s3_derv_links_5subj.txt', 'w') as f:
 
 ***
 
-18. Let's list out the files we've downloaded. You'll notice that the data was downloaded into a `submission_XXXXX` directory. You will also notice that the files are in `.tgz` format. The last step will be to unzip the files. The unzipping and `datalad save` steps will take a few minutes. Fourth tea refill is a charm!
+18. Let's list out the files we've downloaded. You'll notice that the data was downloaded into a `fmriresults01` directory. You will also notice that the files are in `.tgz` format. 
+ 
+```python
+! ls /home/jovyan/ABCDndar/tar_files! ls /home/jovyan/ABCDndar/tar_files/fmriresults01
+```
+
+19. The last step will be to unzip the files. The unzipping and `datalad save` steps will take a few minutes. Fourth tea refill is a charm!
 
 If using Jupyter Notebook, place the `%%bash` command in the cell to tell the entire cell to run the code in bash.
-
-```python
-! ls /home/jovyan/ABCDndar/tar_files
-```
 
 ```bash
 
 # let's use datalad to track the unzipped dataset
+
+%%bash
+git config --global user.name <First Last>
+git config --global user.email <email>
+
 datalad create /home/jovyan/ABCDndar/image_files
 
 # now unzip the files
 cd /home/jovyan/ABCDndar/tar_files
-for sub in submission_*; do
+for sub in fmriresults01*; do
     cd $sub
     for f in *.tgz; do
         tar zxf $f --directory /home/jovyan/ABCDndar/image_files
@@ -283,166 +289,3 @@ git log
 ### Success!!
 # 🎉🎉🎉
 
-
-***
-
-## Downloading the data using the nda-data-access repository
-
-~~The [Developmental Cognition and Neuroimaging Lab (DCAN)](https://www.ohsu.edu/school-of-medicine/developmental-cognition-and-neuroimaging-lab) at Oregon Health & Science University has created a handy tool to make downloading easier. In addition, they have uploaded preprocessed derivatives to facilitate quick analysis. More information about the specific contents and preprocessing pipeline can be found at the [Collection 3165 documentation page](https://collection3165.readthedocs.io/en/stable/release_notes/). The procedure for preparing the final download is similar to the procedure above.~~
-
-First you need to create a package and download the list of files contained in Collection 3165. Below are the instructions for using this tool from the [`nda-abcd-s3-downloader` README](https://github.com/DCAN-Labs/nda-abcd-s3-downloader). 
-
-1. Navigate to the [NDA website](https://nda.nih.gov/general-query.html?q=query=collections%20~and~%20searchTerm=DCAN%20Labs%20ABCD-BIDS%20MRI%20pipeline%20inputs%20and%20derivatives%20~and~%20orderBy=id%20~and~%20orderDirection=Ascending) 
-2. Under "Get Data" select "Data from Labs"
-3. Search for "DCAN Labs ABCD-BIDS MRI pipeline inputs and derivatives"
-4. After clicking on the Collection Title select "Shared Data"
-5. Click "Add to Cart" at the bottom
-6. It will take a minute to update the "Filter Cart" in the upper right corner, but when that is done select "Package/Add to Study"Select "Create Package", name your package accordingly, and click "Create Package"
-- IMPORTANT: Make sure "Include associated data files" is deselected or it will automatically attempt to download all the data through the NDA's package manager which is unreliable on such a large dataset. That is why we've created this downloader for you.
-7. Now download the "Download Manager" to actually download the package or use the NDA's nda-tools to download the package from the command line. This may take several minutes.
-8. After the download is complete find the "datastructure_manifest.txt" in the downloaded directory. This is the input S3 file that contains AWS S3 links to every input and derivative for all of the selected subjects and you will need to give the path to this file when calling download.py
-
-
-***
- Hopefully most of the steps to download the manifest sound familiar. Once you have created the Data Package in the NDA, you can proceed.
- 
- 9. Let's make a directory and download the data package.
-
-```python
-! mkdir /home/jovyan/ABCDdcan
-! downloadcmd <package_ID> -dp -d /home/jovyan/ABCDdcan # replace <package_ID> with your ID
-```
-
-```python
-! ls /home/jovyan/ABCDdcan
-```
-
-***
-
-10. We should see `datastructure_manifest.txt` in `/home/jovyan/ABCDdcan`. This is the file that contains all of the s3 links for the input and derivative data. As before, we'll need to filter the larger file, but we'll do so in a different way. But first, we need to clone the [nda-abcd-s3-downloader](https://github.com/DCAN-Labs/nda-abcd-s3-downloader).
-
-```bash
-
-cd /home/jovyan/ABCDdcan
-git clone https://github.com/DCAN-Labs/nda-abcd-s3-downloader.git
-```
-
-***
-
-11. The `nda-abcd-s3-downloader` accepts a `data_subsets.txt` file in which we can specify which subsets of the data we want. Let's download some raw (input) data and some derivative data, but keep them separate. You can see the list of data subsets [here](https://github.com/DCAN-Labs/nda-abcd-s3-downloader/blob/master/data_subsets.txt). First, we'll download the inputs.
-
-```bash
-
-cd /home/jovyan/ABCDdcan
-# write inputs of interest to inputs.txt
-echo inputs.anat.T1w >> inputs.txt
-echo inputs.func.task-rest >> inputs.txt
-```
-
-***
-
-12. Now that you have the data subsets, you'll also need to create a subject subset file. You can use the same subjects as you did for the above exercise. Create a file called `5subjects.txt` that contains the following format. You can `echo` the GUIDs to a text file as we did with the inputs above, or you can create a text file outside of this notebook.
-
-```
-sub-NDARINVXXXXXXXX
-sub-NDARINVXXXXXXXX
-sub-NDARINVXXXXXXXX
-sub-NDARINVXXXXXXXX
-sub-NDARINVXXXXXXXX
-```
-
-
-***
-
-13. Now we are ready to download the input data! This step will take a few minutes. You're probaly out of tea at this point.
-
-#### **NOTE**: The first time you run `download.py`, you'll need to run it from your terminal because it will ask for your NDA credentials
-
-```bash
-
-# let's use datalad to track the unzipped dataset
-datalad create /home/jovyan/ABCDdcan/image_files
-
-## NOTE: the first time you run download.py, you'll need to run it from your terminal because it will ask for your NDA credentials
-cd /home/jovyan/ABCDdcan/
-
-# run the downloader
-nda-abcd-s3-downloader/download.py -i datastructure_manifest.txt -o image_files -s 5subjects.txt -d inputs.txt
-```
-
-```bash
-
-# track the changes in datalad
-cd /home/jovyan/ABCDdcan/image_files
-datalad save -m 'add T1w and rest input data' .
-```
-
-***
-
-14. Let's check to see if the input data we downloaded are in proper BIDS format. To do this we'll use the [bids-validator](https://github.com/bids-standard/bids-validator). We'll build a singularity container from the docker image so that we can run the validator on the JupyterHub.
-
-```python
-! singularity build bids_validator-1.6.1.simg docker://bids/validator:v1.6.1
-```
-
-Now let's see if the input data are in BIDS.
-
-```python
-! singularity run /home/jovyan/bids_validator-1.6.1.simg /home/jovyan/ABCDdcan/image_files
-```
-
-It looks like the data are in BIDS! (Warnings are ok, but something you should be aware of)
-
-
-***
-
-15. Now let's download some derivatives! You can use the same subjects file.
-
-```bash
-
-cd /home/jovyan/ABCDdcan
-
-# make subsets file
-cat ./nda-abcd-s3-downloader/data_subsets.txt | grep derivatives | grep rest >> derivatives.txt
-cat ./nda-abcd-s3-downloader/data_subsets.txt | grep derivatives | grep T1w >> derivatives.txt
-```
-
-***
-
-16. Now download the derivatives. `download.py` automatically adds the derivatives directory. So we'll have to force a subdataset with datalad after the download.
-
-```bash
-
-cd /home/jovyan/ABCDdcan/
-
-# run the downloader
-nda-abcd-s3-downloader/download.py -i datastructure_manifest.txt -o image_files/derivatives -s 5subjects.txt -d derivatives.txt
-```
-
-***
-
-18. Now use datalad to create a subdataset and save the subdataset's state.
-
-```bash
-
-cd /home/jovyan/ABCDdcan/image_files
-# force the creation of a subdataset
-datalad create -d derivatives --force
-
-# now save the subdataset
-cd derivatives
-datalad save -m 'add T1w and rest derivatives'
-```
-
-Finally, we can look at the log to see the changes we've made to this dataset.
-
-```bash
-
-cd /home/jovyan/ABCDdcan/image_files
-git log
-```
-
-### Success!!
-# 🎉🎉🎉
-
-You should probably buy more tea... ☕
