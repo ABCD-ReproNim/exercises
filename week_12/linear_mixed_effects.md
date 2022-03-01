@@ -5,13 +5,14 @@ jupyter:
     text_representation:
       extension: .md
       format_name: markdown
-      format_version: '1.2'
-      jupytext_version: 1.7.1
+      format_version: '1.3'
+      jupytext_version: 1.13.7
   kernelspec:
-    display_name: Python 3
+    display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
+
 # Week 12 Part 1: Longitudional Modeling
 
 You will use this notebook to answer questions from the longitudional modeling portion of in the Week 12 quiz.
@@ -30,6 +31,7 @@ First let's import all of the libraries that we will need.
 
 
 ```python
+from copy import deepcopy # to deep copy data
 import pandas as pd # to work with tabular data
 import numpy as np # to generate random numbers and perform computations on numbers
 import statsmodels.formula.api as smf # to fit mixed (i.e., fixed and random) effects models
@@ -232,7 +234,7 @@ Including random intercepts helps model the varying intercepts between participa
 
 
 ```python
-intercepts_group = simple_group.copy()
+intercepts_group = deepcopy(simple_group)
 intercepts_group['control']['variance'] = 1000
 rng = np.random.default_rng(seed=123)
 diff_intercepts_df = generate_data(intercepts_group, timepoints, rng)
@@ -264,7 +266,7 @@ Some participants may have their brain volume increase slowly, and others may ha
 
 
 ```python
-intercepts_and_growth_group = intercepts_group.copy()
+intercepts_and_growth_group = deepcopy(intercepts_group)
 intercepts_and_growth_group['control']['growth_btwn_variance'] = 1000
 rng = np.random.default_rng(seed=123)
 diff_intercepts_and_growth_df = generate_data(intercepts_and_growth_group, timepoints, rng)
@@ -300,7 +302,7 @@ the sources of variance when fitting a mixed effects model.
 
 
 ```python
-all_variance_group = intercepts_and_growth_group.copy()
+all_variance_group = deepcopy(intercepts_and_growth_group)
 all_variance_group['control']['growth_wthn_variance'] = 1000
 rng = np.random.default_rng(seed=123)
 all_variance_df = generate_data(all_variance_group, timepoints, rng)
