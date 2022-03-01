@@ -74,7 +74,7 @@ Next, let’s fetch a [pre-written Notebook](https://github.com/ABCD-ReproNim/ex
 
 `$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_12/linear_mixed_effects.md`
 
-You can open `linear_mixed_effects.md` on the JupyterHub as a Notebook by right clicking the file then choosing "Open With" and "Notebook".
+You can open `linear_mixed_effects.md` on the JupyterHub as a Notebook by right clicking the file then choosing **Open With** and **Notebook**.
 
 The simulated data can be interpreted as measuring brain volume from a particular area of interest (for example the hippocampus) over time.
 We are hypothesizing the brain area of interest increases in size over time, and we want to measure the average yearly increase of volume in our cohort.
