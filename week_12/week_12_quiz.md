@@ -79,7 +79,7 @@ You can open `linear_mixed_effects.md` on the JupyterHub as a Notebook by right 
 The simulated data can be interpreted as measuring brain volume from a particular area of interest (for example the hippocampus) over time.
 We are hypothesizing the brain area of interest increases in size over time, and we want to measure the average yearly increase of volume in our cohort.
 Run the code blocks in the notebook until you reach `Simple Dataset Conclusions`.
-After you complete the Simple Dataset analysis, explain why the intercept is estimated to be `6940` (your answers may vary depending on the random seed) even though the baseline volume was simulated to be `7000`?
+After you complete the Simple Dataset analysis, explain why the intercept is estimated to be `6940`even though the baseline volume was simulated to be `7000`?
 
 - [ ] Error inherent in model estimation
 - [ ] `6940` represents the predicted volume at `0` months of age
