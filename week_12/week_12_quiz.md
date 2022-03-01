@@ -147,7 +147,7 @@ In this quiz, we're going to explore some of the concepts presented in the machi
 
 `$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_12/machine_learning.md`
 
-You can open `machine_learning.md` on the JupyterHub as a Notebook by right clicking the file then choosing "Open With" and "Notebook".
+You can open `machine_learning.md` on the JupyterHub as a Notebook by right clicking the file then choosing **Open With** and **Notebook**.
 
 **Question 6**
 
