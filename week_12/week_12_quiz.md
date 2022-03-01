@@ -39,7 +39,7 @@ What makes a longitudinal design different from a cross-sectional design?
 
 **Question 2**
 
-Imagine we are analyzing hippocampal volume over time, with 3 timepoints for each participant. Using `R`s syntax, our model would be specified like so:
+Imagine we are analyzing hippocampal volume over time, with 3 timepoints for each participant. Using `R` syntax, our model would be specified like so:
 `volume ~ time + (1 + time | subject)`
 Which of the following statements are **True**?
 
