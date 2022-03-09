@@ -124,7 +124,7 @@ Thus far in the course we've used `bash` to automate manual tasks,
 (e.g., running the same command across many participants, on other machines,
 and/or on a high performance/throughput computing cluster).
 
-While not strictly necessary, we do recommend you complete the [week 8](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_quiz.md#repronim-questions) (DataLad) and [week 9 ](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions) (reproducible workflows) quizzes before completing this week's ReproNim questions. For today's ReproNim portion of the Data Exercise, you
+While not strictly necessary, we do recommend you complete the [week 8](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_2_quiz.md#repronim-questions) (DataLad) and [week 9](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_year_2_quiz.md#repronim-questions) (reproducible workflows) quizzes before completing this week's ReproNim questions. For today's ReproNim portion of the Data Exercise, you
 will be cloning (via the command `datalad clone week9_analysis week10_analysis`), the same [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) that we worked with in the ReproNim portions of the previous two quizzes.
 We will also be testing different ways of using FSL's [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) again.
 
@@ -187,7 +187,7 @@ Both ReproMan and DataLad can:
 **Question 7**
 
 We will be making a new DataLad dataset named `week10_analysis`.
-If you completed the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions) and have a `week9_analysis` directory tree that looks like this,
+If you completed the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_year_2_quiz.md#repronim-questions) and have a `week9_analysis` directory tree that looks like this,
 ```
 - derivatives
     - first
@@ -202,8 +202,8 @@ the following commands _should_ get you up to speed:
 
 Assuming this is the case, after entering the above commands you _should_ be ready to continue with this question (but check `datalad status` within each dataset to see if there are uncommitted files!)
 
-If you did _not_ complete the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions) (or, if you'd just like a fresh start for this week),
-then take a moment to look at the answer posted to Question 7 of the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions). Enter those commands now, only changing instances
+If you did _not_ complete the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_year_2_quiz.md#repronim-questions) (or, if you'd just like a fresh start for this week),
+then take a moment to look at the answer posted to Question 7 of the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_year_2_quiz.md#repronim-questions). Enter those commands now, only changing instances
 of `week9_analysis` with `week10_analysis`. This will set up the appropriate DataLad `week10_analysis` dataset needed to complete the rest of this week's questions.
 
 If the `week10_analysis` dataset is clean, which of the following should the output of `datalad status` be? (if your dataset is not clean, use `datalad save` to
@@ -267,7 +267,12 @@ my-local-shell         shell                a8b86830-64b4-11eb- available
 ```
 
 ## Note:
-Look at the [ReproMan documentation](https://reproman.readthedocs.io/en/latest/generated/man/reproman-create.html) for help with using this command.
+If you get
+```
+bash: reproman: command not found
+```
+when you try your first reproman command, you'll have to install reproman. See the [installation instructions](https://github.com/repronim/reproman#installation) for full details but `pip install reproman` ought to do it.
+Look at the [ReproMan documentation](https://reproman.readthedocs.io/en/latest/generated/man/reproman-create.html) for help with using the command required for this question.
 
 <details>
 <summary>Click to see answer</summary>
@@ -280,7 +285,7 @@ Look at the [ReproMan documentation](https://reproman.readthedocs.io/en/latest/g
 
 **Question 9**
 
-In [last week's quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions), you ran a separate DataLad command for each
+In [last week's quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_year_2_quiz.md#repronim-questions), you ran a separate DataLad command for each
 set of inputs (e.g., the participant parameters (`01`, `02`) and the method parameters (`none`, `fast`)),
 resulting in four total commands you had to type out.
 ReproMan can condense those four commands into one call that runs all desired commands in parallel.
@@ -335,7 +340,7 @@ bash -c "cd data/sub-'{p[subject]}'/anat && run_first_all -i sub-'{p[subject]}'_
 
 **Question 10**
 
-In order to run the previous ReproMan command on remote computer,
+In order to run the previous ReproMan command on a remote computer,
 which flags would need to change values? (at a minimum)
 
 - [ ] `--resource, --submitter, --orchestrator`
