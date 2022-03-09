@@ -67,11 +67,11 @@ Your Filter Cart will take a few minutes to update. Make yourself some tea. Once
 
 ***
 
-8. In the drop down menu on the Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will probably take a while to move from the "Creating Package" status to "Ready to Download". Maybe take a nap. In the below image **ABCDndar** is the Data Package we just created.  **ABCDdcan** will be created in the second section of this exercise.
+8. In the drop down menu on the Data Package Dashboard, select **My Data Packages**. You should see the Data Package you just created. It will probably take a while to move from the "Creating Package" status to "Ready to Download". Maybe take a nap. In the below image **ABCDndar** is the Data Package we just created.  
 
-<img src="./screenshots/create_dash.png" width="350" />
+<img src="./screenshots/create_dash2.png" width="350" />
 
-<img src="./screenshots/ready_dash.png" width="350" />
+<img src="./screenshots/ready_dash2.png" width="350" />
 
 Make note of the "Package ID" value for your new Data Package, as you will need this to download it.
 ***
