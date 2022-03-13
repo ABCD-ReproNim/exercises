@@ -128,20 +128,7 @@ While not strictly necessary, we do recommend you complete the [week 8](https://
 will be cloning (via the command `datalad clone week9_analysis week10_analysis`), the same [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) that we worked with in the ReproNim portions of the previous two quizzes.
 We will also be testing different ways of using FSL's [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) again.
 
-Enrolled Students: We recommend you use the online version of
-the [ABCD-ReproNim Jupyterhub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15), in
-which DataLad is already installed. You can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local
-instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
-you can work with a local, non-JupyterHub instance of DataLad by following the installation
-instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
-
-Observer Students: We recommend you use the ABCD-ReproNim JupyterHub container that we've set up for ABCD-ReproNim Observer Students, in which
-DataLad is already installed. Instructions on how to set up a local instance of our JupyterHub can be
-found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). General information about the
-ABCD-ReproNim JupyterHub can be
-found [here](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15). Alternatively, you can
-work with a local, non-JupyterHub instance of DataLad by following the installation
-instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
+If you have ABCD Data access, we recommend you use the online version of the [ABCD-ReproNim Jupyterhub](http://abcd.repronim.org/) in which DataLad is already installed. To request access please provide us with your GitHub username [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link) and a screen capture of your active DUC [here](https://docs.google.com/forms/d/e/1FAIpQLSdZbXLB2HdciB88YN3JIXg6OdUN2dq1KnLTolIcos2Tu6FazA/viewform?usp=sf_link). If you do not have an active DUC, you can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively, you can work with a local, non-JupyterHub instance of DataLad by following the DataLad installation instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html)/
 
 
 **Question 6**
