@@ -1,10 +1,10 @@
-# Download and Inspect ABCD 4.0
+# Download, Inspect, and Visualize ABCD 4.0 Tabulated and Raw Behavioral Datasets
 
-This is the first two installments in a series of data exercises for ABCD-ReproNim students on how to download, vizualize, and work with the ABCD data. They are intended as guided tutorials that will prepare for Project Month (to be held on April 4th - April 29th, 2022). By working through these exercises you will have the opportunity to explore the ABCD data, generate ideas about what kind of project you might like to work on during Project Month, and get practice with various technical/programming skills that will be useful in carrying out your project idea.
+This is the first two installments in a series of data exercises for ABCD-ReproNim students on how to download, vizualize, and work with the ABCD data. They are intended as guided tutorials that will prepare for Project Month (to be held on April 4th - April 29th, 2022). By working through these exercises you will have the opportunity to explore the ABCD data, generate ideas about what kind of project you might like to work on during Project Month, and get practice with various technical/programming skills that will be useful in carrying out your project idea. You are welcome and encouraged to download data to the [ABCD-ReproNim JupyterHub](https://abcd.repronim.org/). If you need access to the Hub you can request it [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link).
 
 This data exercise is intended for students who have _already obtained_ [ABCD data access](https://docs.google.com/document/d/18hsT2x15bypuXFcfMQb9Ck_YEB7VvY2j4w5hwbV78A4/edit#heading=h.ifsu9kkjrdcu). However, broad concepts (e.g., working with and visualizing data in Python) are generalizable across other data sets, but many of the steps and instructions in this exercise are specific to the ABCD study. If you do not have/are not able to receive ABCD data access then we still encourage you to engage with this assignment! Publicly available, non-ABCD data alternatives such as those in the [Human Connectome Project](http://www.humanconnectomeproject.org/), [OpenNeuro](https://openneuro.org/), or any other dataset that you may have access to can be adapted (but perhaps not directly mapped onto) to the steps outlined in this data exercise. If you are unable to use the ABCD data then our hope is that you can still learn from the general principles we cover by adapting them to a different dataset you do have access to.
 
-This assignment has a suggested due date of March 8th, which is the start of Project Month. Unlike the Data Exercises you’ve been turning in thus far in the course, this data exercise does not have any multiple choice questions to answer. We will not be asking you to submit anything for this Project Month Prep Data Exercise. However, ABCD-ReproNim TAs will be available to give you feedback on the code you generate from this tutorial upon request.
+This assignment has a suggested due date of March 21st, which is the start of Project Month. Unlike the Data Exercises you’ve been turning in thus far in the course, this data exercise does not have any multiple choice questions to answer. We will not be asking you to submit anything for this Project Month Prep Data Exercise. However, ABCD-ReproNim TAs will be available to give you feedback on the code you generate from this tutorial upon request.
 
 ## Task 1: Download the ABCD 4.0
 
@@ -17,24 +17,24 @@ Mapping to Course Materials: [NDA Presentation](https://www.youtube.com/watch?v=
 
 Note: The `$` symbol indicates text that should be typed into the command line in Terminal; you don't need to type it.
 
-The [ABCD Curated Annual Release 4.0](https://nda.nih.gov/general-query.html?q=query=featured-datasets:Adolescent%20Brain%20Cognitive%20Development%20Study%20(ABCD)) contains all data from the entire Curated Annual Release 4.0, (except for the associated images) and is about 11GB in size. This data does include the S4 paths to the imaging data, so never fear, from this data we can get to the imaging data.
+The [ABCD Curated Annual Release 4.0](https://nda.nih.gov/general-query.html?q=query=featured-datasets:Adolescent%20Brain%20Cognitive%20Development%20Study%20(ABCD)) contains all data from the entire Curated Annual Release 4.0, (except for the associated images) and is about 14GB in size. This data does include the S4 paths to the imaging data, so never fear, from this data we can get to the imaging data.
 
 ### 1.1 Get a ‘Package ID’ for your copy of the Annual Release 4.0
 
-Go to [ABCD page](https://nda.nih.gov/general-query.html?q=query=featured-datasets:Adolescent%20Brain%20Cognitive%20Development%20Study%20(ABCD)) on [NDA](https://nda.nih.gov). Under **OPTION ONE**, click **Access Shared Data Pakages**, you will be directed to [this page](https://nda.nih.gov/user/dashboard/packages.html?dataset=Adolescent+Brain+Cognitive+Development+Study+%28ABCD%29&type=shared_packages)
-Here, you will see a set of **Shared Data Packages**. One of these is caleed **ABCDStudyNDA**. In the **Actions** for this row, select **Add to My Data Packages**. You will get a green notice on the page to confirm success. If you couldn't find **ABCDStudyNDA** in **Shared Data Packages**, it may alreay exist in **My Data Packages**.
+Go to the [ABCD page](https://nda.nih.gov/general-query.html?q=query=featured-datasets:Adolescent%20Brain%20Cognitive%20Development%20Study%20(ABCD)) on the [NDA website](https://nda.nih.gov). Under the [**OPTION ONE** subsection](https://nda.nih.gov/general-query.html?q=query=featured-datasets:Adolescent%20Brain%20Cognitive%20Development%20Study%20(ABCD)#:~:text=datasets%20of%20interest.-,OPTION%20ONE,-Option%201%20provides), click **Access Shared Data Pakages**. After signing in with your NDA credentials you will be directed to [this page](https://nda.nih.gov/user/dashboard/packages.html?dataset=Adolescent+Brain+Cognitive+Development+Study+%28ABCD%29&type=shared_packages).
+Here, you will see a set of **Shared Data Packages**. One of these is called **ABCDStudyNDA**. In the **Actions** for this row, select **Add to My Data Packages**. You should get a green notice on the page to confirm success. Note: if you couldn't find **ABCDStudyNDA** in the **Shared Data Packages** list then it may alreay exist in **My Data Packages**.
 
 <img src="./screenshots/shared_data_pacakes_nda.png" width="900" />
 
-Change your view to **My Data Package**.
+Now, change your view to **My Data Package**.
 
 <img src="./screenshots/my_data_packages_nda.png" width="900" />
 
-You will see your data pacakage and its ID.
+You should be able to see your data pacakage and its ID.
 Proceed to the next step armed with this **Package ID Number**.
 
 ### 1.2 Download ABCD 4.0
-Now that you have the Package ID for **ABCDStudyNDA** from the step above, you can use the following command (from the NDA that we have installed) to download this package:
+Now that you have the Package ID from the step above, you can use the following command (from the [NDA tools](https://github.com/NDAR/nda-tools) library that we have installed for you on the [ABCD-ReproNim JupyterHub](https://abcd.repronim.org/)) to download this package:
 
 `$ downloadcmd -dp <package_id> -d ABCD4`
 
@@ -43,23 +43,23 @@ Input your nda username and password when it asks.
 If you get the following warning:
 ```
 Running NDATools Version 0.2.13
-Your version of nda-tools is out of date. Please upgrade to the latest version (0.2.14) from PyPi or GitHub and try again. 
-        To upgrade using pip, run: 
+Your version of nda-tools is out of date. Please upgrade to the latest version (0.2.14) from PyPi or GitHub and try again.
+        To upgrade using pip, run:
 pip install nda-tools==0.2.14
 ```
 Run `$ pip install nda-tools==0.2.14`, then `$ downloadcmd -dp <package_id> -d ABCD4`
 
-The above download may take ~10 minutes on the JupyterHub. Once this is completed, you have the Release 4.0 content! Go forth to Task 2...
+The above download may take ~10 minutes on the [JupyterHub](https://abcd.repronim.org/). Once this is completed, you have the Release 4.0 content! Go forth to Task 2...
 
 ## Task 2: Inspect the data
 
 ### 2.1 Do you have the correct data?
- 
+
 If all has gone well, you would have a folder (ABCD4) containing the downloaded files. In this section of the assignment we are going to help you walk through how to read in the files you have just downloaded. We’ll also show you some techniques in how to visualize the data that you have just downloaded.
 
-First, let's use the Terminal on jupyterhub to verify a few things about the download.
+First, let's use the Terminal on [JupyterHub](https://abcd.repronim.org/) to verify a few things about the download.
 
-If you do not see the above Terminal icon, click on the __File__ menu in Jupyterhub and then click __New Launcher__. 
+If you do not see the above Terminal icon, click on the __File__ menu in [JupyterHub](https://abcd.repronim.org/) and then click __New Launcher__.
 
 Note: The `$` symbol indicates text that should be typed into the command line in Terminal; you don't need to type it.
 
@@ -124,7 +124,7 @@ We can use NDA's services to find more details about each file. In the NDA, each
 
 For any of the data structures, you can view the details using a direct url such as this
 
-https://nda.nih.gov/data_structure.html?short_name=abcd_ant01 
+https://nda.nih.gov/data_structure.html?short_name=abcd_ant01
 
 or by searching using the NDA query tool
 
@@ -136,7 +136,7 @@ https://nda.nih.gov/general-query.html?q=query=data-element%20~and~%20searchTerm
 
 The NDAR guid is the identifier attached to each participant. This is the key to finding information for participants across different data structures.
 
-We can retrieve a column of GUIDs in the file. Note we start our counting from the third line and use awk to print the 4th column (the subjectkey). 
+We can retrieve a column of GUIDs in the file. Note we start our counting from the third line and use awk to print the 4th column (the subjectkey).
 
 `$ tail -n +3 ~/ABCD4/abcd_ant01.txt | awk '{print $4}' | wc -l`
 
@@ -145,17 +145,17 @@ Return:
 `39766`
 
 Note: if you need a refresher on the unix commands being used in the above or any of the following commands you can find helpful information in the manual pages (in Terminal, type man `<unix command>` or you can access the manual information for each command online [here](https://man7.org/linux/man-pages/dir_section_1.html).)
-    
+
 
 We can now get the unique number of GUIDs in the dataset:
-    
+
 
 `$ tail -n +3 ~/ABCD4/abcd_ant01.txt | awk '{print $4}' | sort | uniq | wc -l`
-    
+
 Return:
-    
+
 `11876`
-    
+
 ### 2.3 Can you retrieve some data?
 
 Using the data you have downloaded, you can make a list of all the data elements available in the ABCD study by using the following set of commands:
@@ -212,7 +212,7 @@ You can sample 1000 random participants to start with. Save this dataframe as a 
 We are going to create a few visualizations of the data. You will need to manipulate your dataframe to represent the data in a way that makes it easier to plot. These representations may be slightly different for if you chose to use R or a non-Python programming language.
 
 1. A regression plot ([Faceted logistic regression — seaborn 0.11.0 documentation](https://seaborn.pydata.org/examples/logistic_regression.html))
-    
+
     Choose a brain imaging variable and a clinical variable that are both continuous. Now plot a relation between these two variables grouped by sex of the participants.
 
 2. A pair plot ([Scatterplot Matrix — seaborn 0.11.0 documentation](https://seaborn.pydata.org/examples/scatterplot_matrix.html))
@@ -222,8 +222,7 @@ We are going to create a few visualizations of the data. You will need to manipu
 3. Can you plot all 20 variables simultaneously? ([pandas.plotting.parallel_coordinates — pandas 1.1.4 documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.parallel_coordinates.html)) For an interactive plot you can use plotly ([Parallel Coordinates Plot | Python](https://plotly.com/python/parallel-coordinates-plot/)) in the notebook.
 
 4. Plotting distributions: A violin plot grouped by sex. ([Grouped violinplots with split violins — seaborn 0.11.0 documentation](https://seaborn.pydata.org/examples/grouped_violinplots.html))
-    
-    For this exercise you will need two categorical variables and one continuous variable. You are going to show how the continuous variable behaves as a function of the categorical variables
-    (Optional) Can you think of some ways of estimating if a variable is continuous or categorical?
 
-Once you have completed the above steps please create a GitHub repository where you will keep your code, clone that repository to the JupyterHub, move your Notebook into the repository, and then commit and push the Notebook up to GitHub. Once you have done this please complete/submit the data exercise by sharing your code with us!
+    For this exercise you will need two categorical variables and one continuous variable. You are going to show how the continuous variable behaves as a function of the categorical variables. (Optional) Can you think of some ways of estimating if a variable is continuous or categorical?
+
+In the next Project Month Prep data exercise we will give a tutorial on how to download the ABCD 4.0 imaging data.
