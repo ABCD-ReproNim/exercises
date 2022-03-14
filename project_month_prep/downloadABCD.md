@@ -225,4 +225,4 @@ We are going to create a few visualizations of the data. You will need to manipu
 
     For this exercise you will need two categorical variables and one continuous variable. You are going to show how the continuous variable behaves as a function of the categorical variables. (Optional) Can you think of some ways of estimating if a variable is continuous or categorical?
 
-In the next Project Month Prep data exercise we will give a tutorial on how to download the ABCD 4.0 imaging data.
+In the [next Project Month Prep Data Exercise](https://github.com/ABCD-ReproNim/exercises/blob/main/project_month_prep/downloadMRI.md) we will give a tutorial on how to download the ABCD 4.0 imaging data.
