@@ -19,130 +19,7 @@ Note: The `$` symbol indicates text that should be typed into the command line i
 
 The [ABCD Curated Annual Release 4.0](https://nda.nih.gov/general-query.html?q=query=featured-datasets:Adolescent%20Brain%20Cognitive%20Development%20Study%20(ABCD)) contains all data from the entire Curated Annual Release 4.0, (except for the associated images) and is about 11GB in size. This data does include the S4 paths to the imaging data, so never fear, from this data we can get to the imaging data.
 
-### 1.1 Get AWS security ‘token’.
-
-From your NDA credentials, we need to generate the security keys that lets AWS know that you are authorized to access the ABCD content. The following steps are assuming the environment of the ABCD-ReproNim JupyterHub. If you are doing this from a different location (e.g., local docker), you may have to adjust the instructions accordingly. 
-
-We will use the Terminal on JupyterHub to perform this download.
-
-<img src="./screenshots/terminal_jupyterhub.png" width="900" />
-
-If you do not see the above Terminal icon, click on the File menu in Jupyterhub and then click New Launcher.
-
-The Terminal in Jupyterhub is very similar to a terminal or shell you might find on your own computer, or in the computing cluster of your university or institution. Use the following command you can fetch the token generating program from the NDA GitHub repository:
-
-`$ wget https://github.com/NDAR/nda_aws_token_generator/raw/master/python/nda_aws_token_generator.py`
-
-Generate a `get_token_example.py` script following the [example from the README of the NDAR/nda_aws_token_generator repo](https://github.com/NDAR/nda_aws_token_generator#python).
-
-**For example:**
-
-Using `nano` or `vim` to create an empty script:
-
-`$ nano get_token_example.py`
-
-Then insert the following:
-
-```
-from nda_aws_token_generator import *
-
-import getpass
-
-import os
-
-if sys.version_info[0] < 3:
-
-    # Python 2 specific imports
-
-    input = raw_input
-
-    from ConfigParser import ConfigParser
-
-else:
-
-    # Python 3 specific imports
-
-    from configparser import ConfigParser
-
-web_service_url = 'https://nda.nih.gov/DataManager/dataManager'
-
-username  = input('Enter your NIMH Data Archives username: ')
-
-password  = getpass.getpass('Enter your NIMH Data Archives password: ')
-
-generator = NDATokenGenerator(web_service_url)
-
-token = generator.generate_token(username, password)
-
-# Read .aws/credentials from the user's HOME directory, add a NDA profile, and update with credentials
-
-parser = ConfigParser()
-
-parser.read(os.path.expanduser('~/.aws/credentials'))
-
-if not parser.has_section('NDA'):
-
-    parser.add_section('NDA')
-
-parser.set('NDA', 'aws_access_key_id', token.access_key)
-
-parser.set('NDA', 'aws_secret_access_key', token.secret_key)
-
-parser.set('NDA', 'aws_session_token', token.session)
-
-with open (os.path.expanduser('~/.aws/credentials'), 'w') as configfile:
-
-    parser.write(configfile)
-
-print('aws_access_key_id=%s\n'
-
-      'aws_secret_access_key=%s\n'
-
-      'security_token=%s\n'
-
-      'expiration=%s\n' 
-
-      %(token.access_key,
-
-        token.secret_key,
-
-        token.session,
-
-        token.expiration)
-
-      )
-```
-
-Once you’ve copied this code into get_token_example.py save the file and quit the editor. To do this, from the Nano editor screen/your terminal, type in `Ctrl+X` to save, press `y` to confirm the file name, and then press `Enter` quit.
-
-**Confirm you have your desired file**
-Type:
-
-`$ ls get_token_example.py`
-
-It should return:
-
-`get_token_example.py`
-
-Next, make a hidden .aws directory in your home directory and generate your AWS credentials
-```
-$ cd
-$ mkdir ~/.aws
-```
-
-Running your `get_token_example.py` script will ask for NDAR username and password and return and save your AWS tokens. This is the username and password associated with your NIMH Data Archive (NDA) account. If needed, you can view your username and/or update your password via your profile [on the NDA website](https://nda.nih.gov/). __**Keep your NDAR username and password AND your token information safe! Do not include it in a GitHub repo, and DO NOT SHARE with anyone.**__
-
-`$ python get_token_example.py`
-
-If this works, it will show your AWS credentials (aws_access_key_id, aws_secret_access_key, and aws_session_token) in the terminal, and the program will write them to the ~/.aws/credentials file. For security best practices, set the file permissions to “owner has full read and write access to the file, while no other user can access the file” using the following command:
-
-`$ chmod 600 ~/.aws/credentials`
-
-__**PROTECT YOUR SCREEN (and credentials) from onlookers! Do not record and share this part of a session, do not do this as part of a screen share situation!**__ You can retrieve your credentials by listing the credentials file:
-
-`$ more ~/.aws/credentials`
-
-### 1.2 Get a ‘Package ID’ for your copy of the Annual Release 4.0
+### 1.1 Get a ‘Package ID’ for your copy of the Annual Release 4.0
 
 Go to [ABCD page](https://nda.nih.gov/general-query.html?q=query=featured-datasets:Adolescent%20Brain%20Cognitive%20Development%20Study%20(ABCD)) on [NDA](https://nda.nih.gov). Under **OPTION ONE**, click **Access Shared Data Pakages**, you will be directed to [this page](https://nda.nih.gov/user/dashboard/packages.html?dataset=Adolescent+Brain+Cognitive+Development+Study+%28ABCD%29&type=shared_packages)
 Here, you will see a set of **Shared Data Packages**. One of these is caleed **ABCDStudyNDA**. In the **Actions** for this row, select **Add to My Data Packages**. You will get a green notice on the page to confirm success. If you couldn't find **ABCDStudyNDA** in **Shared Data Packages**, it may alreay exist in **My Data Packages**.
@@ -156,12 +33,12 @@ Change your view to **My Data Package**.
 You will see your data pacakage and its ID.
 Proceed to the next step armed with this **Package ID Number**.
 
-### 1.3 Download ABCD 4.0
+### 1.2 Download ABCD 4.0
 Now that you have the Package ID from the step above, you can use the following command (from the NDA that we have installed) to download this package:
 
 `$ downloadcmd -dp <package_id> -d ABCD4`
 
-The first time you run the above you will be asked for various pieces of credentials (which you should have at this point, see your ~/.aws/credentials file). We suggest that you enter your NDAR username, password, and credentials from the ~/.aws/credentials file carefully on the first try as your initial entry is stored in a configuration file for future access. It may error out with `Exception: Invalid username and/or password`. If that happens, use `Nano` to open the configurations file `~/.NDATools/settings.cfg` and re-enter your credentials. You can then run the `downloadcmd` command again, and unless you entered incorrect info it should start downloading things into the `ABCD4` directory (note that the default download location is `AWS_downloads`, but we specified an alternate target directory with the `-d` option in the downloadcmd command).
+Input your nda username and password when it asks.
 
 If you get the following warning:
 ```
