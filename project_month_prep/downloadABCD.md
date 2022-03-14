@@ -1,4 +1,4 @@
-# Download and Introspect ABCD 4.0
+# Download and Inspect ABCD 4.0
 
 This is the first two installments in a series of data exercises for ABCD-ReproNim students on how to download, vizualize, and work with the ABCD data. They are intended as guided tutorials that will prepare for Project Month (to be held on April 4th - April 29th, 2022). By working through these exercises you will have the opportunity to explore the ABCD data, generate ideas about what kind of project you might like to work on during Project Month, and get practice with various technical/programming skills that will be useful in carrying out your project idea.
 
