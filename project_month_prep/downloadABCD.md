@@ -34,7 +34,7 @@ You will see your data pacakage and its ID.
 Proceed to the next step armed with this **Package ID Number**.
 
 ### 1.2 Download ABCD 4.0
-Now that you have the Package ID from the step above, you can use the following command (from the NDA that we have installed) to download this package:
+Now that you have the Package ID for **ABCDStudyNDA** from the step above, you can use the following command (from the NDA that we have installed) to download this package:
 
 `$ downloadcmd -dp <package_id> -d ABCD4`
 
@@ -51,7 +51,7 @@ Run `$ pip install nda-tools==0.2.14`, then `$ downloadcmd -dp <package_id> -d A
 
 The above download may take ~10 minutes on the JupyterHub. Once this is completed, you have the Release 4.0 content! Go forth to Task 2...
 
-## Task 2: Introspect the data
+## Task 2: Inspect the data
 
 ### 2.1 Do you have the correct data?
  
