@@ -391,7 +391,7 @@ You have successfully pushed your reproducible paper elements to a repository on
 
 **Question 9**
 
-Matplotlib is built on top of Seaborn. 
+Before we end, one last quick true/false python visualization question: Matplotlib is built on top of Seaborn. 
 
 - True
 - False 
