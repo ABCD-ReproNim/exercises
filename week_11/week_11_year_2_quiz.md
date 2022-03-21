@@ -285,7 +285,7 @@ Execution environment. We had to either install latexmk or change the Makefile.
 
 We also learned about [Nilearn](https://nipy.org/packages/nilearn/index.html) in the ABCD lecture, and we can use it to visualize the segmentations we created in week 9. 
 
-Once you have completed the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_quiz.md#repronim-questions), you should use the following commands to clone the dataset and get the contents that were generated in the `derivatives` folder. 
+Once you have completed the [week 9 quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_9/week_9_year_2_quiz.md#repronim-questions), you should use the following commands to clone the dataset and get the contents that were generated in the `derivatives` folder. 
 We will also create two new folders to store the code and the figures that we will generate. 
 
 ```bash
