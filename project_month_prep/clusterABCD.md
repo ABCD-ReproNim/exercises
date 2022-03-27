@@ -15,7 +15,7 @@ jupyter:
 
 # Create a hierarchical clustering plot of your chosen features
 
-In a previous exercise, you created a subset of the ABCD 3.0 release that included 1,000 randomly chosen subjects and 20 hand selected features.
+In a previous exercise, you created a subset of the ABCD 4.0 release that included 1,000 randomly chosen subjects and 20 hand selected features.
 
 After this notebook is run you should be able to:
 1. summarize the datatypes of the features that you selected.
@@ -175,10 +175,12 @@ num_features = pd.DataFrame(
 )
 ```
 
-And then concatenate our categorical and numerical features into a new dataframe called `df_scaled`.
+And then concatenate our categorical and numerical features into a new dataframe called `df_scaled`. Since some subjects are missing data, 
+we remove subjects from our analysis who are missing data in any of the columns.
 
 ```python
 df_scaled = pd.concat([num_features, cat_features], axis="columns")
+df_scaled = df_scaled.dropna()
 
 # Confirm that all data lies between zero and one.
 print(f"Data min, max: {df_scaled.min().min(), df_scaled.max().max()}")
