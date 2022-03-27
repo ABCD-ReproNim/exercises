@@ -1,8 +1,8 @@
-# Week 12 Quiz
+# Week 12 Data Exercise
 
-### Quiz Instructions
+### Instructions
 
-In this Week 12 Quiz, we will ask you a few questions about [Longitudinal Models and Machine Learning](https://abcd-repronim.github.io/materials/week-12/).
+In this Week 12 Data Exercise, we will ask you a few questions about [Longitudinal Models and Machine Learning](https://abcd-repronim.github.io/materials/week-12/).
 
 ***
 
