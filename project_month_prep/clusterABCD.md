@@ -15,7 +15,7 @@ jupyter:
 
 # Create a hierarchical clustering plot of your chosen features
 
-In a previous exercise, you created a subset of the ABCD 4.0 release that included 1,000 randomly chosen subjects and 20 hand selected features.
+In a [previous Project Month prep exercise](https://github.com/ABCD-ReproNim/exercises/blob/main/project_month_prep/viewABCD.md), you created a subset of the ABCD 4.0 release that included 1,000 randomly chosen subjects and 20 hand selected features.
 
 After this notebook is run you should be able to:
 1. summarize the datatypes of the features that you selected.
