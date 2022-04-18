@@ -191,7 +191,7 @@ To start we recommend that you create your own Jupyter Notebook on the JupyterHu
 
 Next, let’s fetch a pre-written [viewABCD](https://github.com/ABCD-ReproNim/exercises/blob/main/project_month_prep/viewABCD.md) Notebook we created that has example code for you to use in the next part of the assignment. This Notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below.
 
-`$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/9efb6218ccfa33dfd2303f32cbc92af3aa700e61/project_month_prep/viewABCD.md`
+`$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/project_month_prep/viewABCD.md`
 
 If everything worked successfully you should have a new file in your home folder on the JuputerHub called viewABCD.md. This file should look a lot like the [viewABCD.md file](https://github.com/ABCD-ReproNim/exercises/blob/main/project_month_prep/viewABCD.md) on our GitHub repository - the difference being that your local file has executable code blocks. This notebook walks you through reading, filtering, and visualizing the ABCD data you just downloaded. It also will provide you with code that you can copy and past into your own Jupyter Notebook where you can explore the 20 variables you have just chosen.
 
