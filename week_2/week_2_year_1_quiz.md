@@ -89,9 +89,9 @@ Grep is a bash command used to match patterns and expressions. Using only one li
 
 Hint: you may need to use pipes.
 
-- 55
+- 36
 - 28
-- 32
+- 39
 - 18
 
 <details>
@@ -273,7 +273,7 @@ Create new file: `echo code for new feature > awesome_feature.txt`
 
 Add to staging area: `git add awesome_feature.txt`
 
-Commit: `git commit -m "add awesome feature`
+Commit: `git commit -m "add awesome feature"`
 
 Checkout master: `git checkout master`
 
