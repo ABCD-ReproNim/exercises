@@ -49,14 +49,14 @@ Every two years
 How are ABCD Study data shared?
 
 - ABCD Study website
-- NIMH Data Archive (NDA)
+- NBDC LASSO informatics
 - OpenNeuro.org
 - fMRIDC
 
 <details>
 <summary>Click to see answer</summary>
 
-NIMH Data Archive (NDA)
+NBDC LASSO informatics
 
 ***
 
