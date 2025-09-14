@@ -247,7 +247,7 @@ RUN /bin/bash /opt/miniconda.sh -b -p /opt/conda
 ENV PATH="/opt/conda/bin:$PATH"
 ```
 
-Build this docker image by navigating to the same directory as your Dockerfile and running `docker build -t my_custom_fsl .` Don't forget about the dot at the end, which tells Docker where to find the Dockerfile. Next register for an account on Docker Hub. Log into Docker Hub in your console using `docker login`. Build your image with the name `<username>/my_custom_fsl` and push your image to Docker Hub using `docker push <username>/my_custom_fsl.` Find a link to your image online on Docker Hub. There's no right or wrong answer for this one. Simply take a moment to reflect on your accomplishments.
+Build this docker image by navigating to the same directory as your Dockerfile and running `docker build -t my_custom_fsl .` Don't forget about the dot at the end, which tells Docker where to find the Dockerfile. Next register for an account on Docker Hub. Log into Docker Hub in your console using `docker login`. Build your image with the name `<username>/my_custom_fsl` and push your image to Docker Hub using `docker push <username>/my_custom_fsl`. Find a link to your image online on Docker Hub. There's no right or wrong answer for this one. Simply take a moment to reflect on your accomplishments.
 
 **Question 11**
 
