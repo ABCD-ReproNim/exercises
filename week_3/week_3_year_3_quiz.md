@@ -166,15 +166,15 @@ Once Docker is installed, try downloading and running the alpine Docker containe
 
 The alpine docker image is a minimal image based on Alpine Linux. It is designed for you to provide commands yourself as arguments to the docker run command. For example the command `docker run alpine echo 'Hello World'` would pass the `echo 'Hello World'` command to the alpine container. Try it out. In Alpine Linux, the operating system version information is stored in a file located at `/etc/alpine-release`. Use this information to find the exact Alpine Linux version number for the alpine docker image with tag `3.14`. Hint: be sure to use the tag `3.14` in all docker pull and run commands that you use to answer this question.
 
-- 3.14.2
-- 3.14.3
-- 3.14.4
-- 3.14.5
+- 3.14.9
+- 3.14.10
+- 3.14.11
+- 3.14.12
 
 <details>
 <summary>Click to see answer</summary>
 
-3.14.3
+3.14.10
 
 **Explanation**
 Use the command `docker run alpine:3.14 cat /etc/alpine-release` to get the version information.
@@ -185,7 +185,7 @@ Use the command `docker run alpine:3.14 cat /etc/alpine-release` to get the vers
 
 **Question 8**
 
-8) Use docker commands to download the `bids/base_fsl` image [from Docker Hub](https://hub.docker.com/r/bids/base_fsl/). Also download [this map from NeuroVault.org](http://neurovault.org/media/images/457/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz) and place it in an example folder in your current working directory. Using the `-v` option as described in the lecture (or “volume flags” if you are referencing [the Docker documentation](https://docs.docker.com/storage/volumes/)), mount your folder so that it will be accessible from the container when you run it. Now use the `fslstats` command to output the mean entropy of non-zero voxels for the image you downloaded. Hint: Use `fslstats --help` to determine the option that will return the mean entropy of non-zero voxels. What is the mean entropy of the non-zero voxels in the downloaded image?
+8) Use docker commands to download the `bids/base_fsl` image [from Docker Hub](https://hub.docker.com/r/bids/base_fsl/). Also download [this map from NeuroVault.org](https://neurovault.org/media/images/457/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz) and place it in an example folder in your current working directory. Using the `-v` option as described in the lecture (or “volume flags” if you are referencing [the Docker documentation](https://docs.docker.com/storage/volumes/)), mount your folder so that it will be accessible from the container when you run it. Now use the `fslstats` command to output the mean entropy of non-zero voxels for the image you downloaded. Hint: Use `fslstats --help` to determine the option that will return the mean entropy of non-zero voxels. What is the mean entropy of the non-zero voxels in the downloaded image?
 
 - 0.410776
 - 0.929105
@@ -247,7 +247,7 @@ RUN /bin/bash /opt/miniconda.sh -b -p /opt/conda
 ENV PATH="/opt/conda/bin:$PATH"
 ```
 
-Build this docker image by navigating to the same directory as your Dockerfile and running `docker build -t my_custom_fsl .` Don't forget about the dot at the end, which tells Docker where to find the Dockerfile. Next register for an account on Docker Hub. Log into Docker Hub in your console using `docker login`. Build your image with the name `<username>/my_custom_fsl` and push your image to Docker Hub using `docker push <username>/my_custom_fsl`. Find a link to your image online on Docker Hub. There's no right or wrong answer for this one. Simply take a moment to reflect on your accomplishments.
+Build this docker image by navigating to the same directory as your Dockerfile and running `docker build -t my_custom_fsl .` Don't forget about the dot at the end, which tells Docker where to find the Dockerfile. Next register for an account on Docker Hub. Log into Docker Hub in your console using `docker login`. Build your image with the name `<username>/my_custom_fsl` and push your image to Docker Hub using `docker push <username>/my_custom_fsl.` Find a link to your image online on Docker Hub. There's no right or wrong answer for this one. Simply take a moment to reflect on your accomplishments.
 
 **Question 11**
 
@@ -257,7 +257,7 @@ Extra credit (not graded). Using NeuroDocker, create a Dockerfile that will prod
 <summary>Click to expand and see one potential answer</summary>
 
 ```
-download_cmd="mkdir /data && curl -sSL -o /data/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz http://neurovault.org/media/images/457/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz"
+download_cmd="mkdir /data && curl -sSL -o /data/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz https://neurovault.org/media/images/457/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz"
 
 docker run --rm repronim/neurodocker generate docker --base debian:stretch --pkg-manager apt --fsl version=6.0.3 --run="$download_cmd" --entrypoint "fslstats /data/tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz -E" > Dockerfile
 ```
