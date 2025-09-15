@@ -49,6 +49,74 @@ Some people miss appointments
 
 ****
 
+### DEAP Questions
+
+Let's do a few exercises in the DEAP dataset creation portal
+
+Go to [DEAP](https://abcd.deapscience.com/), and click "Create a dataset" to begin exploring the data dictionary.
+
+**Question 3**
+
+First find the scores for the NIH Toolbox Oral Reading Recognition Test Age 3+ v2.0, Age-Corrected Standard Score.
+
+Hint: In the DEAP ABCD Ontology, all of the measures from this test have the prefix “nc_y_nihtb_readr.”
+
+What is the mean age-corrected standard score at baseline?
+
+- 101.653
+- 104.974
+- 102.517
+- 105.746
+
+<details>
+<summary>Click to see answer</summary>
+
+102.517
+
+</details>
+
+**Question 4**
+
+Identify the variable representing average fractional anisotropy within the left inferior longitudinal fasciculus.
+
+Hint: This variable went by the name of “dmri_dti.fa_fiber.at_ilf.lh” in the DEAP 1.0.
+
+How many participants have complete data for this variable at the ses-04A timepoint?
+
+- 11130
+- 3969
+- 7841
+- 6224
+
+<details>
+<summary>Click to see answer</summary>
+
+6224
+
+</details>
+
+**Question 5**
+
+Navigate to the table for the Emotional Stroop Task. Are there any responsible data use warnings or data quality warnings? If so, what are the recommendations for appropriate use?  
+
+- There are no warnings about using these variables.
+- Researchers should use pre-set cut-offs to omit RTs above and below specific thresholds and should consider downloading trial-wise data to recalculate mean RTs after excluding outlier trials.
+- Data from this task may be culturally biased and should be analyzed with appropriate considerations
+- Researchers should exclude participants whose data contains outlier RTs
+
+<details>
+<summary>Click to see answer</summary>
+
+Researchers should use pre-set cut-offs to omit RTs above and below specific thresholds and should consider downloading trial-wise data to recalculate mean RTs after excluding outlier trials.
+
+To view this information, click the "Details" button for any of the Emotional Stroop Task variables. You should see a warning triangle followed by the following sentence: 
+
+Learn about data quality issues with this variable [here](https://docs.abcdstudy.org/latest/documentation/non_imaging/nc.html#data-est).
+
+Click on the link at the end of the sentence to view data quality warnings.
+
+</details>
+
 ### Shell Basics
 
 Let's do a few exercises using the Terminal
