@@ -2,9 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 2 Quiz, we will ask you a few questions about ABCD Study data and you will complete a few exercises about shell and git basics.
-
-If you have access to ABCD Study data, then we recommend that you also complete the Week 2 Bonus Quiz on DEAP. This bonus quiz is not required if you do not have access to ABCD data.
+In this Week 2 Quiz, we will ask you a few questions about ABCD Study data and you will complete a few exercises using DEAP and about shell and git basics.
 
 ***
 
