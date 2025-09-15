@@ -123,7 +123,7 @@ Let's do a few exercises using the Terminal
 
 For students running computers with MacOS or Linux, follow the instructions in the lecture and do the following problems using your operating system’s Terminal application. For Windows users, you can download Ubuntu for Windows [here](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:regionofsystemrequirementstab). You can also practice using bash commands without downloading Ubuntu via an online Linux Terminal application such as [Webminal](https://www.webminal.org/terminal/) (note: you will need to create a free user account in order to use this online Linux emulator).
 
-**Question 3**
+**Question 6**
 
 Which command(s) will print what shell you’re currently in?
 Select all that apply:
@@ -154,7 +154,7 @@ Select all that apply:
 
 </details>
 
-**Question 4**
+**Question 7**
 
 Grep is a bash command used to match patterns and expressions. Using only one line in the terminal, find how many times the word “pattern” appears in the grep user manual.
 
@@ -186,7 +186,7 @@ Note: the usage of `grep -i -o pattern` can contain the plural, thus `pattern` a
 
 </details>
 
-**Question 5**
+**Question 8**
 
 Using only commands in the Terminal application, create a directory called `week_2`. Within this directory, save the user manuals of the commands `grep`, `cat`, and `ls` to respective files called `grep.txt`, `cat.txt`, and `ls.txt`. Using one line in the Terminal, sort the contents of these three files by the number of lines they contain, in ascending order. What is this order?
 
@@ -214,7 +214,7 @@ We then pipe the output of `wc` to the `sort` command, to have it sort by line n
 
 </details>
 
-**Question 6**
+**Question 9**
 
 Within the `week_2` directory, create a new directory called `user_manuals`. Which of the following commands will deposit `grep.txt`, `cat.txt`, and `ls.txt` into the `user_manuals` directory and remove them from the parent `week_2` directory? Run this command to deposit the files (if multiple options are true, only run one command).
 
@@ -248,7 +248,7 @@ Install git on your local computer, if you do not already have it. Here are the 
 
 If you are running git for the first time (either on your local machine or remotely) you should configure your `user.name` and `user.email`. Please see this  [link](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)  for more information.
 
-**Question 7**
+**Question 10**
 
 Initialize a git repository within the `week_2` directory. Add the three files within the `user_manuals` directory.
 
@@ -282,7 +282,7 @@ Check the status of the repository: `git status`
 
 </details>
 
-**Question 8**
+**Question 11**
 
 Using `git branch`, create a branch called “new_feature”. Check the git log. Where is HEAD currently pointing?
 
@@ -312,7 +312,7 @@ Or, a related solution would be to use `git checkout -b new_feature`, which woul
 
 </details>
 
-**Question 9**
+**Question 12**
 
 Checkout the new_feature branch. Using the Terminal, add the line of text “code for new feature” to a new file called `awesome_feature.txt`. Add `awesome_feature.txt` to the staging area and commit using the message “add awesome feature”. Using git checkout, switch back to the master branch. Using commands in the Terminal.
 
