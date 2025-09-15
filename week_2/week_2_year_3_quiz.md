@@ -48,6 +48,9 @@ Some people miss appointments
 </details>
 
 ****
+
+### Shell Basics
+
 Let's do a few exercises using the Terminal
 
 For students running computers with MacOS or Linux, follow the instructions in the lecture and do the following problems using your operating system’s Terminal application. For Windows users, you can download Ubuntu for Windows [here](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:regionofsystemrequirementstab). You can also practice using bash commands without downloading Ubuntu via an online Linux Terminal application such as [Webminal](https://www.webminal.org/terminal/) (note: you will need to create a free user account in order to use this online Linux emulator).
@@ -168,6 +171,8 @@ You can use a wildcard operator to move all files that end in `*.txt` as in the 
 </details>
 
 ***
+
+### Git Basics
 
 Now let's do a few Git exercises
 
