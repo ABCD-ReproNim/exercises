@@ -50,7 +50,7 @@ Reliability and generalizability
 
 **Question 3**
 
-Before ABCD data are made available on NDA, the images are subject to (check all that apply):
+Before ABCD data are made available on NBDC, the images are subject to (check all that apply):
 
 - [ ] Compliance check for completeness and sanity checks
 - [ ] Quality checks that are computed automatically (e.g., mean framewise displacement)
@@ -74,16 +74,16 @@ Quality checks performed manually by reviewers who inspect all images pre- and p
 
 ABCD Study neuroimaging data that have been minimally processed can be accessed via (check all that apply):
 
-- [ ] NDA Fast Track data
-- [ ] NDA Tabulated data
-- [ ] ABCD-BIDS Community Collection 3165
+- [ ] NBDC Fast Track data
+- [ ] NBDC Tabulated data
+- [ ] ABCD-BIDS Community Collection (on NBDC)
 
 <details>
 <summary>Click to see answer</summary>
 
-NDA Tabulated data
+NBDC Tabulated data
 
-ABCD-BIDS Community Collection 3165
+ABCD-BIDS Community Collection (on NBDC)
 
 ***
 
