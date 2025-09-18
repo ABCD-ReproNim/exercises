@@ -54,7 +54,7 @@ Before ABCD data are made available on NBDC, the images are subject to (check al
 - [ ] Compliance check for completeness and sanity checks
 - [ ] Quality checks that are computed automatically (e.g., mean framewise displacement)
 - [ ] Quality checks performed manually by reviewers who inspect all images pre- and post-processing
-- [ ] Nothing. Poor quality participant data are automatically excluded on NDA
+- [ ] Nothing. Poor quality participant data are automatically excluded on NBDC.
 
 <details>
 <summary>Click to see answer</summary>
