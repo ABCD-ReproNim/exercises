@@ -74,7 +74,6 @@ Quality checks performed manually by reviewers who inspect all images pre- and p
 
 ABCD Study neuroimaging data that have been minimally processed can be accessed via (check all that apply):
 
-- [ ] NBDC Fast Track data
 - [ ] NBDC Tabulated data
 - [ ] ABCD-BIDS Community Collection (on NBDC)
 
