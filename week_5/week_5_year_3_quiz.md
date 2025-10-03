@@ -202,7 +202,7 @@ For the next questions, you’ll need the following sample dataset repository: h
 To get set up, complete the following steps:
 
 1. Fork the sample dataset repository to create your own copy.
-2. Clone your forked version of this repository onto your local machine (or on the ABCD-ReproNim JupyterHub).
+2. Clone your forked version of this repository onto your local machine.
 
 ***
 
