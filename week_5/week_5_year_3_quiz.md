@@ -1,10 +1,101 @@
 # Week 5 Quiz
 
-### Quiz Instructions
+## Quiz Instructions
+
+## ABCD (substance use assessments) Questions
+
+**Question 1**
+
+The ABCD substance use interview includes questions about: (check all that apply)
+
+- [ ] which substances youth have heard of
+- [ ] subjective effects of early use (alcohol, nicotine, cannabis)
+- [ ] problem symptoms related to use (alcohol, nicotine, cannabis)
+- [ ] peer substance use and availability of substances in the neighborhood
+- [ ] parent substance use and family history of use
+- [ ] caffeine consumption and over-the-counter medications
+
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+Source: [Course Video: Substance Use Assessments (15:25)](https://youtu.be/Yy8mA8Teb3E?t=925)
+
+</details>
+
+**Question 2**
+
+The goals of the ABCD substance use module include the characterization of: (check all that apply)
+
+- [ ] risk and resilience factors for substance use and SUD development (e.g., early substance use attitudes, expectancies, subjective effects, peer use, parental rules)
+- [ ] the impact of polysubstance use patterns and “gateway interactions” between different substances
+- [ ] the consequences of repeated substance use on neurocognitive, emotional, and physical development
+- [ ] associations between substance use and psychopathology
+- [ ] differential trajectories of substance use initiation, experimentation, and use patterns
+
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+Source: [Course Video: Substance Use Assessments (1:45)](https://youtu.be/Yy8mA8Teb3E?t=105)
+
+</details>
+
+**Question 3**
+
+Biospecimens (e.g., saliva, hair, and urine samples) provide a more objective measure of recent substance use and exposure. Biospecimen samples are collected for **ALL** participants enrolled in the ABCD Study at each in-person visit.
+
+- True
+- False
+
+<details>
+<summary>Click to see answer</summary>
+
+False
+
+Source: [Course Video: Substance Use Assessments (27:05)](https://youtu.be/Yy8mA8Teb3E?t=1625)
+
+</details>
+
+**Question 4**
+
+Which of the following are examples of gating in the ABCD substance use interview? (check all that apply)
+
+- [ ] In years baseline-2 year follow-up, a participant indicates they have “heard of” a given substance, additional questions about that particular substance will follow
+- [ ] If a participant indicates they have heard of a potential “gateway” substance, additional questions about other substances will follow
+- [ ] If a participant indicates they have NOT used a given substance, zeros may be inserted for any follow-up questions triggered by this question
+- [ ] If a participant has indicated they have used a given substance, they will be asked to recall details of their first experience with that substance at future visits
+
+<details>
+<summary>Click to see answer</summary>
+
+- In years baseline-2 year follow-up, a participant indicates they have “heard of” a given substance, additional questions about that particular substance will follow
+- If a participant indicates they have NOT used a given substance, zeros may be inserted for any follow-up questions triggered by this question
+
+Source: [Course Video: Substance Use Assessments (34:39)](https://youtu.be/Yy8mA8Teb3E?t=2079)
+
+</details>
+
+**Question 5**
+
+The Timeline Follow Back asks about detailed month-by-month substance use (i.e., date of use, amount in standard units) and applicable follow-up questions for some substances such as cannabis (e.g., route of administration) for the 12-month period preceding the interview date.
+
+- True
+- False
+
+<details>
+<summary>Click to see answer</summary>
+
+True
+
+Source: [Course Video: Substance Use Assessments (11:44)](https://youtu.be/Yy8mA8Teb3E?t=704) and [Course Video: Substance Use Assessments (20:00)](https://youtu.be/Yy8mA8Teb3E?t=1199)
+
+</details>
 
 
-
-### ReproNim FAIR data questions
+## ReproNim FAIR data questions
 
 **Question 6**
 
