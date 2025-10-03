@@ -2,7 +2,121 @@
 
 ### Quiz Instructions
 
+In this Week 5 Quiz, we will ask you a few questions about the ABCD neurocognitive assessments and FAIR data concepts.
 
+***
+
+### ABCD (neurocognitive assessments) Questions
+
+**Question 1**
+
+ What were the overarching motivations for the tasks selected for the neurocognitive battery?
+
+- [ ] The tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10
+- [ ] The tasks minimize participant burden
+- [ ] The tasks are comparable to those used for other large studies
+- [ ] The tasks cover multiple domains
+- [ ] All the above
+
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+Source: [Course Video: Neurocognitive Assessments (2:03)](https://youtu.be/QcnsPmcvjrc?t=123)
+
+***
+
+</details>
+
+**Question 2**
+
+This lecture covered the results of Thompson et al. (2019) wherein principal component analysis was applied to 12 neurocognitive assessments. Based on this study, what were the main principal components underlying the different tasks administered to participants at baseline? Select all that apply.
+
+- [ ] Reward
+- [ ] General cognitive ability
+- [ ] Executive function
+- [ ] Learning and memory
+
+<details>
+<summary>Click to see answer</summary>
+
+- General cognitive ability
+- Executive function
+- Learning and memory
+
+Sources:
+
+- [Course Video: Neurocognitive Assessments (8:38)](https://youtu.be/QcnsPmcvjrc?t=518)
+- [Thompson et al.: 'The structure of cognition in 9 and 10 year-old children and associations with problem behaviors: Findings from the ABCD study's baseline neurocognitive battery'](https://doi.org/10.1016/j.dcn.2018.12.004)
+
+***
+
+</details>
+
+**Question 3**
+
+Which of these tasks are only offered at one timepoint? Select all that apply.
+
+- [ ] Picture Vocabulary
+- [ ] Rey Auditory Verbal Learning Test
+- [ ] Stanford Mental Arithmetic Response Time Eval
+- [ ] Dimensional Change Card Sort
+
+<details>
+<summary>Click to see answer</summary>
+
+- Stanford Mental Arithmetic Response Time Eval
+- Dimensional Change Card Sort
+
+Source: [Course Video: Neurocognitive Assessments (10:08)](https://youtu.be/QcnsPmcvjrc?t=608)
+
+***
+
+</details>
+
+**Question 4**
+
+Which of these are true of the Cash Choice and Delay Discounting tasks? Select all that apply.
+
+- [ ] A strong association has been reported between temporal delay and substance use.
+- [ ] Both of these tasks are administered at each timepoint.
+- [ ] The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable.
+
+<details>
+<summary>Click to see answer</summary>
+
+- A strong association has been reported between temporal delay and substance use.
+- The decision participants make about whether to receive $75 in three days or $115 in three months is developmentally stable.
+
+Sources:
+
+- [Course Video: Neurocognitive Assessments (16:10)](https://youtu.be/QcnsPmcvjrc?t=970)
+- [Adolescent neurocognitive development and impacts of substance use: Overview of the adolescent brain cognitive development (ABCD) baseline neurocognition battery (see section 4.2)](https://doi.org/10.1016/j.dcn.2018.02.006)
+
+***
+
+</details>
+
+**Question 5**
+
+Which of these are methodological considerations associated with the ABCD study design?
+
+- [ ] Environmental exposures might change the developmental trajectory
+- [ ] Alternate forms of tests must be administered to account for potential practice effects
+- [ ] Overlapping assessments of youngest and oldest subjects
+- [ ] All the above
+
+<details>
+<summary>Click to see answer</summary>
+
+All the above
+
+Source: [Course Video: Neurocognitive Assessments (23:08)](https://youtu.be/QcnsPmcvjrc?t=1388)
+
+***
+
+</details>
 
 ### ReproNim FAIR data questions
 
