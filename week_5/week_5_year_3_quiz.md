@@ -20,7 +20,7 @@ The ABCD substance use interview includes questions about: (check all that apply
 
 All the above
 
-Source: [Course Video: Substance Use Protocol ((9:11)]()
+Source: [Course Video: Substance Use Protocol ((9:11)](https://youtu.be/974QMCTMplo?list=PLU6a0ES56Gvgdg9eoI-Vqtr_nKOH85Ufr&t=551)
 
 </details>
 
@@ -39,7 +39,7 @@ The goals of the ABCD substance use module include the characterization of: (che
 
 All the above
 
-Source: [Course Video: Substance Use Protocol (5:46)]()
+Source: [Course Video: Substance Use Protocol (5:46)](https://youtu.be/974QMCTMplo?list=PLU6a0ES56Gvgdg9eoI-Vqtr_nKOH85Ufr&t=346)
 
 </details>
 
@@ -55,7 +55,7 @@ Biospecimens (e.g., saliva, hair, and urine samples) provide a more objective me
 
 False
 
-Source: [Course Video: Substance Use Protocol (17:28)]()
+Source: [Course Video: Substance Use Protocol (17:28)](https://youtu.be/974QMCTMplo?list=PLU6a0ES56Gvgdg9eoI-Vqtr_nKOH85Ufr&t=1048)
 
 </details>
 
@@ -74,7 +74,7 @@ Which of the following are examples of gating in the ABCD substance use intervie
 - In years baseline-2 year follow-up, a participant indicates they have “heard of” a given substance, additional questions about that particular substance will follow
 - If a participant indicates they have NOT used a given substance, zeros may be inserted for any follow-up questions triggered by this question
 
-Source: [Course Video: Substance Use Protocol (22:28)]()
+Source: [Course Video: Substance Use Protocol (22:28)](https://youtu.be/974QMCTMplo?list=PLU6a0ES56Gvgdg9eoI-Vqtr_nKOH85Ufr&t=1348)
 
 </details>
 
@@ -90,7 +90,7 @@ The Timeline Follow Back asks about detailed month-by-month substance use (i.e.,
 
 True
 
-Source: [Course Video: Substance Use Protocol (23:37)]() 
+Source: [Course Video: Substance Use Protocol (23:37)](https://youtu.be/974QMCTMplo?list=PLU6a0ES56Gvgdg9eoI-Vqtr_nKOH85Ufr&t=1417) 
 
 </details>
 
