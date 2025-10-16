@@ -222,7 +222,7 @@ url = "https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_7/sim
 download = requests.get(url).content
 
 # Reading the downloaded content and turning it into a pandas dataframe
-df = pd.read_csv(io.StringIO(download.decode('utf-8')), sep='\t')
+hippo = pd.read_csv(io.StringIO(download.decode('utf-8')), sep='\t')
 ```
 
 *Option B: simulate data using on the mean and standard deviation of hippocampal values*
