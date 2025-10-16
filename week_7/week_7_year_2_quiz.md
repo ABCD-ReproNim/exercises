@@ -205,7 +205,7 @@ Primarily cares about accuracy
 
 **Question 10**
 
-For this question you will need some data with which to explore the relationships between sample size and the different measures of effect size discussed in [this week's lecture (4:33)](https://youtu.be/auzLLbQPMfY?t=273). We have simulated a dataset for you to use that is based on [ABCD structural MRI morphometric and image intensity measures ("abcd_smrip201")](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data file. These data represent the sum total volume of both the left and right hippocampi across 10000 participants. You can download our simulated data file for this assignment [on our GitHub](https://github.com/ABCD-ReproNim/exercises/blob/main/week_7/simulated_data.tsv) or simulate it yourself. Alternatively, if you have ABCD data access, feel free to work directly with the [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data (the answers you will compute should end up being the same).
+For this question you will need some data with which to explore the relationships between sample size and the different measures of effect size discussed in this week's lecture. We have simulated a dataset for you to use that is based on [ABCD structural MRI morphometric and image intensity measures ("abcd_smrip201")](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) data file. These data represent the sum total volume of both the left and right hippocampi across 10000 participants. You can download our simulated data file for this assignment [on our GitHub](https://github.com/ABCD-ReproNim/exercises/blob/main/week_7/simulated_data.tsv) or simulate it yourself. Alternatively, if you have ABCD data access, feel free to work directly with the data (the answers you will compute should end up being the same).
 
 First, in your favorite programming language (we like Python), either read in the [simulated data file](https://github.com/ABCD-ReproNim/exercises/blob/main/week_7/simulated_data.tsv) (option A), simulate the data yourself (option B), or download and parce the appropriate ABCD data elements from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201) (option C).
 
@@ -214,6 +214,8 @@ First, in your favorite programming language (we like Python), either read in th
 ```
 import requests
 import io
+import numpy as np
+import pandas as pd
 
 url = "https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_7/simulated_data.tsv" 
 # Make sure the url is the raw version of the file on GitHub
@@ -223,7 +225,7 @@ download = requests.get(url).content
 df = pd.read_csv(io.StringIO(download.decode('utf-8')), sep='\t')
 ```
 
-*Option B: simulate data using on the mean and standard deviation of hippocampal values from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201)*
+*Option B: simulate data using on the mean and standard deviation of hippocampal values*
 ```
 # male
 m_mean = 8407
@@ -245,19 +247,34 @@ f_dat.head()
 hippo = pd.concat([m_dat, f_dat])
 ```
 
-*Option C: read in and parce ABCD data using on the mean and standard deviation of hippocampal values from [abcd_smrip201](https://nda.nih.gov/data_structure.html?short_name=abcd_smrip201)*
+*Option C: read in and parce ABCD data using on the mean and standard deviation of hippocampal values*
 ```
 # import full data -- note you will need to download this data from the NDA directly
-smrip201_file = '/home/jovyan/ABCD3/abcd_smrip201.txt'
-smrip201 = pd.read_csv(smrip201_file, sep='\t',skiprows=[1],header=[0])
+To download and parse the data on your own if you have data acces, go to the NBDC data hub, login and go to lasso infomatics. Create a query in the dictionary
+query tool and include these 3 pieces:
+
+1) mr_y_smri__vol__aseg__hc__lh_sum #select section 00A
+3) mr_y_smri__vol__aseg__hc__rh_sum #select section 00A
+4) ab_g_stc__cohort_sex
+
+You will be able to download all three of these as a single csv file and follow the next steps to parse the dataset:
+
+import requests
+import io
+import pandas as pd
+import math
+import matplotlib.pyplot as plt
+import numpy as np
+
+smrip201 = pd.read_csv("DATASETNAME") #copy and paste the name of the dataset in place of DATASETNAME and enclose the name in quotes
 
 # subset to only include columns of interest
-columns = ['subjectkey','sex','smri_vol_scs_hpuslh','smri_vol_scs_hpusrh']
+columns = ['participant_id','ab_g_stc__cohort_sex','mr_y_smri__vol__aseg__hc__lh_sum','mr_y_smri__vol__aseg__hc__rh_sum']
 hippo = smrip201.loc[:,columns]
 # sum left and right hippocampi
-hippo['both'] = hippo['smri_vol_scs_hpuslh'] + hippo['smri_vol_scs_hpusrh']
+hippo['hippocampi'] = hippo['mr_y_smri__vol__aseg__hc__lh_sum'] + hippo['mr_y_smri__vol__aseg__hc__rh_sum']
 # make names easier to read
-hippo.rename(columns={'smri_vol_scs_hpuslh':'left','smri_vol_scs_hpusrh':'right'},inplace=True)
+hippo.rename(columns={'mr_y_smri__vol__aseg__hc__lh_sum':'left','mr_y_smri__vol__aseg__hc__rh_sum':'right', 'ab_g_stc__cohort_sex':'sex'},inplace=True)
 ```
 
 Now that you have the total hippocampal volume for both male and female participants, we can subset these data at multiple sample sizes to see the relationship between effect size and sample size. The goal is to get a distribution of effect sizes corresponding to each sample size we choose. We can then use these distributions to visualize how the mean effect sizes may change as a function of sample size.
@@ -277,8 +294,8 @@ def eff_size_cal(df, niter, n_size):
     cohen = []
     z = []
     for i in range(niter):
-        male = df[df['sex']=='M'].sample(n_size)
-        female = df[df['sex']=='F'].sample(n_size)
+        male = df[df['sex']=='M'].sample(n_size) #if you downloaded the data yourself change 'M' to 1, with no quotes, sex is an integer not a string in this case
+        female = df[df['sex']=='F'].sample(n_size) #if you downloaded the data yourself change 'F' to 2, with no quotes, sex is an integer not a string in this case
         m_mu = male['hippocampi'].mean()
         f_mu = female['hippocampi'].mean()
         #pooled standard deviation for males and females
