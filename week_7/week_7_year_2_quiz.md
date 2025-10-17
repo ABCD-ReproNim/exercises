@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 7 Quiz, we will ask you a few questions about [ABCD Demographic, Physical, and Mental Health Assessments](https://youtu.be/VxwWQRvE7QY) and [Scientific Questions and Statistical Issues](https://youtu.be/auzLLbQPMfY).
+In this Week 7 Data Exercise, we will ask you a few questions about ABCD friends, family, and community assessments (https://www.youtube.com/watch?v=EbHXALb484k&t=2171s) and some questions about scientific questions and statistical issues (https://youtu.be/auzLLbQPMfY).
 
 ***
 
@@ -10,24 +10,19 @@ In this Week 7 Quiz, we will ask you a few questions about [ABCD Demographic, Ph
 
 **Question 1**
 
-ABCD mental and physical health assessments include measures related to the following domains: (select all that apply)
+1) Which general parameters were considered when deciding which culture and environment factors to include in the ABCD Study (select all that apply)?
 
-- [ ] Categorical diagnoses and dimensional measures of mental health
-- [ ] Trait-like behaviors and personality measures associated with risk factors and consequences of mental health outcomes 
-Stress, life events (e.g., COVID-19), and peer environment (e.g., friendships and bullying)
-- [ ] Blood draws and saliva samples for genetic and hormone testing
-- [ ] Nutrition, physical activity, and actigraphy (fitbit) data
-- [ ] Baby teeth for determining early exposure to toxins
+- [ ] Being a component in the PhenX toolkit
+- [ ] Time to administer
+- [ ] Validity across cultures
+- [ ] Racial and ethnic group classifications that align with census groups
 
 <details>
 <summary>Click to see answer</summary>
 
-- Categorical diagnoses and dimensional measures of mental health
-- Trait-like behaviors and personality measures associated with risk factors and consequences of mental health outcomes 
-Stress, life events (e.g., COVID-19), and peer environment (e.g., friendships and bullying)
-- Blood draws and saliva samples for genetic and hormone testing
-- Nutrition, physical activity, and actigraphy (fitbit) data
-- Baby teeth for determining early exposure to toxins
+- Being a component in the PhenX toolkit
+- Time to administer
+- Validity across cultures
 
 ***
 
@@ -35,20 +30,19 @@ Stress, life events (e.g., COVID-19), and peer environment (e.g., friendships an
 
 **Question 2**
 
-What are some of the key challenges and considerations pertaining to the design of the ABCD health assessment? (select all that apply)
+2) The ABCD Study aimed to recruit a certain percentage of participants from a "high risk" group, where high risk is identified as a likelihood to use marijuana by age 14-15 and measured using a screening developed by Loeber et al, 2018. What was the recruitment goal for this "high risk" group?
 
-- [ ] Collecting measures that are consistent across visits versus measures that are relevant for different stages of development
-- [ ] Utilizing reliable and valid instruments that are known to be relevant given prior literature versus opportunities that allow for discovery science
-- [ ] Obtaining both child and parent blood draws required by the study
-- [ ] Keeping participant burden in mind so to ensure retention over the course of the study
+- 40%
+- 45%
+- 50%
+- 55%
+- 60%
 
 
 <details>
 <summary>Click to see answer</summary>
 
-- Collecting measures that are consistent across visits versus measures that are relevant for different stages of development
-- Utilizing reliable and valid instruments that are known to be relevant given prior literature versus opportunities that allow for discovery science
-- Keeping participant burden in mind so to ensure retention over the course of the study
+- 50%
 
 ***
 
@@ -56,16 +50,18 @@ What are some of the key challenges and considerations pertaining to the design 
 
 **Question 3**
 
-Parent and child reports are frequently inconsistent with one another. One way in which a researcher may evaluate the convergent validity of certain domains (e.g., problem behavior) is through teacher reports.
+3) The Culture and Environment component of the ABCD protocol has a modest ability to differentiate between these higher and lower risk groups. For the baseline data, 64% of the tests of difference between the higher and lower risk groups are significant. How many of these tests make the 0.20 cut-off for a meaningful effect size?
 
-- True
-- False
+- None
+- 2
+- 4
+- 7
 
 
 <details>
 <summary>Click to see answer</summary>
 
-- True
+- 4
 
 ***
 
@@ -73,21 +69,17 @@ Parent and child reports are frequently inconsistent with one another. One way i
 
 **Question 4**
 
-What are some of the main goals of interviewing the parent (in addition to the child) about themselves and the child? (select all that apply)
+4) With one exception, in the Culture and Environment component of the ABCD Study, the baseline parent and youth reports all show the same patterns with the regard to sex differences. For which measure was the sex difference (or lack thereof) found in the youth report not found in the parent report?
 
-- [ ] Parents may be able to report about certain domains such as externalizing symptoms more accurately than the child
-- [ ] Parents have greater access to knowledge of family history
-- [ ] Parent mental health may color their reports of the child
-- [ ] To allow the parent to feel more involved with the study in order to benefit participant retention
-- [ ] To capture shared genetic information and environmental/contextual factors associated with mental health outcomes
+- [ ] Neighborhood Safety
+- [ ] FES Conflict subscale
+- [ ] SDQ Prosocial Behavior
+- [ ] Parental Monitoring
 
 <details>
 <summary>Click to see answer</summary>
 
-- Parents may be able to report about certain domains such as externalizing symptoms more accurately than the child
-- Parents have greater access to knowledge of family history
-- Parent mental health may color their reports of the child
-- To capture shared genetic information and environmental/contextual factors associated with mental health outcomes
+- Neighborhood Safety
 
 ***
 
@@ -95,19 +87,19 @@ What are some of the main goals of interviewing the parent (in addition to the c
 
 **Question 5**
 
-Which demographic information is collected in order to measure socioeconomic status? (select all that apply)
+5) Which of the following measures were administered for the first time at the one-year follow-up assessment for youth (select all that apply)?
 
-- [ ] Household income data is objective and thus is used as the sole indicator of socioeconomic status in ABCD 
-- [ ] A given income may provide different levels of financial stability in different parts of the country, and thus parental occupation, education, and family structure are also collected
-- [ ] Family financial adversity and neighborhood adversity provide additional important insight into an individual’s lived socioeconomic situation
-- [ ] Rather than relying on participant report, poverty norms in geographic areas (determined by zip code) are used to estimate a family’s socioeconomic status
+- [ ] PhenX Neighborhood Safety/Crime
+- [ ] Perceived Discrimination Scale
+- [ ] Prosocial Tendencies
+- [ ] Wills Problem Solving
 
 <details>
 <summary>Click to see answer</summary>
 
-- A given income may provide different levels of financial stability in different parts of the country, and thus parental occupation, education, and family structure are also collected
-- Family financial adversity and neighborhood adversity provide additional important insight into an individual’s lived socioeconomic situation
-
+- Perceived Discrimination Scale
+- Wills Problem Solving
+  
 ***
 
 </details>
