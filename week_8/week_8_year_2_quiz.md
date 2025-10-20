@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 8 Quiz, we will ask you a few questions about the [ABCD Culture and Environment Assessments](https://youtu.be/EbHXALb484k) and [Data Versioning and Transformation with DataLad](https://youtu.be/udLVUyZQanw).
+In this Week 8 Quiz, we will ask you a few questions about the [ABCD Linked External Data](https://[youtu.be/EbHXALb484k](https://youtu.be/fnY_As9b7Uw)) and [Data Versioning and Transformation with DataLad](https://youtu.be/udLVUyZQanw).
 
 ***
 
