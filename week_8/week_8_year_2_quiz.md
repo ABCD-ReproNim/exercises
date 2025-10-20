@@ -12,10 +12,10 @@ In this Week 8 Quiz, we will ask you a few questions about the [ABCD Culture and
 
 Which statement best defines “place-based health”?
 
-- [ ] Health is determined only by genetics
-- [ ] Health is shaped mainly by hospital quality
-- [ ] Health is shaped by where people live, work, and play
-- [ ] Health is unaffected by geography
+- Health is determined only by genetics
+- Health is shaped mainly by hospital quality
+- Health is shaped by where people live, work, and play
+- Health is unaffected by geography
 
 <details>
 <summary>Click to see answer</summary>
@@ -87,10 +87,10 @@ What changed for LED in the 6.0 release?
 
 Which statement best describes the Adolescent Neural Urbanome?
 
-- [ ] A genetic database of ABCD participants
-- [ ] A repository of household sensor data capturing micro-environments indoors
-- [ ] A neuroimaging atlas that maps adolescent brain networks across scanners only
-- [ ] A framework organizing environmental LED variable sets to contextualize where ABCD youth lived at baseline and inform policy
+- A genetic database of ABCD participants
+- A repository of household sensor data capturing micro-environments indoors
+- A neuroimaging atlas that maps adolescent brain networks across scanners only
+- A framework organizing environmental LED variable sets to contextualize where ABCD youth lived at baseline and inform policy
 
 <details>
 <summary>Click to see answer</summary>
