@@ -10,21 +10,17 @@ In this Week 8 Quiz, we will ask you a few questions about the [ABCD Culture and
 
 **Question 1**
 
-Which general parameters were considered when deciding which culture and environment factors to include in the ABCD Study (select all that apply)?
+Which statement best defines “place-based health”?
 
-- [ ] Being a component in the PhenX toolkit
-- [ ] Time to administer
-- [ ] Validity across cultures
-- [ ] Racial and ethnic group classifications that align with census groups
+- [ ] Health is determined only by genetics
+- [ ] Health is shaped mainly by hospital quality
+- [ ] Health is shaped by where people live, work, and play
+- [ ] Health is unaffected by geography
 
 <details>
 <summary>Click to see answer</summary>
 
-- Being a component in the PhenX toolkit
-- Time to administer
-- Validity across cultures
-
-The [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper specifically mentions that the census group classifications are inadequate. All other options can be found in Section 2 `Description of measures` of the paper
+- Health is shaped by where people live, work, and play
 
 ***
 
@@ -32,19 +28,18 @@ The [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper specifically
 
 **Question 2**
 
-The ABCD Study aimed to recruit a certain percentage of participants from a "high risk" group, where high risk is identified as a likelihood to use marijuana by age 14-15 and measured using a screening developed by Loeber et al, 2018. What was the recruitment goal for this "high risk" group?
+In ABCD Linked External Data (LED), which addresses are used for environmental linkages?
 
-- 40%
-- 45%
-- 50%
-- 55%
-- 60%
+- Current address only
+- Baseline addresses (ages 9–10)
+- All lifetime addresses
+- School addresses only
 
 
 <details>
 <summary>Click to see answer</summary>
 
-- 50% ([ABCD Culture and Environment Assessments lecture video 28:25](https://youtu.be/EbHXALb484k?t=1705))
+-  Baseline addresses (ages 9–10)
 
 ***
 
@@ -52,20 +47,19 @@ The ABCD Study aimed to recruit a certain percentage of participants from a "hig
 
 **Question 3**
 
-The Culture and Environment component of the ABCD protocol has a modest ability to differentiate between these higher and lower risk groups. For the baseline data, 64% of the tests of difference between the higher and lower risk groups are significant. How many of these tests make the 0.20 cut-off for a meaningful effect size?
+Can ABCD share residential histories (addresses) with data users?
 
-- None
-- 2
-- 4
-- 7
+- No; addresses are PII, so geocoding is performed within ABCD’s secure environment
+- Yes; but only for longitudinal researchers
+- Yes; they are public records
+- No; but de-identified full geocodes are emailed on request
 
 
 <details>
 <summary>Click to see answer</summary>
 
-- 4
+- No; addresses are PII, so geocoding is performed within ABCD’s secure environment
 
-This can be answered by looking at Table 3 of the [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper or simply by reading its conclusion. _Although 64% of the tests of difference between the higher and lower risk groups are significant (80% of the Youth measures and 53% of the measures completed by parents), only four make the cut-off for a meaningful effect size, 0.20_
 
 ***
 
@@ -73,18 +67,17 @@ This can be answered by looking at Table 3 of the [Zucker et al](https://pubmed.
 
 **Question 4**
 
-With one exception, in the Culture and Environment component of the ABCD Study, the baseline parent and youth reports all show the same patterns with the regard to sex differences. For which measure was the sex difference not found in the youth report but found in the parent report?
+What changed for LED in the 6.0 release?
 
-- Neighborhood Safety
-- FES Conflict subscale
-- SDQ Prosocial Behavior
+- New data and new names
+- No new data; variable names/descriptions changed and warnings added
+- No changes at all
+- All variables were removed
 
 <details>
 <summary>Click to see answer</summary>
 
-- Neighborhood Safety
-
-This can be answered by looking at Table 4 of the [Zucker et al](https://pubmed.ncbi.nlm.nih.gov/29627333/) paper or the conclusion part. _With the exception of the ratings of no differences for Neighborhood Safety, strong sex differences are present in all of the Youth Report measures of their experience of the proximal social environment._
+- No new data; variable names/descriptions changed and warnings added
 
 ***
 
@@ -92,18 +85,17 @@ This can be answered by looking at Table 4 of the [Zucker et al](https://pubmed.
 
 **Question 5**
 
-Which of the following measures were administered for the first time at the one-year follow-up assessment for youth (select all that apply)?
+Which statement best describes the Adolescent Neural Urbanome?
 
-- [ ] PhenX Neighborhood Safety/Crime
-- [ ] Perceived Discrimination Scale
-- [ ] Prosocial Tendencies
-- [ ] Wills Problem Solving Scale
+- [ ] A genetic database of ABCD participants
+- [ ] A repository of household sensor data capturing micro-environments indoors
+- [ ] A neuroimaging atlas that maps adolescent brain networks across scanners only
+- [ ] A framework organizing environmental LED variable sets to contextualize where ABCD youth lived at baseline and inform policy
 
 <details>
 <summary>Click to see answer</summary>
 
-- Perceived Discrimination Scale (Source: [lecture video 23:30](https://youtu.be/EbHXALb484k?t=1410))
-- Wills Problem Solving Scale (Source: [lecture video 23:30](https://youtu.be/EbHXALb484k?t=1410))
+- A framework organizing environmental LED variable sets to contextualize where ABCD youth lived at baseline and inform policy
 
 ***
 
