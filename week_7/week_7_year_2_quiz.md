@@ -10,7 +10,7 @@ In this Week 7 Data Exercise, we will ask you a few questions about ABCD friends
 
 **Question 1**
 
-1) Which general parameters were considered when deciding which culture and environment factors to include in the ABCD Study (select all that apply)?
+1) Which general parameters were considered when deciding which friends, family, and community factors to include in the ABCD Study (select all that apply)?
 
 - [ ] Being a component in the PhenX toolkit
 - [ ] Time to administer
@@ -50,7 +50,7 @@ In this Week 7 Data Exercise, we will ask you a few questions about ABCD friends
 
 **Question 3**
 
-3) The Culture and Environment component of the ABCD protocol has a modest ability to differentiate between these higher and lower risk groups. For the baseline data, 64% of the tests of difference between the higher and lower risk groups are significant. How many of these tests make the 0.20 cut-off for a meaningful effect size?
+3) The friends, family, and community component of the ABCD protocol has a modest ability to differentiate between these higher and lower risk groups. For the baseline data, 64% of the tests of difference between the higher and lower risk groups are significant. How many of these tests make the 0.20 cut-off for a meaningful effect size?
 
 - None
 - 2
@@ -69,7 +69,7 @@ In this Week 7 Data Exercise, we will ask you a few questions about ABCD friends
 
 **Question 4**
 
-4) With one exception, in the Culture and Environment component of the ABCD Study, the baseline parent and youth reports all show the same patterns with the regard to sex differences. For which measure was the sex difference (or lack thereof) found in the youth report not found in the parent report?
+4) With one exception, in the friends, family, and community component of the ABCD Study, the baseline parent and youth reports all show the same patterns with the regard to sex differences. For which measure was the sex difference (or lack thereof) found in the youth report not found in the parent report?
 
 - [ ] Neighborhood Safety
 - [ ] FES Conflict subscale
