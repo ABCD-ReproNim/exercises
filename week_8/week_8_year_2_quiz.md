@@ -2,7 +2,7 @@
 
 ### Quiz Instructions
 
-In this Week 8 Quiz, we will ask you a few questions about the [ABCD Linked External Data](https://[https://www.youtube.com/watch?v=fnY_As9b7Uw]) and [Data Versioning and Transformation with DataLad](https://youtu.be/udLVUyZQanw).
+In this Week 8 Quiz, we will ask you a few questions about the [ABCD Linked External Data]([https://https://www.youtube.com/watch?v=fnY_As9b7Uw]) and [Data Versioning and Transformation with DataLad](https://youtu.be/udLVUyZQanw).
 
 ***
 
