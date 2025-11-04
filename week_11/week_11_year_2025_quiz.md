@@ -3,10 +3,6 @@
 ### Quiz Instructions
 In this Week 12 Data Exercise, we will ask you a few questions about [Biospecimens in ABCD and Machine Learning](https://abcd-repronim.github.io/materials/week-11/).
 
-
-We will being by asking you a few questions about [ABCD Biospecimens
-and Reproducible workflows in Repronim](https://abcd-repronim.github.io/materials/week-9/). Please view the [lecture video](https://youtu.be/QcsifMz5_fQ) before completing this quiz.
-
 ***
 
 ## ABCD questions
