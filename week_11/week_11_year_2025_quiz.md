@@ -1,7 +1,7 @@
 # Week 11 Quiz
 
 ### Quiz Instructions
-In this Week 12 Data Exercise, we will ask you a few questions about [Biospecimens in ABCD and Machine Learning](https://abcd-repronim.github.io/materials/week-11/).
+In this Week 11 Data Exercise, we will ask you a few questions about [Biospecimens in ABCD and Machine Learning](https://abcd-repronim.github.io/materials/week-11/).
 
 ***
 
@@ -105,9 +105,9 @@ What are some recommendations for dealing with biospecimen data? (select all tha
 
 ## Machine learning questions
 
-In this quiz, we're going to explore some of the concepts presented in the machine learning lecture. First, let’s fetch a [pre-written Jupyter Notebook](https://github.com/ABCD-ReproNim/exercises/blob/main/week_12/machine_learning.md) with example code to guide you through the assignment. This notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below.
+In this quiz, we're going to explore some of the concepts presented in the machine learning lecture. First, let’s fetch a [pre-written Jupyter Notebook](https://github.com/ABCD-ReproNim/exercises/blob/main/week_11/machine_learning.md) with example code to guide you through the assignment. This notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below.
 
-`$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_12/machine_learning.md`
+`$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_11/machine_learning.md`
 
 You can open `machine_learning.md` on the JupyterHub as a Notebook by right clicking the file then choosing **Open With** and **Notebook**.
 
