@@ -2,8 +2,7 @@
 
 ### Week 9 Data Exercise Instructions
 
-We will being by asking you a few questions about [ABCD Biospecimens
-and Reproducible workflows in Repronim](https://abcd-repronim.github.io/materials/week-9/). Please view the [lecture video](https://youtu.be/QcsifMz5_fQ) before completing this quiz.
+In this Week 9 Data Exercise, we will ask you a few questions about ABCD Neurocognitive Assessments and reproducible workflows and analyses with DataLad. 
 
 ***
 
@@ -11,20 +10,18 @@ and Reproducible workflows in Repronim](https://abcd-repronim.github.io/material
 
 **Question 1**
 
-What biospecimens are collected at multiple timepoints in the ABCD Study? (select all that apply)
+What were the overarching motivations for the tasks selected for the neurocognitive battery?
 
-- [ ] Breath, urine, and saliva to detect recent substance use
-- [ ] Saliva to measure pubertal hormones
-- [ ] Blood and saliva for DNA analysis
-- [ ] Hair to detect substance use
-- [ ] Baby teeth to estimate environmental exposure
+- The tasks maximize sensitivity to development and other emergent factors across a decade of assessment, starting from the ages of 9-10
+- The tasks minimize participant burden
+- The tasks are comparable to those used for other large studies
+- The tasks cover multiple domains
+- All of the above
 
 <details>
 <summary>Click to see answer</summary>
 
-- Breath, urine, and saliva to detect recent substance use
-- Saliva to measure pubertal hormones
-- Hair to detect substance use
+- All of the above
 
 ***
 
@@ -32,20 +29,19 @@ What biospecimens are collected at multiple timepoints in the ABCD Study? (selec
 
 **Question 2**
 
-What are some methodological considerations for dealing with biospecimen data? (select all that apply)
+This lecture covered the results of Thompson et al. (2019) wherein principal component analysis was applied to 12 neurocognitive assessments. Based on this study, what were the main principal components underlying the different tasks administered to participants at baseline? Select all that apply.
 
-- [ ] Who is missing from the dataset and why? Is there a sampling bias for who opts in (or out) of providing certain biospecimens?
-- [ ] Are the details of specimen collection (e.g., time of day) accurately recorded or labeled? How to identify and deal with potential errors and inconsistencies?
-- [ ] How to perform quality checks, determine final sample selection, and any additional decisions that increase experimenter degrees of freedom?
-- [ ] What confounds may be explaining variance in the data (e.g. caffeine, physical activity)?
+- [ ] Reward
+- [ ] General cognitive ability
+- [ ] Executive function
+- [ ] Learning and  memory
 
 <details>
 <summary>Click to see answer</summary>
 
-- Who is missing from the dataset and why? Is there a sampling bias for who opts in (or out) of providing certain biospecimens?
-- Are the details of specimen collection (e.g., time of day) accurately recorded or labeled? How to identify and deal with potential errors and inconsistencies?
-- How to perform quality checks, determine final sample selection, and any additional decisions that increase experimenter degrees of freedom?
-- What confounds may be explaining variance in the data (e.g. caffeine, physical activity)?
+- General cognitive ability
+- Executive function
+- Learning and memory
 
 ***
 
@@ -53,15 +49,17 @@ What are some methodological considerations for dealing with biospecimen data? (
 
 **Question 3**
 
-Individual differences in pubertal hormone levels, patterns, and sensitivity can contribute to differences in brain and body maturation, mental health, substance use, and behavioral problems.
+Which of these tasks are only offered at one timepoint? Select all that apply.
 
-- True
-- False
+- [ ] Picture Vocabulary
+- [ ] Rey Auditory Verbal Learning Test
+- [ ] Cash Choice
+- [ ] Dimensional Change Card Sort
 
 <details>
 <summary>Click to see answer</summary>
 
-- True
+- Cash Choice
 
 ***
 
@@ -69,15 +67,17 @@ Individual differences in pubertal hormone levels, patterns, and sensitivity can
 
 **Question 4**
 
-Baby teeth provide layer-by-layer information about environmental exposure beginning in the second trimester of pregnancy
+Which of these are true of the Behavioral Indicator of Resilience to Distress (BIRD) task? Select all that apply.
 
-- True
-- False
+- [ ] Low distress tolerance is associated with depression, anxiety, substance use, and other mental health problems
+- [ ] The task is administered at each timepoint
+- [ ] Primary measures of the task are distress and distress tolerance
 
 <details>
 <summary>Click to see answer</summary>
 
-- True
+- Low distress tolerance is associated with depression, anxiety, substance use, and other mental health problems
+- Primary measures of the task are distress and distress tolerance
 
 ***
 
@@ -85,21 +85,17 @@ Baby teeth provide layer-by-layer information about environmental exposure begin
 
 **Question 5**
 
-What are some recommendations for dealing with biospecimen data? (select all that apply)
+Which of these are methodological considerations associated with the ABCD study design?
 
-- [ ] Visualize data to identify physiologically improbable values
-- [ ] Publish experimenter decision trees and scripts for transparency and reproducibility
-- [ ] Trust that the data are accurate even if some data points seem unlikely
-- [ ] Be informed by approaches and effect sizes reported in the literature
-- [ ] Consider sociodemographic factors, sample bias, and methods
+- Environmental exposures might change the developmental trajectory
+- Alternate forms of tests must be administered to account for potential practice effects
+- Overlapping assessments of youngest and oldest subjects
+- All the above
 
 <details>
 <summary>Click to see answer</summary>
 
-- Visualize data to identify physiologically improbable values
-- Publish experimenter decision trees and scripts for transparency and reproducibility
-- Be informed by approaches and effect sizes reported in the literature
-- Consider sociodemographic factors, sample bias, and methods
+- All the above
 
 ***
 
