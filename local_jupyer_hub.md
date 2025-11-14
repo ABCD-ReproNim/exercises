@@ -18,3 +18,5 @@ The abcd-repronim directory will be mounted inside and will preserve any changes
 The --privileged flag is necessary if you want to run singularity inside the container.
 
 We have also put all this into a short video for you:
+
+TODO: Add link to video.
