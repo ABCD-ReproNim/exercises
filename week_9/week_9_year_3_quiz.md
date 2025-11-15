@@ -147,7 +147,7 @@ in the [DataLad](https://www.datalad.org/) questions from
 the [Week 8 Quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_2_quiz.md#repronim-questions), but this time inside a new datalad dataset
 that we will name `week9_analysis`.
 Assuming you are starting from your home directory on
-the [ABCD-ReproNim JupyterHub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15)
+the local [ABCD-ReproNim JupyterHub]()
 (i.e., `/home/jovyan`), reorder the below commands to create the necessary datalad datasets for analysis (note: not all of the commands listed are necessarily needed).
 We want a dataset named `data` for our raw data, a dataset named `derivatives` for our results,
 T1w images from the first three participants, and an FSL container for the software we will run.
