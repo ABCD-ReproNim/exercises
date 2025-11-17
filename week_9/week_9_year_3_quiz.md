@@ -110,7 +110,7 @@ the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest
 during the [DataLad](https://www.datalad.org/) portion of [last week's quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_2_quiz.md#repronim-questions).
 We will also be testing different ways of using FSL's [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) to compare results.
 
-We recommend to use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local instance of our JupyterHub can be found [here](https://github.com/likeajumprope/exercises/blob/main/local_juptyer_hub.md) (or alternatively, [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
+We recommend to use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local instance of our JupyterHub can be found [here](https://github.com/likeajumprope/exercises/blob/main/local_jupyter_hub.md) (or alternatively, [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
 you can work with a local, non-JupyterHub instance of DataLad by following the DataLad installation instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
 
 **Question 6**
