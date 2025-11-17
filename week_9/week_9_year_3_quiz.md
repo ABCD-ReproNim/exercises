@@ -107,7 +107,7 @@ For today's Repronim questions, you will be using (via the command `datalad crea
 cloning (via the command `datalad clone -d . https://github.com/psychoinformatics-de/studyforrest-data-structural.git data`),
 and retrieving T1w data (via the command `datalad get data/sub-*/anat/*T1w*`) from
 the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) we worked with
-during the [DataLad](https://www.datalad.org/) portion of [last week's quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_3_quiz.md#repronim-questions).
+during the [DataLad](https://www.datalad.org/) portion of [last week's quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_2_quiz.md#repronim-questions).
 We will also be testing different ways of using FSL's [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) to compare results.
 
 We recommend to use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local instance of our JupyterHub can be found [here](https://github.com/likeajumprope/exercises/blob/main/local_jupyer_hub.md) (or alternatively, [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
@@ -144,7 +144,7 @@ The result is:
 
 You will be installing the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) again as you did
 in the [DataLad](https://www.datalad.org/) questions from
-the [Week 8 Quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_3_quiz.md#repronim-questions), but this time inside a new datalad dataset
+the [Week 8 Quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_2_quiz.md#repronim-questions), but this time inside a new datalad dataset
 that we will name `week9_analysis`.
 Assuming you are starting from your home directory on
 the local [ABCD-ReproNim JupyterHub]()
