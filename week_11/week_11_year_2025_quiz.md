@@ -107,6 +107,8 @@ What are some recommendations for dealing with biospecimen data? (select all tha
 
 In this quiz, we're going to explore some of the concepts presented in the machine learning lecture. First, let’s fetch a [pre-written Jupyter Notebook](https://github.com/ABCD-ReproNim/exercises/blob/main/week_11/machine_learning.md) with example code to guide you through the assignment. This notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below.
 
+> __Note__: If you are having trouble running these commands in tour local environment, you can use the instructions found in [local_jupyter_hub.md](../local_jupyter_hub.md) to run the following code on a local Docker instance of the ABCD-ReproNim Jupyterhub.
+
 `$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_11/machine_learning.md`
 
 You can open `machine_learning.md` on the JupyterHub as a Notebook by right clicking the file then choosing **Open With** and **Notebook**.
