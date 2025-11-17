@@ -110,12 +110,7 @@ the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest
 during the [DataLad](https://www.datalad.org/) portion of [last week's quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_quiz.md#repronim-questions).
 We will also be testing different ways of using FSL's [`FIRST`](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) to compare results.
 
-We recommend you use the online version of the [ABCD-ReproNim Jupyterhub](http://abcd.repronim.org/), in
-which DataLad is already installed. The JupyterHub is open to ABCD-ReproNim students who have 
-active [NDA Data Use Certification (DUC)](https://docs.google.com/document/d/18hsT2x15bypuXFcfMQb9Ck_YEB7VvY2j4w5hwbV78A4/edit?usp=sharing) to access ABCD Study data. 
-To request access please provide us with your GitHub username [here](https://docs.google.com/forms/d/e/1FAIpQLSefrxRzdjFak_BoxTL5bE-TnsJdg9KbGvFdOwuW7zliZ96z7g/viewform?usp=sf_link).
-If you do not have an active DUC You can also use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local
-instance of our JupyterHub can be found [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
+We recommend to use a local version of the ABCD-ReproNim JupyterHub container. Instructions on how to set up a local instance of our JupyterHub can be found [here[() or [here](https://neurostars.org/t/using-abcd-repronim-jupyterhub-container-locally-via-docker/17439). Alternatively,
 you can work with a local, non-JupyterHub instance of DataLad by following the DataLad installation instructions [here](https://handbook.datalad.org/en/latest/intro/installation.html).
 
 **Question 6**
@@ -152,7 +147,7 @@ in the [DataLad](https://www.datalad.org/) questions from
 the [Week 8 Quiz](https://github.com/ABCD-ReproNim/exercises/blob/main/week_8/week_8_year_2_quiz.md#repronim-questions), but this time inside a new datalad dataset
 that we will name `week9_analysis`.
 Assuming you are starting from your home directory on
-the [ABCD-ReproNim JupyterHub](https://docs.google.com/document/d/1kXvK2c_N9TkIAYn21WfzlCPtJvxhjW13Ftf0DwnAnlg/edit#heading=h.yb1hc7y3vc15)
+the local [ABCD-ReproNim JupyterHub]()
 (i.e., `/home/jovyan`), reorder the below commands to create the necessary datalad datasets for analysis (note: not all of the commands listed are necessarily needed).
 We want a dataset named `data` for our raw data, a dataset named `derivatives` for our results,
 T1w images from the first three participants, and an FSL container for the software we will run.
