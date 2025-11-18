@@ -1,37 +1,32 @@
-# Week 12 Data Exercise
+# Week 12 Quiz
 
-### Instructions
+### Quiz Instructions
 
-In this Week 12 Data Exercise, we will ask you a few questions about [Longitudinal Models and Machine Learning](https://abcd-repronim.github.io/materials/week-12/).
+In this Week 12 Quiz, we will ask you a few questions about [ABCD Genetics Data and the ReproPub Re-executable Paper](https://www.abcd-repronim.org/week12.html). 
 
 ***
-
-## Longitudinal modeling questions
-
 **Question 1**
 
-What makes a longitudinal design different from a cross-sectional design?
-(select all that apply)
+What kinds of genetics data have been released by ABCD? (check all that apply)
 
-- [ ] Multiple samples are collected over time from the same participant
-- [ ] Longitudinal designs are not observational studies
-- [ ] Better causal inference
-- [ ] Removes concern from unmeasured variables
+- [ ] Genotyped SNPs
+- [ ] Imputed SNPs
+- [ ] Whole genome sequencing
+- [ ] Genetic ancestry
+- [ ] Local allele counts
+- [ ] Polygenic risk scores derived from ABCD data
 
 <details>
 <summary>Click to see answer</summary>
 
-- [x] Multiple samples are collected over time from the same participant
-  - Cross sectional designs only collect samples at one time point.
-- [ ] Longitudinal designs are not observational studies
-  - There is no inherit intervention in longitudinal studies making them observational as well.
-- [x] Better causal inference
-  - ["Longitudinal data have the ability to establish temporal precedence, thus improving
-    causal inference over cross-sectional studies because observations of an outcome at a
-    prior time point may be controlled."](https://www.sciencedirect.com/science/article/pii/S1878929317300300)    
-- [ ] Removes concern from unmeasured variables
-  - ["As with cross-sectional data, longitudinal data can suffer from unmeasured third variables that confound causality"](https://www.sciencedirect.com/science/article/pii/S1878929317300300)
-
+- [x] Genotyped SNPs
+- [x] Imputed SNPs
+- [ ] Whole genome sequencing
+  - Some whole-genome sequencing has been completed, but none of it has been released.
+- [x] Genetic ancestry
+- [x] Local allele counts
+- [ ] Polygenic risk scores derived from ABCD data
+  - Polygenic risk scores are included, but the scores were created using other, larger datasets.
 
 ***
 
@@ -39,191 +34,7 @@ What makes a longitudinal design different from a cross-sectional design?
 
 **Question 2**
 
-Imagine we are analyzing hippocampal volume over time, with 3 timepoints for each participant. Using `R` syntax, our model would be specified like so:
-`volume ~ time + (1 + time | subject)`
-Which of the following statements are **True**?
-
-- [ ] `volume` is a fixed effect
-- [ ] `time` is a fixed effect
-- [ ] `time` is a random effect
-- [ ] `subject` is a fixed effect
-- [ ] `subject` is a random effect
-
-<details>
-<summary>Click to see answer</summary>
-
-- [ ] `volume` is a fixed effect
-  - `volume` is the dependent/outcome variable.
-- [x] `time` is a fixed effect
-  - The main effect of `time` is being estimated.
-- [x] `time` is a random effect
-  - `time` is a random slope meaning the variance in subjects' growth over `time` is being estimated. 
-- [ ] `subject` is a fixed effect
-  - `subject` does not appear in the fixed effect portion of the equation.
-- [x] `subject` is a random effect
-  - `subject` is the grouping variable for which we have multiple observations
-    over time.
-
-***
-
-</details>
-
-**Question 3**
-
-Next, let’s fetch a [pre-written Notebook](https://github.com/ABCD-ReproNim/exercises/blob/main/week_12/linear_mixed_effects.md) we created that has example code for you to use in the next part of the assignment. This Notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below. 
-
-`$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_12/linear_mixed_effects.md`
-
-You can open `linear_mixed_effects.md` on the JupyterHub as a Notebook by right clicking the file then choosing **Open With** and **Notebook**.
-
-The simulated data can be interpreted as measuring brain volume from a particular area of interest (for example the hippocampus) over time.
-We are hypothesizing the brain area of interest increases in size over time, and we want to measure the average yearly increase of volume in our cohort.
-Run the code blocks in the notebook until you reach `Simple Dataset Conclusions`.
-After you complete the Simple Dataset analysis, explain why the intercept is estimated to be `6940`even though the baseline volume was simulated to be `7000`?
-
-- [ ] Error inherent in model estimation
-- [ ] `6940` represents the predicted volume at `0` months of age
-- [ ] `6940` represents the predicted volume at `144` months of age
-- [ ] `6940` represents the predicted volume at `-12` months of age
-
-<details>
-<summary>Click to see answer</summary>
-
-- [x] `6940` represents the predicted volume at `0` months of age
-  - We should think about the meaning of our intercepts and whether they make sense to us. It may make more sense if the intercept was 9 or 10 years old since that would represent the earliest observed data in our dataset. Extrapolating to 0 years old does not make much sense because we did not measure anyone at 0 years old, and it may be implausible to assume a linear model from 0 -10 years old.
-
-***
-
-</details>
-
-**Question 4**
-
-Also at the end of `Simple Dataset Conclusions`, answer this question about the models outputs.
-Which of the following is a correct interpretation of `interviewed_age`?
-
-- [ ] for every month, volume has an estimated increase of `0.5 mm`
-- [ ] for every year, volume has an estimated increase of `0.5 mm`
-- [ ] for the first year, volume has an estimated increase of `0.5 mm`
-- [ ] for the last year, volume has an estimated increase of `0.5 mm`
-
-<details>
-<summary>Click to see answer</summary>
-
-- [x] for every month, volume has an estimated increase of `0.5 mm`
-  - `interview_age` is represented in months meaning the parameter represents monthly change. The simulation, however, represents the change in years, so a `6 mm` yearly change becomes a `0.5 mm` monthly change (`6 / 12 = 0.5`).
-
-***
-
-</details>
-
-**Question 5**
-
-What are other random effects we should be aware of in the ABCD dataset when constructing models?
-
-- [ ] sex
-- [ ] site
-- [ ] scanner
-- [ ] age
-- [ ] family
-
-
-
-<details>
-<summary>Click to see answer</summary>
-
-- [ ] sex
-- [x] site
-- [x] scanner
-- [ ] age
-- [x] family
-
-***
-
-</details>
-
-## Machine learning questions
-
-In this quiz, we're going to explore some of the concepts presented in the machine learning lecture. First, let’s fetch a [pre-written Jupyter Notebook](https://github.com/ABCD-ReproNim/exercises/blob/main/week_12/machine_learning.md) with example code to guide you through the assignment. This notebook is meant as a fully executable guide that you can copy and paste code blocks from as you complete the questions we ask you below.
-
-`$ wget https://raw.githubusercontent.com/ABCD-ReproNim/exercises/main/week_12/machine_learning.md`
-
-You can open `machine_learning.md` on the JupyterHub as a Notebook by right clicking the file then choosing **Open With** and **Notebook**.
-
-**Question 6**
-
-The corresponding section of the Jupyter notebook presents two options for pipeline ordering: (A) data imputation before splitting and (B) data splitting before imputation. Based on the lecture and your understanding of the Jupyter notebook, which of the two orderings is correct and why?
-
-- [ ] Option A because it achieves a higher accuracy score.
-- [ ] Option B because it achieves a lower accuracy score and one should report the more pessimistic score to avoid overfitting.
-- [ ] Option A because the data is split after imputation and immediately before model fitting, therefore the imputation is the same for the entire dataset.
-- [ ] Option B because the data is imputed after splitting, thereby preventing leakage of information between the training and test sets.
-
-<details>
-<summary>Click to see answer</summary>
-
-- [ ] Option A because it achieves a higher accuracy score.
-  - The downstream model performance is not a factor in determining the correct order.
-- [ ] Option B because it achieves a lower accuracy score and one should report the more pessimistic score to avoid overfitting.
-  - It makes sense that the accuracy for option A is higher since the imputed values in the test set have "seen" information from the training set. However, this has more to do with the concept of leakage, not overfitting. Moreover, the choice of option B would be correct even if it resulted in improved accuracy. In fact, if you experiment with different random seeds, you may indeed find one for which option B improves model performance.
-- [ ] Option A because the data is split after imputation and immediately before model fitting, therefore the imputation is the same for the entire dataset.
-  - This option allows leakage of information between the train and test sets. The imputed values in the test set have "seen" information from the training set.
-- [x] Option B because the data is imputed after splitting, thereby preventing leakage of information between the training and test sets.
-  - This is the correct answer. Think of the imputation strategy as part of the model. It should be validated along with the `SVC` estimator.
-
-***
-
-</details>
-
-**Question 7**
-
-Based on the plot you generated for this question in the Jupyter notebook, which of the following statements is true?
-(select all that apply)
-
-- [ ] Increasing the sample size narrowed the distribution of test accuracies.
-- [ ] Increasing the sample size had no effect on the distribution of test accuracies.
-- [ ] By chance, some test splits for the smallest two sample sizes yielded accuracies that outperformed all test splits from the three highest sample sizes.
-- [ ] The test accuracy distributions for small sample sizes supports the practice of using a single train/test split (i.e. one of the dots) to evaluate model performance, rather than the more computationally expensive cross-validation.
-
-<details>
-<summary>Click to see answer</summary>
-
-- [x] Increasing the sample size narrowed the distribution of test accuracies.
-  - Correct. As also noted in the lecture, large sample sizes yield tighter distributions of test error.
-- [ ] Increasing the sample size had no effect on the distribution of test accuracies.
-  - Incorrect. See above.
-- [x] By chance, some test splits for the smallest two sample sizes yielded accuracies that outperformed all test splits from the three highest sample sizes.
-  - This is a direct consequence of the points above. With wider test error distributions for small sample sizes, by chance, some test splits will yield dramatically better results from the tails of the wider distributions.
-- [ ] The test accuracy distributions for small sample sizes supports the practice of using a single train/test split (i.e. one of the dots) to evaluate model performance, rather than the more computationally expensive cross-validation.
-  - Quite the opposite. Because of the point directly above, it is crucial to evaluate model performance on more than just a single train/test split.
-
-***
-
-</details>
-
-**Question 8**
-
-In the corresponding section of the Jupyter notebook, you re-executed an example from the nilearn library that compared different classifiers on a visual object recognition decoding task. Take a look at the plot you generated. Now suppose we are researchers focused exclusively on predicting chair recognition in this dataset? Which estimator
-gave us the best accuracy for chair recognition?
-
-- [ ] `svc_l2`
-- [ ] `svc_l1`
-- [ ] `logistic_l1`
-- [ ] `logistic_l2`
-- [ ] `ridge_classifier`
-
-<details>
-<summary>Click to see answer</summary>
-
-- [x] `svc_l1`
-  - However, qualify this result with your understanding of test error distributions from the previous question.
-
-***
-
-</details>
-
-**Question 9**
-
-(True/False) Based on the lecture, because we tested all of these estimators with cross-validation before picking the best one, we have a reliable estimation of the `svc_l1` model performance.
+Genetic ancestry components should only be used in analyses that include genetic data.
 
 - [ ] True
 - [ ] False
@@ -231,32 +42,275 @@ gave us the best accuracy for chair recognition?
 <details>
 <summary>Click to see answer</summary>
 
+- [ ] True
 - [x] False
-  - We used test set results (through cross-validation) to select the best model, thereby fitting the "model-choice" parameter to the test sets. Not that we've used all of our data, how then should we test that model choice?
-
+  - Population structure can confound associations between non-genetic variables and accounting for genetic ancestry can mitigate this confounding bias.
 ***
 
 </details>
 
-**Question 10**
+**Question 3**
 
-Based on the plot that you generated in the last part of the Jupyter notebook, you should choose the complex tree model if your objective is to memorize the training data (both its signal and its noise). Which model should you use if your objective is to generalize to new, unseen data?
+How are race/ethnicity and genetic ancestry different?
 
-- [ ] Simple tree model
-- [ ] Complex tree model
-- [ ] Ensemble of simple tree models
-- [ ] Ensemble of complex tree models
 
 <details>
 <summary>Click to see answer</summary>
 
-- [x] Ensemble of simple tree models
-  - The simple tree ensemble generalizes to unseen data better than both the complex and simple individual decision trees. The example notebook does not test a complex tree ensemble, but you should try it out. How does an ensemble of complex trees compare to the ensemble of simple trees?
-
-```python
-regr_4 = AdaBoostRegressor(DecisionTreeRegressor(max_depth=15), n_estimators=300, random_state=rng)
-```
+If you said some variation of "race/ethnicity is a social construct and genetic ancestry describes genetic similarity based on lineage" then you're correct! Congratulations. Tell your friends.
 
 ***
 
 </details>
+
+**Question 4**
+
+Why is diversity important in genome-wide association studies and in computing polygenic risk scores?
+
+- [ ] Analyses performed in homogeneous samples won't generalize to other populations.
+- [ ] Genetic drift makes cross ancestry generalization problematic.
+- [ ] Many polygenic risk scores are based largely on European-ancestry samples and they perform poorly on individuals of other ancestry.
+- [ ] All of the above.
+
+<details>
+<summary>Click to see answer</summary>
+
+- [ ] Analyses performed in homogeneous samples won't generalize to other populations.
+- [ ] Genetic drift makes cross ancestry generalization problematic.
+- [ ] Many polygenic risk scores are based largely on European-ancestry samples and they perform poorly on individuals of other ancestry.
+- [x] All of the above.
+  - All these things are true! There are many more reasons why participant diversity is important, but these are the reasons relevant to this lecture.
+***
+
+</details>
+
+## ReproPub questions
+
+**Question 5**
+
+The lecture and [ReproPub preprint](https://zenodo.org/record/3336609#.X3IzuNNKjOQ) point to [Ghosh et al's 2017 "simple, re-executable neuroimaging publication"](https://f1000research.com/articles/6-124
+) as a proof of concept of the ReproPub. In this question, we will see if this paper is indeed re-executable. First, create a new directory for the output
+
+```bash
+mkdir -p week_12/problem_5/output
+cd week_12/problem_5
+```
+
+Now, rerun the paper's analysis using the provided docker commands provided in the paper:
+```
+docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output -e CURL_CA_BUNDLE='' repronim/simple_workflow:1.1.0 run_demo_workflow.py --key 11an55u9t2TAf0EV2pHN0vOd8Ww2Gie-tHp9xGULh_dA
+```
+
+If you would like to run this command on the JupyterHub, [please see these instructions](https://github.com/ReproNim/simple_workflow/blob/master/README.md#4-other-containers) to use Singularity instead of Docker.
+
+This will take a while to run (e.g. a couple hours). Feel free to work on some of the other problems while you're waiting. Or you can watch a [panda cam](https://nationalzoo.si.edu/webcams/panda-cam) to pass the time. The possibilities are endless!
+
+Once the simple workflow is done, use the paper's supplied `check_output.py` program to verify that your results match the original results.
+
+```
+docker run -it --rm -v $(pwd)/output:/opt/repronim/simple_workflow/scripts/output repronim/simple_workflow:1.1.0 check_output.py
+```
+
+
+Based on the output of this program, what was the **ORIGINAL** platform on which the paper's analysis was performed
+
+- [ ] platform: Linux-4.9.19-moby-x86_64-with-debian-8.7, FSL version: 5.0.9
+- [ ] platform: Linux-4.9.19-moby-x86_64-with-debian-8.7, FSL version: 6.0
+- [ ] platform: Linux-4.19.121-linuxkit-x86_64-with-debian-8.8, FSL version: 5.0.9
+- [ ] platform: Linux-4.19.121-linuxkit-x86_64-with-debian-8.8, FSL version: 6.0
+
+<details>
+<summary>Click to see answer</summary>
+
+- [x] platform: Linux-4.9.19-moby-x86_64-with-debian-8.7, FSL version: 5.0.9
+***
+
+</details>
+
+Great, we have re-executed the "simple publication." That is, we ran the same analysis on the same data using the same computational environment.
+
+**Question 6**
+
+Next we'll look at running different analysis on the same data using a different reproducible paper example. It may not surprise you to learn that DataLad can help you write a fully reproducible paper. You can read more about this [in the DataLad handbook](http://handbook.datalad.org/en/latest/usecases/reproducible-paper.html). We will use the DataLad ["Automatically Reproducible Paper Template"](https://github.com/datalad-handbook/repro-paper-sketch/). The next two questions help you explore how to do this.
+
+From the `week_12` directory that you created for problem #1, clone the reproducible paper repository:
+
+```
+datalad clone https://github.com/datalad-handbook/repro-paper-sketch.git
+```
+
+If you're doing this on the JupyterHub, you already have all of the Python packages you need for this example. If you're not on the JupyterHub, you should [follow the instructions in the repository's `README.md`](https://github.com/datalad-handbook/repro-paper-sketch/blob/master/README.md#how-to-use-this-template) file, which indicate that you should create a virtual environment using `virtualenv`. You can follow those instructions or use the next few lines, which will create a conda environment instead
+
+```
+conda create --name repro-paper-sketch python=3.8 --no-default-packages
+# follow prompts to create the conda environment
+source activate repro-paper-sketch
+cd repro-paper-sketch
+pip install -r requirements.txt
+```
+
+Now, let's run
+
+```
+make
+```
+
+to generate the reproducible paper. If you're on JupyterHub (or if you don't have `latexmk` installed on your local system) you'll see something like
+
+```
+...
+latexmk -pdf -g main.tex
+make: latexmk: No such file or directory
+make: *** [Makefile:7: main.pdf] Error 127
+```
+
+Oh no! We don't have `latexmk`, which is one of the [requirements for this repo](https://github.com/datalad-handbook/repro-paper-sketch/blob/master/README.md#requirements). We don't need to install `latexmk`. Instead, let's change the `Makefile` using your favorite text editor (e.g. `nano Makefile` on the JupyterHub) so that the `main.pdf` target (on line 6) reads:
+
+```
+main.pdf: main.tex references.bib results_def.tex
+    pdflatex $<
+    bibtex $(basename $<)
+    pdflatex $<
+    pdflatex $<
+```
+
+Whew! Now we can make the paper on JupyterHub, using `make clean` first to clean up any mess from the previous errors
+
+```
+make clean
+make
+```
+
+This downloaded the [iris flower dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set), performed [KNN classification](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) on this dataset, embedded the results in publication LaTeX source files, and then compiled those source files into a publication pdf. Inspecting Table 1 of `main.pdf` (or the output in `prediction_report.csv`), we can see that the KNN classifier achieved a weighted average F1 score of 0.90 on the test set.
+
+Now suppose that instead of re-executing this paper, we wish to augment the analysis while keeping the data the same. Suppose we have a hunch that the classification algorithm might benefit from scaling the input data first.
+
+(Don't worry if Python isn't your primary language or if you're not used to classification algorithms. You can copy paste the code below. The objective of this problem set is to learn about reproducible publications)
+
+So we edit the Python code in `code/mk_figuresnstats.py`. On line 13, after the import statements, add
+
+```
+from sklearn.preprocessing import MinMaxScaler
+```
+
+and then around line 59, we add
+
+```
+    # Scale the feature matrix before classification
+    scaler = MinMaxScaler()
+    # Scaler parameters are learned only from the training set
+    X_train = scaler.fit_transform(X_train)
+    # And then applied to the test set as well (no peaking!)
+    X_test = scaler.transform(X_test)
+    
+    # Fit the model and make predictions on the test dataset
+    knn = ...
+```
+
+The last two lines are there for context so that you see where to add the `scaler` lines. Save the file and return to the shell.
+
+We changed the analysis code. Now we can rerun the entire study with
+
+```
+make
+```
+
+Before we look at the results, let's be good reproducibility advocates and document our changes. First, we'll remind ourselves what we changed:
+
+```
+$ datalad status
+...
+    modified: Makefile (file)
+    modified: code/mk_figuresnstats.py (file)
+    modified: prediction_report.csv (file)
+```
+
+Oh yeah, we changed the Makefile to build the pdf without `latexmk`. Let's note that first.
+
+```
+datalad save -m "Use pdflatex explicitly instead of latexmk in Makefile so that we can build the paper on JupyterHub" Makefile
+```
+
+And we also add feature scaling to the analysis code.
+
+```
+datalad save -m "Use MinMaxScaler to scale features before classification." code/mk_figuresnstats.py prediction_report.csv
+```
+
+Great, now let's inspect the compiled paper (or `prediction_report.csv`) to see if scaling the feature had any effect. To the nearest two digits, what is the new average weighted F1-score?
+
+- [ ] 0.88
+- [ ] 0.90
+- [ ] 0.92
+- [ ] 0.93
+
+<details>
+<summary>Click to see answer</summary>
+
+- [x] 0.93
+***
+
+</details>
+
+**Question 7**
+
+Based on our difficulty building the paper with `latexmk` above, which of the four required elements of the ReproPub is the DataLad "repro-paper-sketch" missing?
+
+- [ ] experimental data
+- [ ] workflow
+- [ ] execution environment
+- [ ] results
+
+<details>
+<summary>Click to see answer</summary>
+
+- [x] execution environment We had to either install latexmk or change the Makefile.
+***
+
+</details>
+
+**Question 8**
+
+It is nice that "repro-paper-sketch" build our LaTeX source for us, but this isn't a requirement of the ReproPub. To create a ReproPub, we need only recognize that the experimental data, workflow, execution environment, and results are themselves research objects and track their provenance. Luckily, if you completed the Week 9 ReproNim quiz, you already have a research finding with provenance tracking, namely you determined that hippocampal volume measurements in the [Study Forrest dataset](https://github.com/psychoinformatics-de/studyforrest-data-structural) were not robust to the two methods of FSL [FIRST](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIRST) that you tried. Let's suppose that you now want to share this groundbreaking research finding in a reproducible publication.
+
+The `week12_analysis` DataLad dataset contains the provenance for our
+
+- experimental data (using the previous `datalad clone` and `datalad get` commands),
+- workflow using the previous and current `datalad run` commands,
+- computational environment (using the previous `datalad container-add` and `datalad containers-run` commands), and
+- results (in the `hippocampal_volume.tsv` file that was created and tracked as a result of a previous `datalad run` command
+as well as the figures that we just generated in question 4).
+
+If you haven't already done so, create a GitHub personal access token by going to <https://github.com/settings/tokens/new>, creating a token with "repo," "user," and "workflow" scope, and saving the token to your clipboard or some place more permanent. You'll use that token in the following command
+
+```
+git config --global --add hub.oauthtoken <insert token here>
+```
+
+Next, reorder the commands below to create a tag for our dataset (to mark this specific version as the one we'll use for our seminal research paper), push your dataset to GitHub, and push the tag we created to GitHub. See the [DataLad handbook if you need some help](http://handbook.datalad.org/en/latest/basics/101-130-yodaproject.html?highlight=GitHub#publishing-the-dataset-to-github):
+
+- `datalad create-sibling-github -d . repro-paper-hippocampal-volumes`
+- `datalad save -m "Add paper tag" --version-tag repro-paper`
+- `git push github --tags`
+- `datalad push --to github`
+
+<details>
+<summary>Click to see answer</summary>
+Here is one possible solution:
+```
+datalad create-sibling-github -d . repro-paper-hippocampal-volumes
+datalad push --to github
+datalad save -m "Add paper tag" --version-tag repro-paper
+git push github --tags
+```
+
+However, the `datalad save` command could be done at any point before the `git push` command.
+
+***
+
+</details>
+
+**Question 9**
+
+You have successfully pushed your reproducible paper elements to a repository on GitHub. The last step is to create a DOI for this resource. Create an account on zenodo.org, link it with your GitHub account, and enable the `repro-paper-hippocampal-volumes` repository that you just created. Then create a new release from the `repro-paper` tag that you created in the previous step. If you've done these steps correctly, you should have published a DOI on zenodo.org. Paste your new DOI in the text box below. When you are writing your groundbreaking paper, you can refer to this DOI to reference your DataLad dataset.
+
