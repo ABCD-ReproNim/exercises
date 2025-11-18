@@ -21,4 +21,4 @@ The --privileged flag is necessary if you want to run singularity inside the con
 
 We have also put all this into a short video for you:
 
-TODO: Add link to video.
+[![Video Instructions](https://www.youtube.com/watch?v=lCtp0i_pPRY)
