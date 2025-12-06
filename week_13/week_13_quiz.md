@@ -158,4 +158,60 @@ Site and scanner are important random effects to consider in ABCD, as data is co
 
 </details>
 
+*** Section 2: Longitudinal Modeling Questions 2
+
+These questions cover the lectures by Wes Thompson.
+
+1) Select all that apply.
+
+- [ ] Linear Mixed Effects Models can handle nested data structures.
+- [ ] Generalized linear effects models are limited to modelling linear trends.
+- [ ] Latent Growth Curve Models is a structural equation modelling approach that allows for modelling more complex structures.
+- [ ] Mediation in longitudinal modelling decomposes the effect of an exposure into a direct and indirect pathway, and a moderator.
+- [ ] Causal Mediation analysis requires more than two time points.
+
+<details
+<summary>Click to see answer</summary>
+- [x] Linear Mixed Effects Models can handle nested data structures.
+- [ ] Generalized linear effects models are limited to modelling linear trends.
+- [x] Latent Growth Curve Models is a structural equation modelling approach that allows for modelling more complex structures.
+- [ ] Mediation in longitudinal modelling decomposes the effect of an exposure into a direct and indirect pathway, and a moderator.
+- [ ] Causal Mediation analysis requires more than two time points. 
+</details>
+
+2) In the context of missing values, select all statements that are true.
+
+- [ ] Missing variables that are correlated with an analysis variable will not affect the outcome of the analysis.
+- [ ] List-wise deletion does not affect the power of a study.
+- [ ] For Multiple Imputation (MI), variables should be missing at random (MAR). Multiple data sets are created, which are then averaged.
+- [ ] In Probability Score Weighting, samples are weighted based on the dropout rate of the population the sample is in.
+- [ ] List-wise deletion is the preferred method to deal with structured missingness.
+<details>
+<summary>Click to see answer</summary>
+- [ ] Missing variables that are correlated with an analysis variable will not affect the outcome of the analysis.
+- [ ] List-wise deletion does not affect the power of a study.
+- [x] For Multiple Imputation (MI), variables should be missing at random (MAR). Multiple data sets are created, which are then averaged.
+- [x] In Probability Score Weighting, samples are weighted based on the dropout rate of the population the sample is in.
+- [ ] List-wise deletion is the preferred method to deal with structured missingness. 
+</details>
+
+3) Select all statements that are true.
+
+- [ ] The ABCD study is an observational study, hence all exposures were randomly assigned.
+- [ ] The analysis of monozygotic and dizygotic twins allows to disentangle the effects of genes versus environment on a trait of interest.
+- [ ] Dizygotic twins provide counterfactuals of each other.
+- [ ] Due to the large sample size in ABCD, small group differences become hardly ever statistically significant.
+- [ ] Due its large sample size, ABCD allows for causal conclusions from correlational analyses.
+
+<details>
+<summary>Click to see answer</summary>
+- [ ] The ABCD study is an observational study, hence all exposures were randomly assigned.
+- [x] The analysis of monozygotic and dizygotic twins allows to disentangle the effects of genes versus environment on a trait of interest.
+- [ ] Dizygotic twins provide counterfactuals of each other.
+- [ ] Due to the large sample size in ABCD, small group differences become hardly ever statistically significant.
+- [ ] Due its large sample size, ABCD allows for causal conclusions from correlational analyses. 
+</details>  
+
+
+
 
