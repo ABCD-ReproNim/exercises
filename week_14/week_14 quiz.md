@@ -1,4 +1,4 @@
-# Week 1 Quiz
+# Week 14 Quiz
 
 ### Quiz Instructions
 
@@ -21,7 +21,8 @@ In this Week 14 Quiz, we will ask you a few questions about Statistical Consider
 
 <details>
 <summary>Click to see answer</summary>
-large
+
+small
 
 
 ***
@@ -155,6 +156,9 @@ We also notice that there are some `NaN` values...which would pose a problem if 
 <summary>Click to see answer</summary>
   
 -sns.lmplot(x="bill_length_mm", y="flipper_length_mm", col="species", hue="species", data=data, facet_kws={'sharey': False, 'sharex': False})
+
+![penguin3](https://github.com/user-attachments/assets/925795d6-3186-47bd-bb3d-a0d65e82ca13)
+
 ***
 
 </details>
@@ -178,6 +182,11 @@ Using the [documentation](https://seaborn.pydata.org/generated/seaborn.pairplot.
 -sns.pairplot(data, hue='species')
 
 -sns.pairplot(data, hue='species', palette='Dark2')
+
+![penguinbefore](https://github.com/user-attachments/assets/1bd678c5-1535-4393-a428-b6035ef0070e)
+
+![penguinafter](https://github.com/user-attachments/assets/cb30ceda-61f2-446d-ab6c-494ed50447e2)
+
 
 ***
 
@@ -208,6 +217,9 @@ If you're doing this on the JupyterHub, you already have all of the Python packa
 
 Next, this paper uses sklearn which has now changed to scikit-learn. To fix this, all we need to do is navigate to the repro-paper-sketch directory and find the requirements.txt file. In the requirements, change sklearn to scikit-learn and save it.
 
+![sklearn](https://github.com/user-attachments/assets/d8d3e074-05a4-4ac5-aac4-513036e49885)
+
+
 Lastly, this paper does not run unless you are using a "virtual environment". Do not get too bogged down with what that is, just follow the next steps. Also note, the first time you set up the virtual environment may take 5 or so minutes to load, so do not interrupt it!
 
 ```
@@ -231,9 +243,10 @@ Now, inside the repro-paper-sketch directory, you should be able to run the make
   make: latexmk: No such file or directory
   make: *** [Makefile:12: main.pdf] Error 127
 ```
-Oh no! We don't have `latexmk`, which is one of the requirements for this repo (https://github.com/datalad-handbook/repro-paper-sketch/blob/master/README.md#requirements). We don't need to install `latexmk`. Instead, let's change the `Makefile` and save it so that the `main.pdf` target (starting on line 10) looks the same as it does in the next panel. Leave the rest of the file alone Please note: **The arrows are important! Tabbing or hitting space does not always work. Please copy and paste an arrow from one of the other sections in the makefile!**
+Oh no! We don't have `latexmk`, which is one of the requirements for this repo (https://github.com/datalad-handbook/repro-paper-sketch/blob/master/README.md#requirements). We don't need to install `latexmk`. Instead, let's change the `Makefile` and save it so that the `main.pdf` target (starting on line 10) looks the same as it does in the next panel. Leave the rest of the file alone. Please note: **The arrows are important! Tabbing or hitting space does not always work. Please copy and paste an arrow from one of the other sections in the makefile!**
 
-***PICTURE***
+![correct_makefile](https://github.com/user-attachments/assets/cb481d0b-a08c-4c9f-b678-1c332eebc567)
+
 
 Whew! Now we can make the paper on JupyterHub, using `make clean` first to clean up any mess from the previous errors
 
@@ -241,6 +254,7 @@ Whew! Now we can make the paper on JupyterHub, using `make clean` first to clean
   make clean
   make
 ```
+
 This downloaded the [iris flower dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set), performed [KNN classification](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) on this dataset, embedded the results in publication LaTeX source files, and then compiled those source files into a publication pdf. To view the PDF double-click on main.pdf to see if everything looks correct. 
 
 If it looks a little wonky, try running make one more time. If it still persists try the steps again or email us!
@@ -262,6 +276,8 @@ If it looks a little wonky, try running make one more time. If it still persists
 <summary>Click to see answer</summary>
 
  0.90
+ 
+![Table1](https://github.com/user-attachments/assets/88651094-bdba-4849-acd5-520d3bdbd838)
 
 
 ***
@@ -287,6 +303,15 @@ def plot_relationships(df):
     # save the figure as a png.
     plot.savefig('img/pairwise_relationships.png', dpi=300)
 ```
+**BEFORE**
+
+![original](https://github.com/user-attachments/assets/37931a0c-befb-49b7-afc3-e50579c892cc)
+
+**AFTER**
+
+![changed](https://github.com/user-attachments/assets/3d75c1bc-01eb-4c16-b1a4-3a9e220be7e2)
+
+
 
 ***
 
